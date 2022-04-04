@@ -1,6 +1,6 @@
 import React from "react";
 
-const GroupGames = () => {
+const GroupGames = (props) => {
   return <div>GroupGames</div>;
 };
 
