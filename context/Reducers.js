@@ -1,7 +1,7 @@
 export const CupReducer = (state, action) => {
   switch (action.type) {
-    case "SUBMIT":
-      return state;
+    case "SCORE-UPDATE":
+      return { ...state, [action.group]: "oi" };
     default:
       return state;
   }

@@ -5,8 +5,8 @@ const Cup = createContext();
 
 const CupContext = ({ children }) => {
   const [state, dispatch] = useReducer(CupReducer, {
-    groupA: [
-      {
+    groupA: {
+      qatar: {
         name: "Qatar",
         points: 0,
         won: 0,
@@ -16,7 +16,7 @@ const CupContext = ({ children }) => {
         goalsAgainst: 0,
         saldo: 0,
       },
-      {
+      ecuador: {
         name: "Ecuador",
         points: 0,
         won: 0,
@@ -26,7 +26,7 @@ const CupContext = ({ children }) => {
         goalsAgainst: 0,
         saldo: 0,
       },
-      {
+      senegal: {
         name: "Senegal",
         points: 0,
         won: 0,
@@ -36,7 +36,7 @@ const CupContext = ({ children }) => {
         goalsAgainst: 0,
         saldo: 0,
       },
-      {
+      netherlands: {
         name: "Netherlands",
         points: 0,
         won: 0,
@@ -46,9 +46,9 @@ const CupContext = ({ children }) => {
         goalsAgainst: 0,
         saldo: 0,
       },
-    ],
-    groupB: [
-      {
+    },
+    groupB: {
+      england: {
         name: "England",
         points: 0,
         won: 0,
@@ -58,7 +58,7 @@ const CupContext = ({ children }) => {
         goalsAgainst: 0,
         saldo: 0,
       },
-      {
+      iran: {
         name: "Iran",
         points: 0,
         won: 0,
@@ -68,7 +68,7 @@ const CupContext = ({ children }) => {
         goalsAgainst: 0,
         saldo: 0,
       },
-      {
+      usa: {
         name: "USA",
         points: 0,
         won: 0,
@@ -78,7 +78,7 @@ const CupContext = ({ children }) => {
         goalsAgainst: 0,
         saldo: 0,
       },
-      {
+      cu: {
         name: "CU",
         points: 0,
         won: 0,
@@ -88,7 +88,7 @@ const CupContext = ({ children }) => {
         goalsAgainst: 0,
         saldo: 0,
       },
-    ],
+    },
   });
   return <Cup.Provider value={{ state, dispatch }}>{children}</Cup.Provider>;
 };

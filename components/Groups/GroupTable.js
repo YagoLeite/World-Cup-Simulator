@@ -5,7 +5,7 @@ const GroupTable = (props) => {
   return (
     <div>
       <Box>
-        {props.group?.map((country, index) => (
+        {props.group[0]?.map((country, index) => (
           <Flex gap={2} key={index}>
             <Box>{country.name}</Box>
             <Box>{country.points} </Box>
