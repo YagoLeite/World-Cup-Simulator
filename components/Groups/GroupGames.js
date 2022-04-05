@@ -10,7 +10,7 @@ const GroupGames = () => {
   );
   console.log(filteredList[0]);
   return (
-    <Box w="500px">
+    <Box w="700px">
       <SingleMatch first={filteredList[0]} second={filteredList[1]} />
       <SingleMatch first={filteredList[2]} second={filteredList[3]} />
 
