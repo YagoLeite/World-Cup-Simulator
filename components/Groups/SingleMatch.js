@@ -4,26 +4,15 @@ import { CupState } from "../../context/Context";
 
 const SingleMatch = (props) => {
   const { state, dispatch } = CupState();
+  console.log(props);
 
-  const scoreChangeHandler = (event, name) => {
-    // dispatch({
-    //   type: "SCORE-UPDATE",
-    //   value: event.target.value,
-    //   group: props.group,
-    // });
-    console.log(event, name);
-  };
   return (
     <Flex>
-      <Box>{props.first.name}</Box>
-      <Input
-        onChange={(event) => scoreChangeHandler(event, props.first.name)}
-      />
+      <Box>{props.first.name} </Box>
+      <Input />
       X
-      <Input
-        onChange={(event) => scoreChangeHandler(event, props.second.name)}
-      />
-      <Box>{props.second.name}</Box>
+      <Input />
+      <Box>{props.second.name} </Box>
     </Flex>
   );
 };

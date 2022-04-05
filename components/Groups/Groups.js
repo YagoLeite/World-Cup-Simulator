@@ -6,17 +6,16 @@ import { CupState } from "../../context/Context";
 
 const Groups = () => {
   const { state, dispatch } = CupState();
-  const [group, setGroup] = useState([Object.values(state.groupA), "groupA"]);
   return (
     <div>
-      <Button onClick={() => setGroup([Object.values(state.groupA), "groupA"])}>
+      <Button onClick={() => dispatch({ type: "GROUP-UPDATE", value: "A" })}>
         A
       </Button>
-      <Button onClick={() => setGroup([Object.values(state.groupB), "groupB"])}>
+      <Button onClick={() => dispatch({ type: "GROUP-UPDATE", value: "B" })}>
         B
       </Button>
-      <GroupTable group={group} />
-      <GroupGames group={group} />
+      <GroupTable />
+      <GroupGames />
     </div>
   );
 };

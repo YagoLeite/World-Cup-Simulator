@@ -1,40 +1,24 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 import SingleMatch from "./SingleMatch";
+import { CupState } from "../../context/Context";
 
-const GroupGames = (props) => {
+const GroupGames = () => {
+  const { state } = CupState();
+  const filteredList = state.groupState.filter(
+    (country) => country.group === state.group
+  );
+  console.log(filteredList[0]);
   return (
     <Box w="500px">
-      <SingleMatch
-        group={props.group[1]}
-        first={props.group[0][0]}
-        second={props.group[0][1]}
-      />
-      <SingleMatch
-        group={props.group[1]}
-        first={props.group[0][2]}
-        second={props.group[0][3]}
-      />
-      <SingleMatch
-        group={props.group[1]}
-        first={props.group[0][0]}
-        second={props.group[0][2]}
-      />
-      <SingleMatch
-        group={props.group[1]}
-        first={props.group[0][1]}
-        second={props.group[0][3]}
-      />
-      <SingleMatch
-        group={props.group[1]}
-        first={props.group[0][0]}
-        second={props.group[0][3]}
-      />
-      <SingleMatch
-        group={props.group[1]}
-        first={props.group[0][1]}
-        second={props.group[0][2]}
-      />
+      <SingleMatch first={filteredList[0]} second={filteredList[1]} />
+      <SingleMatch first={filteredList[2]} second={filteredList[3]} />
+
+      <SingleMatch first={filteredList[0]} second={filteredList[2]} />
+      <SingleMatch first={filteredList[3]} second={filteredList[1]} />
+
+      <SingleMatch first={filteredList[0]} second={filteredList[3]} />
+      <SingleMatch first={filteredList[2]} second={filteredList[1]} />
     </Box>
   );
 };
