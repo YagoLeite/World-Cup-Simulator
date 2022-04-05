@@ -18,7 +18,7 @@ const GroupTable = () => {
           <Text>{country.draw}</Text>
           <Text>{country.lost} </Text>
           <Text>{country.goalsFor} </Text>
-          <Text>{country.goalsAgaisnt} </Text>
+          <Text>{country.goalsAgainst} </Text>
           <Text>{country.saldo} </Text>
         </Flex>
       ))}
