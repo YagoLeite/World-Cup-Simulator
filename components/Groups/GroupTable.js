@@ -11,7 +11,6 @@ const onDragEnd = (result, columns, setColumns) => {
   const [removed] = copiedItems.splice(source.index, 1);
   copiedItems.splice(destination.index, 0, removed);
   setColumns({
-    ...columns,
     [source.droppableId]: {
       ...column,
       items: copiedItems,
