@@ -2,6 +2,7 @@ import React from "react";
 import GroupTable from "./GroupTable";
 import { Button } from "@chakra-ui/react";
 import { CupState } from "../../context/Context";
+import Finals from "../Finals/Finals";
 
 const Groups = () => {
   const { state, dispatch } = CupState();
@@ -33,6 +34,7 @@ const Groups = () => {
         H
       </Button>
       <GroupTable />
+      <Finals />
     </div>
   );
 };

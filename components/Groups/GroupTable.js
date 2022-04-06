@@ -18,7 +18,6 @@ const GroupTable = () => {
   const filteredList = state.groupState
     .filter((country) => country.group === state.group)
     .sort((a, b) => a.index - b.index);
-  console.log(filteredList);
 
   const columns = {
     [state.group]: {
@@ -28,54 +27,69 @@ const GroupTable = () => {
   };
 
   return (
-    <Flex justifyContent="center" h="600px" bg="red">
+    <Flex justifyContent="center" h="200px" bg="red">
       <DragDropContext
         onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
       >
-        <Droppable droppableId={state.group} key={state.group}>
-          {(provided, snapshot) => {
-            return (
-              <Box
-                {...provided.droppableProps}
-                ref={provided.innerRef}
-                bg={snapshot.isDraggingOver ? "blue" : "green"}
-                p="4px"
-                width="1000px"
-                minH="100px"
-              >
-                {filteredList.map((item, index) => {
-                  return (
-                    <Draggable
-                      key={item.name}
-                      draggableId={item.name}
-                      index={index}
-                    >
-                      {(provided, snapshot) => {
-                        return (
-                          <Box
-                            ref={provided.innerRef}
-                            {...provided.draggableProps}
-                            {...provided.dragHandleProps}
-                            userSelect="none"
-                            minxH="50px"
-                            margin="0 0 8px 0"
-                            bg={
-                              snapshot.isDragging ? "yellow.300" : "yellow.700"
-                            }
-                            color="white"
-                          >
-                            {item.name}
-                          </Box>
-                        );
-                      }}
-                    </Draggable>
-                  );
-                })}
-                {provided.placeholder}
-              </Box>
-            );
-          }}
-        </Droppable>
+        <Box>
+          <Text>{columns[state.group].name} </Text>
+          <Droppable droppableId={state.group} key={state.group}>
+            {(provided, snapshot) => {
+              return (
+                <Box
+                  {...provided.droppableProps}
+                  ref={provided.innerRef}
+                  bg={snapshot.isDraggingOver ? "blue" : "green"}
+                  p="4px"
+                  width="1000px"
+                  minH="100px"
+                >
+                  {filteredList.map((item, index) => {
+                    return (
+                      <Draggable
+                        key={item.name}
+                        draggableId={item.name}
+                        index={index}
+                      >
+                        {(provided, snapshot) => {
+                          return (
+                            <Flex
+                              ref={provided.innerRef}
+                              {...provided.draggableProps}
+                              {...provided.dragHandleProps}
+                              userSelect="none"
+                              minxH="50px"
+                              margin="0 0 8px 0"
+                              bg={
+                                snapshot.isDragging
+                                  ? "yellow.300"
+                                  : "yellow.700"
+                              }
+                              color="white"
+                              gap={5}
+                            >
+                              <Text>{item.name} </Text>
+                              <Text>
+                                {item.index === 0
+                                  ? "First place"
+                                  : item.index === 1
+                                  ? "Second place"
+                                  : item.index === 2
+                                  ? "Third place"
+                                  : "Fourth place"}
+                              </Text>
+                            </Flex>
+                          );
+                        }}
+                      </Draggable>
+                    );
+                  })}
+                  {provided.placeholder}
+                </Box>
+              );
+            }}
+          </Droppable>
+        </Box>
       </DragDropContext>
     </Flex>
   );

@@ -2,7 +2,7 @@ export const CupReducer = (state, action) => {
   switch (action.type) {
     case "SCORE-UPDATE":
       const newGroupState = state.groupState.map((item) => {
-        if (action.value.find((element, index) => element.name === item.name)) {
+        if (action.value.find((element) => element.name === item.name)) {
           const newIndex = action.value.findIndex(
             (element) => element.name === item.name
           );
