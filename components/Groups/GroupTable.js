@@ -1,56 +1,53 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { CupState } from "../../context/Context";
 import { DragDropContext, Droppable, Draggable } from "@react-forked/dnd";
 
-const onDragEnd = (result, columns, setColumns) => {
+const onDragEnd = (result, columns, dispatch) => {
   if (!result.destination) return;
   const { source, destination } = result;
   const column = columns[source.droppableId];
   const copiedItems = [...column.items];
   const [removed] = copiedItems.splice(source.index, 1);
   copiedItems.splice(destination.index, 0, removed);
-  setColumns({
-    [source.droppableId]: {
-      ...column,
-      items: copiedItems,
-    },
-  });
+  // console.log(columns, column, copiedItems);
+  dispatch({ type: "SCORE-UPDATE", value: copiedItems });
 };
 
 const GroupTable = () => {
-  const { state } = CupState();
-  const filteredList = state.groupState.filter(
-    (country) => country.group === state.group
-  );
+  const { state, dispatch } = CupState();
+  const filteredList = state.groupState
+    .filter((country) => country.group === state.group)
+    .sort((a, b) => a.index - b.index);
+  console.log(filteredList);
 
-  const [columns, setColumns] = useState({
-    [state.group]: {
-      name: `Group ${state.group}`,
-      items: filteredList,
-    },
-  });
-
-  useEffect(() => {
-    setColumns({
-      [state.group]: {
-        name: `Group ${state.group}`,
-        items: filteredList,
-      },
-    });
-  }, [state.group]);
-
-  // const columns = {
+  // const [columns, setColumns] = useState({
   //   [state.group]: {
   //     name: `Group ${state.group}`,
   //     items: filteredList,
   //   },
-  // };
+  // });
+
+  // useEffect(() => {
+  //   setColumns({
+  //     [state.group]: {
+  //       name: `Group ${state.group}`,
+  //       items: filteredList,
+  //     },
+  //   });
+  // }, [state.group]);
+
+  const columns = {
+    [state.group]: {
+      name: `Group ${state.group}`,
+      items: filteredList,
+    },
+  };
 
   return (
     <Flex justifyContent="center" h="600px" bg="red">
       <DragDropContext
-        onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
+        onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
       >
         <Droppable droppableId={state.group} key={state.group}>
           {(provided, snapshot) => {
@@ -63,7 +60,7 @@ const GroupTable = () => {
                 width="1000px"
                 minH="100px"
               >
-                {columns[state.group]?.items.map((item, index) => {
+                {filteredList.map((item, index) => {
                   return (
                     <Draggable
                       key={item.name}

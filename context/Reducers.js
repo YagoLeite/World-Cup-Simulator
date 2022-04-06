@@ -1,25 +1,17 @@
 export const CupReducer = (state, action) => {
   switch (action.type) {
     case "SCORE-UPDATE":
-      // return {
-      //   ...state,
-      //   groupState: state.groupState.map((country) => {
-      //     if (country.name === action.payload.scoringTeam) {
-      //       return {
-      //         ...country,
-      //         goalsFor: country.goalsFor + +action.payload.value,
-      //       };
-      //     } else if (country.name === action.payload.receivingTeam) {
-      //       return {
-      //         ...country,
-      //         goalsAgainst: country.goalsAgainst - +action.payload.value,
-      //       };
-      //     } else {
-      //       return country;
-      //     }
-      //   }),
-      // };
-      return { ...state };
+      const newGroupState = state.groupState.map((item) => {
+        if (action.value.find((element, index) => element.name === item.name)) {
+          const newIndex = action.value.findIndex(
+            (element) => element.name === item.name
+          );
+          return { ...item, index: newIndex };
+        } else {
+          return item;
+        }
+      });
+      return { ...state, groupState: newGroupState };
     case "GROUP-UPDATE":
       return { ...state, group: action.value };
     default:
