@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import GroupTable from "./GroupTable";
-import GroupGames from "./GroupGames";
 import { Button } from "@chakra-ui/react";
 import { CupState } from "../../context/Context";
 
@@ -34,7 +33,6 @@ const Groups = () => {
         H
       </Button>
       <GroupTable />
-      <GroupGames />
     </div>
   );
 };
