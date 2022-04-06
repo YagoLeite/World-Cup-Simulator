@@ -10,7 +10,6 @@ const onDragEnd = (result, columns, dispatch) => {
   const copiedItems = [...column.items];
   const [removed] = copiedItems.splice(source.index, 1);
   copiedItems.splice(destination.index, 0, removed);
-  // console.log(columns, column, copiedItems);
   dispatch({ type: "SCORE-UPDATE", value: copiedItems });
 };
 
@@ -20,22 +19,6 @@ const GroupTable = () => {
     .filter((country) => country.group === state.group)
     .sort((a, b) => a.index - b.index);
   console.log(filteredList);
-
-  // const [columns, setColumns] = useState({
-  //   [state.group]: {
-  //     name: `Group ${state.group}`,
-  //     items: filteredList,
-  //   },
-  // });
-
-  // useEffect(() => {
-  //   setColumns({
-  //     [state.group]: {
-  //       name: `Group ${state.group}`,
-  //       items: filteredList,
-  //     },
-  //   });
-  // }, [state.group]);
 
   const columns = {
     [state.group]: {
