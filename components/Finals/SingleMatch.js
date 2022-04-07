@@ -4,10 +4,16 @@ import React from "react";
 const SingleMatch = (props) => {
   return (
     <Box>
-      <Text cursor="pointer" onClick={() => props.onClick(props.firstTeam)}>
+      <Text
+        cursor="pointer"
+        onClick={() => props.onClick(props.firstTeam, props.secondTeam)}
+      >
         {props.firstTeam?.name}
       </Text>
-      <Text cursor="pointer" onClick={() => props.onClick(props.secondTeam)}>
+      <Text
+        cursor="pointer"
+        onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
+      >
         {props.secondTeam?.name}
       </Text>
     </Box>

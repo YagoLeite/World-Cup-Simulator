@@ -30,6 +30,17 @@ export const CupReducer = (state, action) => {
         }
       });
       return { ...state, groupState: oitavas };
+    case "QUARTAS-SELECTION":
+      const quartas = state.groupState.map((item) => {
+        if (item.name === action.payload.firstTeam.name) {
+          return { ...item, quartas: true };
+        } else if (item.name === action.payload.secondTeam.name) {
+          return { ...item, quartas: false };
+        } else {
+          return item;
+        }
+      });
+      return { ...state, groupState: quartas };
     default:
       return state;
   }
