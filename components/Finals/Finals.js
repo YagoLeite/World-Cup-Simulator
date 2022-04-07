@@ -7,7 +7,9 @@ const Finals = () => {
   const { state, dispatch } = CupState();
   const filteredList = state.groupState.filter((country) => country.index <= 1);
   const findingTeam = (group, index) =>
-    filteredList.find((item) => item.group === group && item.index === index);
+    filteredList.find(
+      (item) => item.group === group && item.index === index && item.oitavas
+    );
 
   const [quarta11, setQuarta11] = useState();
   const [quarta12, setQuarta12] = useState();

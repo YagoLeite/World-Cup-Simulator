@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, Button } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 import { DragDropContext, Droppable, Draggable } from "@react-forked/dnd";
@@ -26,6 +26,10 @@ const GroupTable = () => {
     },
   };
 
+  const oitavasHandler = () => {
+    dispatch({ type: "OITAVAS-SELECTION", value: state.group });
+  };
+
   return (
     <Flex justifyContent="center" h="200px" bg="red">
       <DragDropContext
@@ -33,6 +37,7 @@ const GroupTable = () => {
       >
         <Box>
           <Text>{columns[state.group].name} </Text>
+          <Button onClick={oitavasHandler}>Confirm</Button>
           <Droppable droppableId={state.group} key={state.group}>
             {(provided, snapshot) => {
               return (
