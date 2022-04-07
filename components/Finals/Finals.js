@@ -18,12 +18,10 @@ const Finals = () => {
         <SingleMatch
           firstTeam={findingTeam("A", 0)}
           secondTeam={findingTeam("B", 1)}
-          onClick={test}
         />
         <SingleMatch
           firstTeam={findingTeam("B", 0)}
           secondTeam={findingTeam("A", 1)}
-          onClick={test2}
         />
         <SingleMatch
           firstTeam={findingTeam("C", 0)}
