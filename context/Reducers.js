@@ -24,7 +24,13 @@ export const CupReducer = (state, action) => {
     case "OITAVAS-SELECTION":
       const oitavas = state.groupState.map((item) => {
         if (item.index <= 1 && item.group === action.value) {
-          return { ...item, oitavas: true };
+          return {
+            ...item,
+            oitavas: true,
+            quartas: false,
+            semi: false,
+            finals: false,
+          };
         } else {
           return item;
         }
@@ -33,14 +39,36 @@ export const CupReducer = (state, action) => {
     case "QUARTAS-SELECTION":
       const quartas = state.groupState.map((item) => {
         if (item.name === action.payload.firstTeam.name) {
-          return { ...item, quartas: true };
+          return { ...item, quartas: true, semi: false, final: false };
         } else if (item.name === action.payload.secondTeam.name) {
-          return { ...item, quartas: false };
+          return { ...item, quartas: false, semi: false, final: false };
         } else {
           return item;
         }
       });
       return { ...state, groupState: quartas };
+    case "SEMI-SELECTION":
+      const semi = state.groupState.map((item) => {
+        if (item.name === action.payload.firstTeam.name) {
+          return { ...item, semi: true, final: false, winner: false };
+        } else if (item.name === action.payload.secondTeam.name) {
+          return { ...item, semi: false, final: false, winner: false };
+        } else {
+          return item;
+        }
+      });
+      return { ...state, groupState: semi };
+    case "FINAL-SELECTION":
+      const final = state.groupState.map((item) => {
+        if (item.name === action.payload.firstTeam.name) {
+          return { ...item, final: true, winner: false };
+        } else if (item.name === action.payload.secondTeam.name) {
+          return { ...item, final: false, winner: false };
+        } else {
+          return item;
+        }
+      });
+      return { ...state, groupState: final };
     default:
       return state;
   }

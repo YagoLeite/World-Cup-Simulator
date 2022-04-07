@@ -6,25 +6,22 @@ import SingleMatch from "./SingleMatch";
 const Finals = () => {
   const { state, dispatch } = CupState();
   const filteredList = state.groupState.filter((country) => country.index <= 1);
-  const findingTeam = (group, index) =>
+  const findingTeam = (group, index, finals) =>
     filteredList.find(
-      (item) => item.group === group && item.index === index && item.oitavas
+      (item) => item.group === group && item.index === index && item[finals]
     );
 
-  const quartasHandler = (firstTeam, secondTeam) => {
+  const quartasHandler = (firstTeam, secondTeam, type) => {
     if (!firstTeam || !secondTeam) return;
-    dispatch({ type: "QUARTAS-SELECTION", payload: { firstTeam, secondTeam } });
+    dispatch({ type, payload: { firstTeam, secondTeam } });
   };
 
-  const findQuartas = (group, index) => {
-    return state.groupState.filter(
-      (item) => item.quartas && item.index === index && item.group === group
-    );
-  };
+  const findSemi = (a, b) =>
+    state.groupState
+      .filter((item) => item.semi)
+      .find((item) => item.group === a || item.group === b);
 
-  console.log(findQuartas("A", 0));
-
-  // console.log(state.groupState.filter((item) => item.quartas));
+  const findFinal = state.groupState.filter((item) => item.final);
 
   return (
     <HStack>
@@ -32,66 +29,66 @@ const Finals = () => {
         <Heading>Oitavas</Heading>
         <SingleMatch
           to="quartas"
-          firstTeam={findingTeam("A", 0)}
-          secondTeam={findingTeam("B", 1)}
+          firstTeam={findingTeam("A", 0, "oitavas")}
+          secondTeam={findingTeam("B", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam)
+            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
           }
         />
         <SingleMatch
           to="quartas"
-          firstTeam={findingTeam("B", 0)}
-          secondTeam={findingTeam("A", 1)}
+          firstTeam={findingTeam("B", 0, "oitavas")}
+          secondTeam={findingTeam("A", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam)
+            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
           }
         />
         <SingleMatch
           to="quartas"
-          firstTeam={findingTeam("C", 0)}
-          secondTeam={findingTeam("D", 1)}
+          firstTeam={findingTeam("C", 0, "oitavas")}
+          secondTeam={findingTeam("D", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam)
+            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
           }
         />
         <SingleMatch
           to="quartas"
-          firstTeam={findingTeam("D", 0)}
-          secondTeam={findingTeam("C", 1)}
+          firstTeam={findingTeam("D", 0, "oitavas")}
+          secondTeam={findingTeam("C", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam)
+            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
           }
         />
         <SingleMatch
           to="quartas"
-          firstTeam={findingTeam("E", 0)}
-          secondTeam={findingTeam("F", 1)}
+          firstTeam={findingTeam("E", 0, "oitavas")}
+          secondTeam={findingTeam("F", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam)
+            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
           }
         />
         <SingleMatch
           to="quartas"
-          firstTeam={findingTeam("F", 0)}
-          secondTeam={findingTeam("E", 1)}
+          firstTeam={findingTeam("F", 0, "oitavas")}
+          secondTeam={findingTeam("E", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam)
+            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
           }
         />
         <SingleMatch
           to="quartas"
-          firstTeam={findingTeam("G", 0)}
-          secondTeam={findingTeam("H", 1)}
+          firstTeam={findingTeam("G", 0, "oitavas")}
+          secondTeam={findingTeam("H", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam)
+            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
           }
         />
         <SingleMatch
           to="quartas"
-          firstTeam={findingTeam("H", 0)}
-          secondTeam={findingTeam("G", 1)}
+          firstTeam={findingTeam("H", 0, "oitavas")}
+          secondTeam={findingTeam("G", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam)
+            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
           }
         />
       </Flex>
@@ -99,23 +96,82 @@ const Finals = () => {
         <Heading>Quartas</Heading>
         <SingleMatch
           to="semi"
-          firstTeam={findQuartas("A", 0)[0] || findQuartas("B", 1)[0]}
-          secondTeam={findQuartas("B", 0)[0] || findQuartas("A", 1)[0]}
+          firstTeam={
+            findingTeam("A", 0, "quartas") || findingTeam("B", 1, "quartas")
+          }
+          secondTeam={
+            findingTeam("B", 0, "quartas") || findingTeam("A", 1, "quartas")
+          }
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam, "SEMI-SELECTION")
+          }
+          // onClick={() => console.log("oi")}
         />
         <SingleMatch
           to="semi"
-          firstTeam={findQuartas("C", 0)[0] || findQuartas("D", 1)[0]}
-          secondTeam={findQuartas("D", 0)[0] || findQuartas("C", 1)[0]}
+          firstTeam={
+            findingTeam("C", 0, "quartas") || findingTeam("D", 1, "quartas")
+          }
+          secondTeam={
+            findingTeam("D", 0, "quartas") || findingTeam("C", 1, "quartas")
+          }
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam, "SEMI-SELECTION")
+          }
         />
         <SingleMatch
           to="semi"
-          firstTeam={findQuartas("E", 0)[0] || findQuartas("F", 1)[0]}
-          secondTeam={findQuartas("F", 0)[0] || findQuartas("E", 1)[0]}
+          firstTeam={
+            findingTeam("E", 0, "quartas") || findingTeam("F", 1, "quartas")
+          }
+          secondTeam={
+            findingTeam("F", 0, "quartas") || findingTeam("E", 1, "quartas")
+          }
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam, "SEMI-SELECTION")
+          }
         />
         <SingleMatch
           to="semi"
-          firstTeam={findQuartas("G", 0)[0] || findQuartas("H", 1)[0]}
-          secondTeam={findQuartas("H", 0)[0] || findQuartas("G", 1)[0]}
+          firstTeam={
+            findingTeam("G", 0, "quartas") || findingTeam("H", 1, "quartas")
+          }
+          secondTeam={
+            findingTeam("H", 0, "quartas") || findingTeam("G", 1, "quartas")
+          }
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam, "SEMI-SELECTION")
+          }
+        />
+      </Flex>
+      <Flex gap={3} direction="column">
+        <Heading>Semi</Heading>
+        <SingleMatch
+          to="semi"
+          firstTeam={findSemi("A", "B")}
+          secondTeam={findSemi("C", "D")}
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam, "FINAL-SELECTION")
+          }
+        />
+        <SingleMatch
+          to="semi"
+          firstTeam={findSemi("E", "F")}
+          secondTeam={findSemi("G", "H")}
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam, "FINAL-SELECTION")
+          }
+        />
+      </Flex>
+      <Flex direction="column" gap={3}>
+        <Heading>Finals</Heading>
+        <SingleMatch
+          to="semi"
+          firstTeam={findFinal[0]}
+          secondTeam={findFinal[1]}
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam, "FINAL-SELECTION")
+          }
         />
       </Flex>
     </HStack>
