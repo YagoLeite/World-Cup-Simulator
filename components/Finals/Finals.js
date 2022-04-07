@@ -50,7 +50,7 @@ const Finals = () => {
       </Flex>
       <Flex gap={3} direction="column">
         <Heading>Quartas</Heading>
-        <SingleMatch firstTeam={quarta11} secondTeam={quarta12} />
+        <SingleMatch />
       </Flex>
     </HStack>
   );
