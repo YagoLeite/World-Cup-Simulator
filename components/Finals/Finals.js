@@ -50,31 +50,49 @@ const Finals = () => {
           to="quartas"
           firstTeam={findingTeam("C", 0)}
           secondTeam={findingTeam("D", 1)}
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam)
+          }
         />
         <SingleMatch
           to="quartas"
           firstTeam={findingTeam("D", 0)}
           secondTeam={findingTeam("C", 1)}
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam)
+          }
         />
         <SingleMatch
           to="quartas"
           firstTeam={findingTeam("E", 0)}
           secondTeam={findingTeam("F", 1)}
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam)
+          }
         />
         <SingleMatch
           to="quartas"
           firstTeam={findingTeam("F", 0)}
           secondTeam={findingTeam("E", 1)}
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam)
+          }
         />
         <SingleMatch
           to="quartas"
           firstTeam={findingTeam("G", 0)}
           secondTeam={findingTeam("H", 1)}
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam)
+          }
         />
         <SingleMatch
           to="quartas"
           firstTeam={findingTeam("H", 0)}
           secondTeam={findingTeam("G", 1)}
+          onClick={(firstTeam, secondTeam) =>
+            quartasHandler(firstTeam, secondTeam)
+          }
         />
       </Flex>
       <Flex gap={3} direction="column">
@@ -82,6 +100,22 @@ const Finals = () => {
         <SingleMatch
           to="semi"
           firstTeam={findQuartas("A", 0)[0] || findQuartas("B", 1)[0]}
+          secondTeam={findQuartas("B", 0)[0] || findQuartas("A", 1)[0]}
+        />
+        <SingleMatch
+          to="semi"
+          firstTeam={findQuartas("C", 0)[0] || findQuartas("D", 1)[0]}
+          secondTeam={findQuartas("D", 0)[0] || findQuartas("C", 1)[0]}
+        />
+        <SingleMatch
+          to="semi"
+          firstTeam={findQuartas("E", 0)[0] || findQuartas("F", 1)[0]}
+          secondTeam={findQuartas("F", 0)[0] || findQuartas("E", 1)[0]}
+        />
+        <SingleMatch
+          to="semi"
+          firstTeam={findQuartas("G", 0)[0] || findQuartas("H", 1)[0]}
+          secondTeam={findQuartas("H", 0)[0] || findQuartas("G", 1)[0]}
         />
       </Flex>
     </HStack>
