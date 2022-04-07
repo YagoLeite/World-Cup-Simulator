@@ -1,5 +1,5 @@
-import { Box, Flex, Heading, HStack } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { Flex, Heading, HStack } from "@chakra-ui/react";
+import React from "react";
 import { CupState } from "../../context/Context";
 import SingleMatch from "./SingleMatch";
 
@@ -10,17 +10,6 @@ const Finals = () => {
     filteredList.find(
       (item) => item.group === group && item.index === index && item.oitavas
     );
-
-  const [quarta11, setQuarta11] = useState();
-  const [quarta12, setQuarta12] = useState();
-
-  const test = (team) => {
-    setQuarta11(team);
-  };
-
-  const test2 = (team) => {
-    setQuarta12(team);
-  };
 
   return (
     <HStack>
