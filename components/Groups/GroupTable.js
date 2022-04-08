@@ -31,7 +31,7 @@ const GroupTable = (props) => {
   };
 
   return (
-    <Flex key={props.group} justifyContent="center" h="200px" bg="red">
+    <Flex justifyContent="center" h="200px">
       <DragDropContext
         onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
       >
@@ -45,10 +45,9 @@ const GroupTable = (props) => {
                   {...provided.droppableProps}
                   {...provided.dragHandleProps}
                   ref={provided.innerRef}
-                  bg={snapshot.isDraggingOver ? "blue" : "green"}
+                  bg={snapshot.isDraggingOver ? "blue" : "gray"}
                   p="4px"
-                  width="1000px"
-                  minH="100px"
+                  width="100%"
                 >
                   {filteredList.map((item, index) => {
                     return (
@@ -67,9 +66,11 @@ const GroupTable = (props) => {
                               minxH="50px"
                               margin="0 0 8px 0"
                               bg={
-                                snapshot.isDragging
-                                  ? "yellow.300"
-                                  : "yellow.700"
+                                !snapshot.isDragging
+                                  ? item.index <= 1
+                                    ? "green.600"
+                                    : "red.400"
+                                  : "yellow.200"
                               }
                               color="white"
                               gap={5}
