@@ -3,13 +3,14 @@ import React from "react";
 
 const SingleMatch = (props) => {
   return (
-    <Box>
+    <Box {...props.config}>
       <Text
         cursor="pointer"
         onClick={() => props.onClick(props.firstTeam, props.secondTeam)}
       >
         {props.firstTeam?.name}
       </Text>
+      X
       <Text
         cursor="pointer"
         onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
