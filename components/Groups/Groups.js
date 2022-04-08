@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import GroupTable from "./GroupTable";
 import { Button } from "@chakra-ui/react";
 import { CupState } from "../../context/Context";
@@ -6,6 +6,11 @@ import Finals from "../Finals/Finals";
 
 const Groups = () => {
   const { state, dispatch } = CupState();
+  const [a, setA] = useState(false);
+  useEffect(() => {
+    setA(true);
+  }, []);
+  const test = ["A", "B", "C", "D", "E", "F", "G", "H"];
   return (
     <div>
       <Button onClick={() => dispatch({ type: "GROUP-UPDATE", value: "A" })}>
@@ -33,7 +38,8 @@ const Groups = () => {
       <Button onClick={() => dispatch({ type: "GROUP-UPDATE", value: "H" })}>
         H
       </Button>
-      <GroupTable />
+      {a && test.map((group) => <GroupTable group={group} />)}
+      {/* <GroupTable /> */}
       <Finals />
     </div>
   );

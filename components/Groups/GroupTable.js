@@ -13,36 +13,37 @@ const onDragEnd = (result, columns, dispatch) => {
   dispatch({ type: "SCORE-UPDATE", value: copiedItems });
 };
 
-const GroupTable = () => {
+const GroupTable = (props) => {
   const { state, dispatch } = CupState();
   const filteredList = state.groupState
-    .filter((country) => country.group === state.group)
+    .filter((country) => country.group === props.group)
     .sort((a, b) => a.index - b.index);
 
   const columns = {
-    [state.group]: {
-      name: `Group ${state.group}`,
+    [props.group]: {
+      name: `Group ${props.group}`,
       items: filteredList,
     },
   };
 
   const oitavasHandler = () => {
-    dispatch({ type: "OITAVAS-SELECTION", value: state.group });
+    dispatch({ type: "OITAVAS-SELECTION", value: props.group });
   };
 
   return (
-    <Flex justifyContent="center" h="200px" bg="red">
+    <Flex key={props.group} justifyContent="center" h="200px" bg="red">
       <DragDropContext
         onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
       >
         <Box>
-          <Text>{columns[state.group].name} </Text>
+          <Text>{columns[props.group].name} </Text>
           <Button onClick={oitavasHandler}>Confirm</Button>
-          <Droppable droppableId={state.group} key={state.group}>
+          <Droppable droppableId={props.group} key={props.group}>
             {(provided, snapshot) => {
               return (
                 <Box
                   {...provided.droppableProps}
+                  {...provided.dragHandleProps}
                   ref={provided.innerRef}
                   bg={snapshot.isDraggingOver ? "blue" : "green"}
                   p="4px"
