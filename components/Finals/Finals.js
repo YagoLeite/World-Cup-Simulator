@@ -28,7 +28,6 @@ const Finals = () => {
       <Flex gap={3} direction="column">
         <Heading>Oitavas</Heading>
         <SingleMatch
-          to="quartas"
           firstTeam={findingTeam("A", 0, "oitavas")}
           secondTeam={findingTeam("B", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -36,7 +35,6 @@ const Finals = () => {
           }
         />
         <SingleMatch
-          to="quartas"
           firstTeam={findingTeam("B", 0, "oitavas")}
           secondTeam={findingTeam("A", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -44,7 +42,6 @@ const Finals = () => {
           }
         />
         <SingleMatch
-          to="quartas"
           firstTeam={findingTeam("C", 0, "oitavas")}
           secondTeam={findingTeam("D", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -52,7 +49,6 @@ const Finals = () => {
           }
         />
         <SingleMatch
-          to="quartas"
           firstTeam={findingTeam("D", 0, "oitavas")}
           secondTeam={findingTeam("C", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -60,7 +56,6 @@ const Finals = () => {
           }
         />
         <SingleMatch
-          to="quartas"
           firstTeam={findingTeam("E", 0, "oitavas")}
           secondTeam={findingTeam("F", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -68,7 +63,6 @@ const Finals = () => {
           }
         />
         <SingleMatch
-          to="quartas"
           firstTeam={findingTeam("F", 0, "oitavas")}
           secondTeam={findingTeam("E", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -76,7 +70,6 @@ const Finals = () => {
           }
         />
         <SingleMatch
-          to="quartas"
           firstTeam={findingTeam("G", 0, "oitavas")}
           secondTeam={findingTeam("H", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -84,7 +77,6 @@ const Finals = () => {
           }
         />
         <SingleMatch
-          to="quartas"
           firstTeam={findingTeam("H", 0, "oitavas")}
           secondTeam={findingTeam("G", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -95,7 +87,6 @@ const Finals = () => {
       <Flex gap={3} direction="column">
         <Heading>Quartas</Heading>
         <SingleMatch
-          to="semi"
           firstTeam={
             findingTeam("A", 0, "quartas") || findingTeam("B", 1, "quartas")
           }
@@ -108,7 +99,6 @@ const Finals = () => {
           // onClick={() => console.log("oi")}
         />
         <SingleMatch
-          to="semi"
           firstTeam={
             findingTeam("C", 0, "quartas") || findingTeam("D", 1, "quartas")
           }
@@ -120,7 +110,6 @@ const Finals = () => {
           }
         />
         <SingleMatch
-          to="semi"
           firstTeam={
             findingTeam("E", 0, "quartas") || findingTeam("F", 1, "quartas")
           }
@@ -132,7 +121,6 @@ const Finals = () => {
           }
         />
         <SingleMatch
-          to="semi"
           firstTeam={
             findingTeam("G", 0, "quartas") || findingTeam("H", 1, "quartas")
           }
@@ -147,7 +135,6 @@ const Finals = () => {
       <Flex gap={3} direction="column">
         <Heading>Semi</Heading>
         <SingleMatch
-          to="semi"
           firstTeam={findSemi("A", "B")}
           secondTeam={findSemi("C", "D")}
           onClick={(firstTeam, secondTeam) =>
@@ -155,7 +142,6 @@ const Finals = () => {
           }
         />
         <SingleMatch
-          to="semi"
           firstTeam={findSemi("E", "F")}
           secondTeam={findSemi("G", "H")}
           onClick={(firstTeam, secondTeam) =>
@@ -166,7 +152,6 @@ const Finals = () => {
       <Flex direction="column" gap={3}>
         <Heading>Finals</Heading>
         <SingleMatch
-          to="semi"
           firstTeam={findFinal[0]}
           secondTeam={findFinal[1]}
           onClick={(firstTeam, secondTeam) =>
