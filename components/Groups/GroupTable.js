@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Button, useToast } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 import { DragDropContext, Droppable, Draggable } from "@react-forked/dnd";
@@ -15,6 +15,7 @@ const onDragEnd = (result, columns, dispatch) => {
 
 const GroupTable = (props) => {
   const { state, dispatch } = CupState();
+  const toast = useToast();
   const filteredList = state.groupState
     .filter((country) => country.group === props.group)
     .sort((a, b) => a.index - b.index);
@@ -28,6 +29,13 @@ const GroupTable = (props) => {
 
   const oitavasHandler = () => {
     dispatch({ type: "OITAVAS-SELECTION", value: props.group });
+    toast({
+      title: "Group Confirmed",
+      // description: "We've created your account for you.",
+      status: "success",
+      duration: 800,
+      isClosable: true,
+    });
   };
 
   return (
