@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Button, useToast } from "@chakra-ui/react";
+import { Box, Flex, Text, Button, useToast, VStack } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 import { DragDropContext, Droppable, Draggable } from "@react-forked/dnd";
@@ -39,13 +39,13 @@ const GroupTable = (props) => {
   };
 
   return (
-    <Flex justifyContent="center" h="200px">
+    <VStack justifyContent="center" h="200px" borderWidth="1px">
       <DragDropContext
         onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
       >
-        <Box>
-          <Text>{columns[props.group].name} </Text>
-          <Button onClick={oitavasHandler}>Confirm</Button>
+        <Box w="100%">
+          <Text bg="blue">{columns[props.group].name}</Text>
+
           <Droppable droppableId={props.group} key={props.group}>
             {(provided, snapshot) => {
               return (
@@ -53,7 +53,7 @@ const GroupTable = (props) => {
                   {...provided.droppableProps}
                   {...provided.dragHandleProps}
                   ref={provided.innerRef}
-                  bg={snapshot.isDraggingOver ? "blue" : "gray"}
+                  bg={snapshot.isDraggingOver ? "gray.200" : "white"}
                   p="4px"
                   width="100%"
                 >
@@ -76,23 +76,22 @@ const GroupTable = (props) => {
                               bg={
                                 !snapshot.isDragging
                                   ? item.index <= 1
-                                    ? "green.600"
-                                    : "red.400"
+                                    ? "#00FF00"
+                                    : ""
                                   : "yellow.200"
                               }
-                              color="white"
                               gap={5}
                             >
-                              <Text>{item.name} </Text>
                               <Text>
                                 {item.index === 0
-                                  ? "First place"
+                                  ? "1º"
                                   : item.index === 1
-                                  ? "Second place"
+                                  ? "2º"
                                   : item.index === 2
-                                  ? "Third place"
-                                  : "Fourth place"}
+                                  ? "3º"
+                                  : "4º"}
                               </Text>
+                              <Text>{item.name} </Text>
                             </Flex>
                           );
                         }}
@@ -106,7 +105,10 @@ const GroupTable = (props) => {
           </Droppable>
         </Box>
       </DragDropContext>
-    </Flex>
+      <Button w="100%" onClick={oitavasHandler}>
+        Confirm
+      </Button>
+    </VStack>
   );
 };
 

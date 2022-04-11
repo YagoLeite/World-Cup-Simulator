@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GroupTable from "./GroupTable";
-import { Button, Grid } from "@chakra-ui/react";
+import { Button, Grid, VStack } from "@chakra-ui/react";
 import { CupState } from "../../context/Context";
 
 const groups = ["A", "B", "C", "D", "E", "F", "G", "H"];
@@ -12,11 +12,15 @@ const Groups = () => {
     setA(true);
   }, []);
   return (
-    <div>
-      <Grid gridTemplateColumns="repeat(auto-fit, minmax(290px, 1fr))">
+    <VStack>
+      <Grid
+        // gridTemplateColumns={["repeat(2, 290px)", "repeat(4, 290px)"]}
+        gridTemplateColumns="repeat(4, minmax(290px, 1fr))"
+        gap={3}
+      >
         {a && groups.map((group) => <GroupTable group={group} />)}
       </Grid>
-    </div>
+    </VStack>
   );
 };
 
