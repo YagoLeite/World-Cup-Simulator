@@ -69,6 +69,8 @@ export const CupReducer = (state, action) => {
         }
       });
       return { ...state, groupState: final };
+    case "UI-UPDATE":
+      return { ...state, ui: action.value };
     default:
       return state;
   }

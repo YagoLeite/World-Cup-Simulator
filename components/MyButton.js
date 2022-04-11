@@ -1,11 +1,10 @@
 import React from "react";
 import { Button } from "@chakra-ui/react";
 
-const MyButton = () => {
+const MyButton = (props) => {
   return (
     <Button
-      // bgColor={`${scheme}.${step1}`}
-      bgColor="green.100"
+      bgColor={props.color1}
       color="white"
       fontWeight="medium"
       rounded="md"
@@ -16,19 +15,21 @@ const MyButton = () => {
       }}
       transition="background 0.8s"
       backgroundPosition="center"
+      key={props.key ? props.key : null}
+      onClick={props.onClick}
       _hover={{
-        bgColor: "green.300",
-        bgGradient: `radial(circle, transparent 1%, green.300 1%)`,
+        bgColor: props.color2,
+        bgGradient: `radial(circle, transparent 1%, ${props.color2} 1%)`,
         bgPos: "center",
         backgroundSize: "15000%",
       }}
       _active={{
-        bgColor: "green.600",
+        bgColor: props.color3,
         backgroundSize: "100%",
         transition: "background 0s",
       }}
     >
-      Click Me
+      {props.children}
     </Button>
   );
 };

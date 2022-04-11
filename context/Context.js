@@ -8,6 +8,7 @@ const CupContext = ({ children }) => {
   const [state, dispatch] = useReducer(CupReducer, {
     group: "A",
     groupState: initialState,
+    ui: "groups",
   });
   return <Cup.Provider value={{ state, dispatch }}>{children}</Cup.Provider>;
 };
