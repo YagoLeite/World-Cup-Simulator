@@ -13,7 +13,6 @@ const SemiFinals = () => {
   return (
     <Stack
       w="100%"
-      bg="red"
       direction="column"
       justifyContent="center"
       alignItems="center"
@@ -21,11 +20,12 @@ const SemiFinals = () => {
       <Text>Semi</Text>
       <HStack
         w="100%"
-        divider={<StackDivider borderColor="gray.800" />}
-        bg="gray.100"
+        divider={<StackDivider borderColor="gray.500" />}
         justifyContent="space-evenly"
       >
         <_SingleMatch
+          justify="space-between"
+          margin="10.5%"
           firstTeam={findSemi("A", "B")}
           secondTeam={findSemi("C", "D")}
           onClick={(firstTeam, secondTeam) =>
@@ -38,6 +38,8 @@ const SemiFinals = () => {
           }
         />
         <_SingleMatch
+          justify="space-between"
+          margin="10.5%"
           firstTeam={findSemi("E", "F")}
           secondTeam={findSemi("G", "H")}
           onClick={(firstTeam, secondTeam) =>

@@ -18,10 +18,11 @@ const _Quartas = () => {
       <HStack
         w="100%"
         justifyContent="space-evenly"
-        divider={<StackDivider borderColor="gray.800" />}
-        bg="gray.100"
+        divider={<StackDivider borderColor="gray.400" />}
       >
         <_SingleMatch
+          margin="4.5%"
+          justify="space-between"
           firstTeam={
             findingTeam("A", 0, "quartas", filteredList) ||
             findingTeam("B", 1, "quartas", filteredList)
@@ -35,6 +36,8 @@ const _Quartas = () => {
           }
         />
         <_SingleMatch
+          margin="4.5%"
+          justify="space-between"
           firstTeam={
             findingTeam("C", 0, "quartas", filteredList) ||
             findingTeam("D", 1, "quartas", filteredList)
@@ -49,6 +52,8 @@ const _Quartas = () => {
         />
 
         <_SingleMatch
+          margin="4.5%"
+          justify="space-between"
           firstTeam={
             findingTeam("E", 0, "quartas", filteredList) ||
             findingTeam("F", 1, "quartas", filteredList)
@@ -63,6 +68,8 @@ const _Quartas = () => {
         />
 
         <_SingleMatch
+          margin="4.5%"
+          justify="space-between"
           firstTeam={
             findingTeam("G", 0, "quartas", filteredList) ||
             findingTeam("H", 1, "quartas", filteredList)

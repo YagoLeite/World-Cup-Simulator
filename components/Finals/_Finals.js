@@ -16,8 +16,10 @@ const _Finals = () => {
       alignItems="center"
     >
       <Text>Final</Text>
-      <HStack w="100%" justifyContent="space-evenly" bg="gray.100">
+      <HStack w="100%" justifyContent="space-evenly">
         <_SingleMatch
+          justify="space-between"
+          margin="22.7%"
           firstTeam={findFinal[0]}
           secondTeam={findFinal[1]}
           onClick={(firstTeam, secondTeam) =>

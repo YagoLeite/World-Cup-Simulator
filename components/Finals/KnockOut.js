@@ -12,7 +12,7 @@ const Finals = () => {
   const { dispatch } = CupState();
 
   return (
-    <Box w="100vw" bg="yellow">
+    <Box>
       <Oitavas />
       <_Quartas />
       <SemiFinals />

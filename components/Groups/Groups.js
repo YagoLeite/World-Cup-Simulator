@@ -12,15 +12,17 @@ const Groups = () => {
     setA(true);
   }, []);
   return (
-    <VStack>
-      <Grid
-        // gridTemplateColumns={["repeat(2, 290px)", "repeat(4, 290px)"]}
-        gridTemplateColumns="repeat(4, minmax(290px, 1fr))"
-        gap={3}
-      >
-        {a && groups.map((group) => <GroupTable group={group} />)}
-      </Grid>
-    </VStack>
+    <Grid
+      // gridTemplateColumns={["repeat(2, 290px)", "repeat(4, 290px)"]}
+      gridTemplateColumns={[
+        "repeat(2, minmax(290, 1fr))",
+        "repeat(3, minmax(290, 1fr))",
+        "repeat(4, minmax(290px, 1fr))",
+      ]}
+      gap={3}
+    >
+      {a && groups.map((group) => <GroupTable group={group} />)}
+    </Grid>
   );
 };
 

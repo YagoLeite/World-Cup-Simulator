@@ -48,14 +48,12 @@ const GroupTable = (props) => {
   };
 
   return (
-    <VStack justifyContent="center" h="200px" borderWidth="1px">
+    <VStack justifyContent="center" p="20px">
       <DragDropContext
         onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
       >
         <Box w="100%">
-          <Text textAlign={"center"} bg="blue">
-            {columns[props.group].name}
-          </Text>
+          <Text textAlign={"center"}>{columns[props.group].name}</Text>
 
           <Droppable droppableId={props.group} key={props.group}>
             {(provided, snapshot) => {
@@ -82,12 +80,14 @@ const GroupTable = (props) => {
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
                               userSelect="none"
-                              minxH="50px"
-                              margin="0 0 8px 0"
+                              margin="6px 15px"
+                              borderRadius="4px"
+                              px="5px"
+                              py="2px"
                               bg={
                                 !snapshot.isDragging
                                   ? item.index <= 1
-                                    ? "#00FF00"
+                                    ? "green.50"
                                     : ""
                                   : "yellow.200"
                               }
@@ -103,14 +103,14 @@ const GroupTable = (props) => {
                                   : "4º"}
                               </Text>
                               <Flex
-                                w="20px"
+                                w="45px"
                                 bg="gray.700"
-                                h="20px"
+                                h="45px"
                                 borderRadius="50%"
                                 overflow="hidden"
                               >
                                 <Image
-                                  objectFit="fill"
+                                  objectFit="cover"
                                   src={item.flag ? item.flag : ""}
                                 />
                               </Flex>
