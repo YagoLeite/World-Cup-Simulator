@@ -2,6 +2,7 @@ import React from "react";
 import _SingleMatch from "./_SingleMatch";
 import { CupState } from "../../context/Context";
 import { HStack } from "@chakra-ui/react";
+import { mata_mata_Handler } from "../functions";
 
 const SemiFinals = () => {
   const { state, dispatch } = CupState();
@@ -15,14 +16,14 @@ const SemiFinals = () => {
         firstTeam={findSemi("A", "B")}
         secondTeam={findSemi("C", "D")}
         onClick={(firstTeam, secondTeam) =>
-          quartasHandler(firstTeam, secondTeam, "FINAL-SELECTION")
+          mata_mata_Handler(firstTeam, secondTeam, "FINAL-SELECTION", dispatch)
         }
       />
       <_SingleMatch
         firstTeam={findSemi("E", "F")}
         secondTeam={findSemi("G", "H")}
         onClick={(firstTeam, secondTeam) =>
-          quartasHandler(firstTeam, secondTeam, "FINAL-SELECTION")
+          mata_mata_Handler(firstTeam, secondTeam, "FINAL-SELECTION", dispatch)
         }
       />
     </HStack>

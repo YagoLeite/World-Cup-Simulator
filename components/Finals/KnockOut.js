@@ -5,8 +5,10 @@ import SingleMatch from "./SingleMatch";
 import _Quartas from "./_Quartas";
 import Oitavas from "./Oitavas";
 import SemiFinals from "./SemiFinals";
+import _Finals from "./_Finals";
 
 import { findingTeam, mata_mata_Handler, filteringByIndex } from "../functions";
+import Winner from "./Winner";
 
 const Finals = () => {
   const { state, dispatch } = CupState();
@@ -17,6 +19,8 @@ const Finals = () => {
       <Oitavas />;
       <_Quartas />
       <SemiFinals />
+      <_Finals />
+      <Winner />
     </Box>
   );
 };
