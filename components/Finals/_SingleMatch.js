@@ -3,11 +3,11 @@ import React from "react";
 
 const SingleMatch = (props) => {
   return (
-    <Stack direction="row">
-      <Stack justifyContent="center" alignItems="center">
+    <Stack w="100%" h="100px" justifyContent="space-evenly" direction="row">
+      <Stack pt="20px">
         <Flex
-          w="50px"
-          h="50px"
+          w={["15px", "20px", "30px", "30px", "50px"]}
+          h={["15px", "20px", "30px", "30px", "50px"]}
           overflow="hidden"
           borderRadius="50%"
           bg="gray.500"
@@ -22,10 +22,10 @@ const SingleMatch = (props) => {
           {props.firstTeam?.name.slice(0, 3).toUpperCase()}
         </Text>
       </Stack>
-      <Stack direction="column" justifyContent="center" alignItems="center">
+      <Stack pt="20px">
         <Flex
-          w="50px"
-          h="50px"
+          w={["15px", "20px", "30px", "30px", "50px"]}
+          h={["15px", "20px", "30px", "30px", "50px"]}
           overflow="hidden"
           borderRadius="50%"
           bg="gray.500"

@@ -8,9 +8,19 @@ const Oitavas = () => {
   const { state, dispatch } = CupState();
   const filteredList = filteringByIndex(state.groupState, 1);
   return (
-    <Stack direction="column" justifyContent="center" alignItems="center">
+    <Stack
+      w="100%"
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+    >
       <Text>Oitavas</Text>
-      <HStack bg="gray.100" divider={<StackDivider borderColor="gray.800" />}>
+      <HStack
+        w="100%"
+        justifyContent="space-evenly"
+        bg="gray.100"
+        divider={<StackDivider borderColor="gray.800" />}
+      >
         <_SingleMatch
           firstTeam={findingTeam("A", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("B", 1, "oitavas", filteredList)}

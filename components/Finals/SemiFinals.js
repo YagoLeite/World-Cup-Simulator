@@ -11,9 +11,20 @@ const SemiFinals = () => {
       .filter((item) => item.semi)
       .find((item) => item.group === a || item.group === b);
   return (
-    <Stack direction="column" justifyContent="center" alignItems="center">
+    <Stack
+      w="100%"
+      bg="red"
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+    >
       <Text>Semi</Text>
-      <HStack divider={<StackDivider borderColor="gray.800" />} bg="gray.100">
+      <HStack
+        w="100%"
+        divider={<StackDivider borderColor="gray.800" />}
+        bg="gray.100"
+        justifyContent="space-evenly"
+      >
         <_SingleMatch
           firstTeam={findSemi("A", "B")}
           secondTeam={findSemi("C", "D")}

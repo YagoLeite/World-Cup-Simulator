@@ -9,9 +9,14 @@ const _Finals = () => {
   const findFinal = state.groupState.filter((item) => item.final);
 
   return (
-    <Stack direction="column" justifyContent="center" alignItems="center">
+    <Stack
+      w="100%"
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+    >
       <Text>Final</Text>
-      <HStack bg="gray.100">
+      <HStack w="100%" justifyContent="space-evenly" bg="gray.100">
         <_SingleMatch
           firstTeam={findFinal[0]}
           secondTeam={findFinal[1]}
