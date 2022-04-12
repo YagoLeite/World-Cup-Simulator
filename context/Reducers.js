@@ -30,6 +30,7 @@ export const CupReducer = (state, action) => {
             quartas: false,
             semi: false,
             finals: false,
+            winner: false,
           };
         } else {
           return item;
@@ -39,9 +40,21 @@ export const CupReducer = (state, action) => {
     case "QUARTAS-SELECTION":
       const quartas = state.groupState.map((item) => {
         if (item.name === action.payload.firstTeam.name) {
-          return { ...item, quartas: true, semi: false, final: false };
+          return {
+            ...item,
+            quartas: true,
+            semi: false,
+            final: false,
+            winner: false,
+          };
         } else if (item.name === action.payload.secondTeam.name) {
-          return { ...item, quartas: false, semi: false, final: false };
+          return {
+            ...item,
+            quartas: false,
+            semi: false,
+            final: false,
+            winner: false,
+          };
         } else {
           return item;
         }
@@ -69,6 +82,17 @@ export const CupReducer = (state, action) => {
         }
       });
       return { ...state, groupState: final };
+    case "WINNER-SELECTION":
+      const winner = state.groupState.map((item) => {
+        if (item.name === action.payload.firstTeam.name) {
+          return { ...item, winner: true };
+        } else if (item.name === action.payload.secondTeam.name) {
+          return { ...item, winner: false };
+        } else {
+          return item;
+        }
+      });
+      return { ...state, groupState: winner };
     case "UI-UPDATE":
       return { ...state, ui: action.value };
     default:
