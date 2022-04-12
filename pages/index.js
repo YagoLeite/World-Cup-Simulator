@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Groups from "../components/Groups/Groups";
 import Finals from "../components/Finals/Finals";
+import _Finals from "../components/Finals/_Finals";
 import { Header } from "../components/Header";
 import { Flex } from "@chakra-ui/react";
 import { CupState } from "../context/Context";
@@ -18,7 +19,8 @@ export default function Home() {
         <Header />
       </Flex>
       {state.ui === "groups" && <Groups />}
-      {state.ui === "finals" && <Finals />}
+      {/* {state.ui === "finals" && <Finals />} */}
+      {state.ui === "finals" && <_Finals />}
     </div>
   );
 }

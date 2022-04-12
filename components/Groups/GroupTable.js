@@ -1,4 +1,12 @@
-import { Box, Flex, Text, Button, useToast, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  useToast,
+  VStack,
+  Image,
+  HStack,
+} from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 import { DragDropContext, Droppable, Draggable } from "@react-forked/dnd";
@@ -69,7 +77,7 @@ const GroupTable = (props) => {
                       >
                         {(provided, snapshot) => {
                           return (
-                            <Flex
+                            <HStack
                               ref={provided.innerRef}
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
@@ -94,8 +102,20 @@ const GroupTable = (props) => {
                                   ? "3º"
                                   : "4º"}
                               </Text>
+                              <Flex
+                                w="20px"
+                                bg="red"
+                                h="20px"
+                                borderRadius="50%"
+                                overflow="hidden"
+                              >
+                                <Image
+                                  objectFit="fill"
+                                  src={item.flag ? item.flag : ""}
+                                />
+                              </Flex>
                               <Text>{item.name} </Text>
-                            </Flex>
+                            </HStack>
                           );
                         }}
                       </Draggable>

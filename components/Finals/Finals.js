@@ -3,14 +3,16 @@ import React from "react";
 import { CupState } from "../../context/Context";
 import SingleMatch from "./SingleMatch";
 import Quartas from "./Quartas";
+import { findingTeam, mata_mata_Handler, filteringByIndex } from "../functions";
 
 const Finals = () => {
   const { state, dispatch } = CupState();
-  const filteredList = state.groupState.filter((country) => country.index <= 1);
-  const findingTeam = (group, index, finals) =>
-    filteredList.find(
-      (item) => item.group === group && item.index === index && item[finals]
-    );
+  // const filteredList = state.groupState.filter((country) => country.index <= 1);
+  const filteredList = filteringByIndex(state.groupState, 1);
+  // const findingTeam = (group, index, finals) =>
+  //   filteredList.find(
+  //     (item) => item.group === group && item.index === index && item[finals]
+  //   );
 
   const quartasHandler = (firstTeam, secondTeam, type) => {
     if (!firstTeam || !secondTeam) return;
@@ -46,10 +48,15 @@ const Finals = () => {
               bg: "salmon",
             },
           }}
-          firstTeam={findingTeam("A", 0, "oitavas")}
-          secondTeam={findingTeam("B", 1, "oitavas")}
+          firstTeam={findingTeam("A", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("B", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
           }
         />
 
@@ -72,10 +79,15 @@ const Finals = () => {
               bg: "yellow",
             },
           }}
-          firstTeam={findingTeam("B", 0, "oitavas")}
-          secondTeam={findingTeam("A", 1, "oitavas")}
+          firstTeam={findingTeam("B", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("A", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
           }
         />
 
@@ -98,10 +110,15 @@ const Finals = () => {
               bg: "salmon",
             },
           }}
-          firstTeam={findingTeam("C", 0, "oitavas")}
-          secondTeam={findingTeam("D", 1, "oitavas")}
+          firstTeam={findingTeam("C", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("D", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
           }
         />
 
@@ -124,46 +141,71 @@ const Finals = () => {
               bg: "yellow",
             },
           }}
-          firstTeam={findingTeam("D", 0, "oitavas")}
-          secondTeam={findingTeam("C", 1, "oitavas")}
+          firstTeam={findingTeam("D", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("C", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
           }
         />
 
         <SingleMatch
           config={{ position: "absolute", top: "0", right: "0" }}
-          firstTeam={findingTeam("E", 0, "oitavas")}
-          secondTeam={findingTeam("F", 1, "oitavas")}
+          firstTeam={findingTeam("E", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("F", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
           }
         />
 
         <SingleMatch
           config={{ position: "absolute", top: "150px", right: "0" }}
-          firstTeam={findingTeam("F", 0, "oitavas")}
-          secondTeam={findingTeam("E", 1, "oitavas")}
+          firstTeam={findingTeam("F", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("E", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
           }
         />
 
         <SingleMatch
           config={{ position: "absolute", bottom: "150px", right: "0" }}
-          firstTeam={findingTeam("G", 0, "oitavas")}
-          secondTeam={findingTeam("H", 1, "oitavas")}
+          firstTeam={findingTeam("G", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("H", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
           }
         />
 
         <SingleMatch
           config={{ position: "absolute", bottom: "0", right: "0" }}
-          firstTeam={findingTeam("H", 0, "oitavas")}
-          secondTeam={findingTeam("G", 1, "oitavas")}
+          firstTeam={findingTeam("H", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("G", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
-            quartasHandler(firstTeam, secondTeam, "QUARTAS-SELECTION")
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
           }
         />
 
