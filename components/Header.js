@@ -1,13 +1,10 @@
 import { HStack } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import MyButton from "./MyButton";
 import { CupState } from "../context/Context";
 
 export const Header = () => {
   const { dispatch } = CupState();
-  // const [ui, setUI] = useState("groups");
-  // const uiHandler = (key) => setUI(key);
-  // console.log(ui);
   return (
     <HStack>
       {[
@@ -26,7 +23,6 @@ export const Header = () => {
           </MyButton>
         );
       })}
-      <MyButton color1={"#0BFA1B"} color2={"green.200"} color3={"green.300"} />
     </HStack>
   );
 };

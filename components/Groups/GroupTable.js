@@ -2,6 +2,7 @@ import { Box, Flex, Text, Button, useToast, VStack } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 import { DragDropContext, Droppable, Draggable } from "@react-forked/dnd";
+import MyButton from "../MyButton";
 
 const onDragEnd = (result, columns, dispatch) => {
   if (!result.destination) return;
@@ -44,7 +45,9 @@ const GroupTable = (props) => {
         onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
       >
         <Box w="100%">
-          <Text bg="blue">{columns[props.group].name}</Text>
+          <Text textAlign={"center"} bg="blue">
+            {columns[props.group].name}
+          </Text>
 
           <Droppable droppableId={props.group} key={props.group}>
             {(provided, snapshot) => {
@@ -105,9 +108,14 @@ const GroupTable = (props) => {
           </Droppable>
         </Box>
       </DragDropContext>
-      <Button w="100%" onClick={oitavasHandler}>
+      <MyButton
+        color1={"#0BFA1B"}
+        color2={"green.200"}
+        color3={"green.300"}
+        onClick={oitavasHandler}
+      >
         Confirm
-      </Button>
+      </MyButton>
     </VStack>
   );
 };

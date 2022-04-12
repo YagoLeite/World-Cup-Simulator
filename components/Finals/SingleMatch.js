@@ -7,13 +7,15 @@ const SingleMatch = (props) => {
       <Text
         cursor="pointer"
         onClick={() => props.onClick(props.firstTeam, props.secondTeam)}
+        {...props.config.firstTeam}
       >
         {props.firstTeam?.name}
       </Text>
-      X
+
       <Text
         cursor="pointer"
         onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
+        {...props.config.secondTeam}
       >
         {props.secondTeam?.name}
       </Text>

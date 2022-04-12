@@ -26,11 +26,26 @@ const Finals = () => {
 
   return (
     <VStack>
-      <Box w="800px" bg="red" h="600px" position="relative">
-        {/* <Heading>Oitavas</Heading> */}
-
+      <Box w="100vw" bg="red" h="600px" position="relative">
         <SingleMatch
-          config={{ position: "absolute", top: "0", left: "0" }}
+          config={{
+            firstTeam: {
+              position: "absolute",
+              top: "0",
+              left: "0",
+              h: "10%",
+              w: "100px",
+              bg: "green",
+            },
+            secondTeam: {
+              position: "absolute",
+              top: "10%",
+              left: "0",
+              h: "10%",
+              w: "100px",
+              bg: "salmon",
+            },
+          }}
           firstTeam={findingTeam("A", 0, "oitavas")}
           secondTeam={findingTeam("B", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -39,7 +54,24 @@ const Finals = () => {
         />
 
         <SingleMatch
-          config={{ position: "absolute", top: "150px", left: "0" }}
+          config={{
+            firstTeam: {
+              position: "absolute",
+              top: "20%",
+              left: "0",
+              h: "10%",
+              w: "100px",
+              bg: "blue",
+            },
+            secondTeam: {
+              position: "absolute",
+              top: "30%",
+              left: "0",
+              h: "10%",
+              w: "100px",
+              bg: "yellow",
+            },
+          }}
           firstTeam={findingTeam("B", 0, "oitavas")}
           secondTeam={findingTeam("A", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -48,7 +80,24 @@ const Finals = () => {
         />
 
         <SingleMatch
-          config={{ position: "absolute", bottom: "150px", left: "0" }}
+          config={{
+            firstTeam: {
+              position: "absolute",
+              top: " 50.5%",
+              left: "0",
+              h: "10%",
+              w: "100px",
+              bg: "green",
+            },
+            secondTeam: {
+              position: "absolute",
+              top: "90%",
+              left: "0",
+              h: "10%",
+              w: "100px",
+              bg: "salmon",
+            },
+          }}
           firstTeam={findingTeam("C", 0, "oitavas")}
           secondTeam={findingTeam("D", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -57,7 +106,24 @@ const Finals = () => {
         />
 
         <SingleMatch
-          config={{ position: "absolute", bottom: "0", left: "0" }}
+          config={{
+            firstTeam: {
+              position: "absolute",
+              top: " 60.5%",
+              left: "0",
+              h: "10%",
+              w: "100px",
+              bg: "blue",
+            },
+            secondTeam: {
+              position: "absolute",
+              top: "80%",
+              left: "0",
+              h: "10%",
+              w: "100px",
+              bg: "yellow",
+            },
+          }}
           firstTeam={findingTeam("D", 0, "oitavas")}
           secondTeam={findingTeam("C", 1, "oitavas")}
           onClick={(firstTeam, secondTeam) =>
@@ -178,6 +244,7 @@ const Finals = () => {
           }
         />
       </Flex> */}
+      <Box position="absolute" w="100%" bg="blue" h="10%" top="42.5%"></Box>
     </VStack>
   );
 };

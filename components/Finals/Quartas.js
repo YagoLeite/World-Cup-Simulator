@@ -1,15 +1,19 @@
-import { Box, ChakraProvider } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 import SingleMatch from "./SingleMatch";
 
-const Quartas = (props) => {
+const Quartas = () => {
   const { state, dispatch } = CupState();
   const filteredList = state.groupState.filter((country) => country.index <= 1);
   const findingTeam = (group, index, finals) =>
     filteredList.find(
       (item) => item.group === group && item.index === index && item[finals]
     );
+  const quartasHandler = (firstTeam, secondTeam, type) => {
+    if (!firstTeam || !secondTeam) return;
+    dispatch({ type, payload: { firstTeam, secondTeam } });
+  };
   return (
     <Box>
       <SingleMatch
