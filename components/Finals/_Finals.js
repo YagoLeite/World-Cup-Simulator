@@ -7,6 +7,7 @@ import { mata_mata_Handler } from "../functions";
 const _Finals = () => {
   const { state, dispatch } = CupState();
   const findFinal = state.groupState.filter((item) => item.final);
+
   return (
     <Stack direction="column" justifyContent="center" alignItems="center">
       <Text>Final</Text>
@@ -22,7 +23,6 @@ const _Finals = () => {
               dispatch
             )
           }
-          // onClick={() => console.log("oi")}
         />
       </HStack>
     </Stack>

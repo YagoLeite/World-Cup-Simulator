@@ -14,6 +14,7 @@ export const CupReducer = (state, action) => {
             quartas: false,
             semi: false,
             final: false,
+            winner: false,
           };
         } else {
           return item;

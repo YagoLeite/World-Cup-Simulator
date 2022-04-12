@@ -3,13 +3,14 @@ import React from "react";
 
 const SingleMatch = (props) => {
   return (
-    <Stack direction="row">
-      <Stack
-        borderLeft="1px"
-        borderRight="1px"
-        justifyContent="center"
-        alignItems="center"
-      >
+    <Stack
+      direction="row"
+      borderLeft="1px"
+      borderRight="1px"
+      justifyContent="space-between"
+      w="100%"
+    >
+      <Stack justifyContent="center" alignItems="center">
         <Flex
           w="50px"
           h="50px"

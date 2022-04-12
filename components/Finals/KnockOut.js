@@ -9,6 +9,7 @@ import _Finals from "./_Finals";
 
 import { findingTeam, mata_mata_Handler, filteringByIndex } from "../functions";
 import Winner from "./Winner";
+import MyButton from "../MyButton";
 
 const Finals = () => {
   const { state, dispatch } = CupState();
@@ -21,6 +22,15 @@ const Finals = () => {
       <SemiFinals />
       <_Finals />
       <Winner />
+      <MyButton
+        color1={"#0BFA1B"}
+        color2={"green.200"}
+        color3={"green.300"}
+        onClick={() => dispatch({ type: "CLEAR" })}
+      >
+        {" "}
+        Clear{" "}
+      </MyButton>
     </Box>
   );
 };

@@ -16,9 +16,11 @@ export default function Home() {
         value: JSON.parse(localStorage.getItem("state")),
       });
   }, []);
+
   useEffect(() => {
     localStorage.setItem("state", JSON.stringify(state));
   }, [state]);
+
   return (
     <div>
       <Head>

@@ -8,6 +8,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Ecuador",
@@ -18,6 +19,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Senegal",
@@ -28,6 +30,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Netherlands",
@@ -38,6 +41,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "England",
@@ -48,6 +52,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Iran",
@@ -58,6 +63,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "USA",
@@ -68,6 +74,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "To de decided 1",
@@ -77,6 +84,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Argentina",
@@ -87,6 +95,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Saudi Arabia",
@@ -97,6 +106,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Mexico",
@@ -107,6 +117,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Poland",
@@ -117,6 +128,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "France",
@@ -127,6 +139,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "To be decided 2",
@@ -136,6 +149,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Denmark",
@@ -146,6 +160,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Tunisia",
@@ -156,6 +171,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Spain",
@@ -166,6 +182,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "To be decided 3",
@@ -175,6 +192,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Germany",
@@ -185,6 +203,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Japan",
@@ -195,6 +214,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Belgium",
@@ -205,6 +225,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Canada",
@@ -215,6 +236,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Marroco",
@@ -225,6 +247,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Croatia",
@@ -235,6 +258,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Brazil",
@@ -245,6 +269,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Serbia",
@@ -255,6 +280,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Switzerland",
@@ -265,6 +291,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Cameroon",
@@ -275,6 +302,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Portugal",
@@ -285,6 +313,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Ghana",
@@ -295,6 +324,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "Uruguay",
@@ -305,6 +335,7 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
   {
     name: "South Korea",
@@ -315,5 +346,6 @@ export const initialState = [
     quartas: false,
     semi: false,
     final: false,
+    winner: false,
   },
 ];
