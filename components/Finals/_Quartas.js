@@ -8,7 +8,7 @@ const _Quartas = () => {
   const { state, dispatch } = CupState();
   const filteredList = filteringByIndex(state.groupState, 1);
   return (
-    <Stack direction="column" justifyContent="center" alignItem="center">
+    <Stack direction="column" justifyContent="center" alignItems="center">
       <Text>Quartas</Text>
       <HStack bg="gray.100">
         <_SingleMatch

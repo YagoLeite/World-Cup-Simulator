@@ -15,7 +15,7 @@ const Finals = () => {
   const filteredList = filteringByIndex(state.groupState, 1);
 
   return (
-    <Box>
+    <Box bg="yellow">
       <Oitavas />;
       <_Quartas />
       <SemiFinals />
