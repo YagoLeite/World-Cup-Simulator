@@ -1,3 +1,4 @@
+import { initialState } from "../components/initialState";
 export const CupReducer = (state, action) => {
   switch (action.type) {
     case "SCORE-UPDATE":
@@ -95,6 +96,14 @@ export const CupReducer = (state, action) => {
       return { ...state, groupState: winner };
     case "UI-UPDATE":
       return { ...state, ui: action.value };
+    case "LOADING":
+      return action.value;
+    case "CLEAR":
+      return {
+        group: "A",
+        groupState: initialState,
+        ui: "groups",
+      };
     default:
       return state;
   }

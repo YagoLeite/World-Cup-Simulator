@@ -5,9 +5,20 @@ import KnockOut from "../components/Finals/KnockOut";
 import { Header } from "../components/Header";
 import { Flex } from "@chakra-ui/react";
 import { CupState } from "../context/Context";
+import { useEffect } from "react";
 
 export default function Home() {
-  const { state } = CupState();
+  const { state, dispatch } = CupState();
+  useEffect(() => {
+    if (localStorage.getItem("state"))
+      dispatch({
+        type: "LOADING",
+        value: JSON.parse(localStorage.getItem("state")),
+      });
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("state", JSON.stringify(state));
+  }, [state]);
   return (
     <div>
       <Head>
