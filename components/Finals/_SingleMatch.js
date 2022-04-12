@@ -3,13 +3,7 @@ import React from "react";
 
 const SingleMatch = (props) => {
   return (
-    <Stack
-      direction="row"
-      borderLeft="1px"
-      borderRight="1px"
-      justifyContent="space-between"
-      w="100%"
-    >
+    <Stack direction="row">
       <Stack justifyContent="center" alignItems="center">
         <Flex
           w="50px"

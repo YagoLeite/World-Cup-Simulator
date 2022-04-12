@@ -1,4 +1,4 @@
-import { HStack, Stack, Text } from "@chakra-ui/react";
+import { HStack, Stack, Text, StackDivider } from "@chakra-ui/react";
 import React from "react";
 import _SingleMatch from "./_SingleMatch";
 import { findingTeam, mata_mata_Handler, filteringByIndex } from "../functions";
@@ -10,7 +10,7 @@ const _Quartas = () => {
   return (
     <Stack direction="column" justifyContent="center" alignItems="center">
       <Text>Quartas</Text>
-      <HStack bg="gray.100">
+      <HStack divider={<StackDivider borderColor="gray.800" />} bg="gray.100">
         <_SingleMatch
           firstTeam={
             findingTeam("A", 0, "quartas", filteredList) ||

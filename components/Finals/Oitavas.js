@@ -2,7 +2,7 @@ import React from "react";
 import { findingTeam, mata_mata_Handler, filteringByIndex } from "../functions";
 import _SingleMatch from "./_SingleMatch";
 import { CupState } from "../../context/Context";
-import { Flex, HStack, Stack, Text } from "@chakra-ui/react";
+import { Flex, HStack, Stack, Text, StackDivider } from "@chakra-ui/react";
 
 const Oitavas = () => {
   const { state, dispatch } = CupState();
@@ -10,7 +10,7 @@ const Oitavas = () => {
   return (
     <Stack direction="column" justifyContent="center" alignItems="center">
       <Text>Oitavas</Text>
-      <HStack bg="gray.100">
+      <HStack bg="gray.100" divider={<StackDivider borderColor="gray.800" />}>
         <_SingleMatch
           firstTeam={findingTeam("A", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("B", 1, "oitavas", filteredList)}

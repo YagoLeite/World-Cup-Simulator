@@ -104,7 +104,7 @@ const GroupTable = (props) => {
                               </Text>
                               <Flex
                                 w="20px"
-                                bg="red"
+                                bg="gray.700"
                                 h="20px"
                                 borderRadius="50%"
                                 overflow="hidden"

@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, HStack, StackDivider } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 import SingleMatch from "./SingleMatch";
@@ -15,7 +15,7 @@ const Quartas = () => {
     dispatch({ type, payload: { firstTeam, secondTeam } });
   };
   return (
-    <Box>
+    <HStack divider={<StackDivider borderColor="gray.800" />}>
       <SingleMatch
         config={{ position: "absolute", top: "75px", left: "200px" }}
         firstTeam={
@@ -65,7 +65,7 @@ const Quartas = () => {
           quartasHandler(firstTeam, secondTeam, "SEMI-SELECTION")
         }
       />
-    </Box>
+    </HStack>
   );
 };
 

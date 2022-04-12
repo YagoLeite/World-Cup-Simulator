@@ -1,7 +1,7 @@
 import React from "react";
 import _SingleMatch from "./_SingleMatch";
 import { CupState } from "../../context/Context";
-import { HStack, Stack, Text } from "@chakra-ui/react";
+import { HStack, Stack, StackDivider, Text } from "@chakra-ui/react";
 import { mata_mata_Handler } from "../functions";
 
 const SemiFinals = () => {
@@ -13,7 +13,7 @@ const SemiFinals = () => {
   return (
     <Stack direction="column" justifyContent="center" alignItems="center">
       <Text>Semi</Text>
-      <HStack bg="gray.100">
+      <HStack divider={<StackDivider borderColor="gray.800" />} bg="gray.100">
         <_SingleMatch
           firstTeam={findSemi("A", "B")}
           secondTeam={findSemi("C", "D")}
