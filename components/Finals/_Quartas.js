@@ -22,7 +22,7 @@ const _Quartas = () => {
       >
         <_SingleMatch
           position="semi"
-          margin="4.5%"
+          margin="4.1%"
           justify="space-between"
           firstTeam={
             findingTeam("A", 0, "quartas", filteredList) ||
@@ -38,7 +38,7 @@ const _Quartas = () => {
         />
         <_SingleMatch
           position="semi"
-          margin="4.5%"
+          margin="4.1%"
           justify="space-between"
           firstTeam={
             findingTeam("C", 0, "quartas", filteredList) ||
@@ -55,7 +55,7 @@ const _Quartas = () => {
 
         <_SingleMatch
           position="semi"
-          margin="4.5%"
+          margin="4.1%"
           justify="space-between"
           firstTeam={
             findingTeam("E", 0, "quartas", filteredList) ||
@@ -72,7 +72,7 @@ const _Quartas = () => {
 
         <_SingleMatch
           position="semi"
-          margin="4.5%"
+          margin="4.1%"
           justify="space-between"
           firstTeam={
             findingTeam("G", 0, "quartas", filteredList) ||
