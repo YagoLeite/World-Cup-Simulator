@@ -20,7 +20,7 @@ const Finals = () => {
   return (
     <Box>
       {test === "solid" && (
-        <Box bg="yellow" px="1%">
+        <Box px="1%">
           <Oitavas />
           <_Quartas />
           <SemiFinals />
