@@ -21,7 +21,8 @@ const Groups = () => {
       ]}
       gap={3}
     >
-      {a && groups.map((group) => <GroupTable group={group} />)}
+      {a &&
+        groups.map((group, index) => <GroupTable key={index} group={group} />)}
     </Grid>
   );
 };

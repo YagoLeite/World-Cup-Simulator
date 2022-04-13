@@ -15,7 +15,7 @@ const MyButton = (props) => {
       }}
       transition="background 0.8s"
       backgroundPosition="center"
-      key={props.key ? props.key : null}
+      // key={props.key ? props.key : null}
       onClick={props.onClick}
       _hover={{
         bgColor: props.color2,
