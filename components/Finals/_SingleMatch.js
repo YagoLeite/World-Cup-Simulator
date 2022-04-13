@@ -1,7 +1,14 @@
-import { Box, Flex, Image, Text, Stack } from "@chakra-ui/react";
+import { Flex, Image, Text, Stack } from "@chakra-ui/react";
 import React from "react";
 
 const SingleMatch = (props) => {
+  if (props.firstTeam && props.secondTeam) {
+    const opacityTwo =
+      props.firstTeam[props.position] && !props.secondTeam[props.position];
+    const opacityOne =
+      props.secondTeam[props.position] && !props.firstTeam[props.position];
+  }
+
   return (
     <Stack
       w="100%"
@@ -10,20 +17,7 @@ const SingleMatch = (props) => {
       direction="row"
       marginX={props.margin}
     >
-      <Stack pt="20px">
-        {/* <Flex
-          w={["15px", "20px", "30px", "50px"]}
-          h={["15px", "20px", "30px", "50px"]}
-          overflow="hidden"
-          cursor="pointer"
-          borderRadius="50%"
-          bg="gray.500"
-          onClick={() => props.onClick(props.firstTeam, props.secondTeam)}
-        >
-          {props.firstTeam && (
-            <Image boxShadow="lg" objectFit="fill" src={props.firstTeam.flag} />
-          )}
-        </Flex> */}
+      <Stack pt="20px" opacity={opacityOne ? "0.5" : "1"}>
         {props.firstTeam ? (
           <Flex
             w={["15px", "20px", "30px", "50px"]}
@@ -35,7 +29,11 @@ const SingleMatch = (props) => {
             bg="gray.500"
             onClick={() => props.onClick(props.firstTeam, props.secondTeam)}
           >
-            <Image boxShadow="lg" src={props.firstTeam.flag} />
+            <Image
+              objectFit="cover"
+              boxShadow="lg"
+              src={props.firstTeam.flag}
+            />
           </Flex>
         ) : (
           <Flex
@@ -58,20 +56,7 @@ const SingleMatch = (props) => {
           {props.firstTeam?.name.slice(0, 3).toUpperCase()}
         </Text>
       </Stack>
-      <Stack pt="20px">
-        {/* <Flex
-          w={["15px", "20px", "30px", "50px"]}
-          h={["15px", "20px", "30px", "50px"]}
-          overflow="hidden"
-          cursor="pointer"
-          borderRadius="50%"
-          bg="gray.500"
-          onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
-        >
-          {props.secondTeam && (
-            <Image boxShadow="lg" src={props.secondTeam.flag} />
-          )}
-        </Flex> */}
+      <Stack pt="20px" opacity={opacityTwo ? "0.5" : "1"}>
         {props.secondTeam ? (
           <Flex
             w={["15px", "20px", "30px", "50px"]}
@@ -83,7 +68,11 @@ const SingleMatch = (props) => {
             bg="gray.500"
             onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
           >
-            <Image boxShadow="lg" src={props.secondTeam.flag} />
+            <Image
+              objectFit="cover"
+              boxShadow="lg"
+              src={props.secondTeam.flag}
+            />
           </Flex>
         ) : (
           <Flex

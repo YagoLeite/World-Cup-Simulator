@@ -24,6 +24,7 @@ const SemiFinals = () => {
         justifyContent="space-evenly"
       >
         <_SingleMatch
+          position="final"
           justify="space-between"
           margin="10.5%"
           firstTeam={findSemi("A", "B")}
@@ -38,6 +39,7 @@ const SemiFinals = () => {
           }
         />
         <_SingleMatch
+          position="final"
           justify="space-between"
           margin="10.5%"
           firstTeam={findSemi("E", "F")}

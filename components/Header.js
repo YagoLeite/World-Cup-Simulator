@@ -13,8 +13,8 @@ export const Header = () => {
       ].map((item, key) => {
         return (
           <MyButton
-            color1={"#0BFA1B"}
-            color2={"green.200"}
+            color1={"green.50"}
+            color2={"#0BFA1B"}
             color3={"green.300"}
             key={key}
             onClick={() => dispatch({ type: "UI-UPDATE", value: item.ui })}

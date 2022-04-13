@@ -21,6 +21,7 @@ const _Quartas = () => {
         divider={<StackDivider borderColor="gray.400" />}
       >
         <_SingleMatch
+          position="semi"
           margin="4.5%"
           justify="space-between"
           firstTeam={
@@ -36,6 +37,7 @@ const _Quartas = () => {
           }
         />
         <_SingleMatch
+          position="semi"
           margin="4.5%"
           justify="space-between"
           firstTeam={
@@ -52,6 +54,7 @@ const _Quartas = () => {
         />
 
         <_SingleMatch
+          position="semi"
           margin="4.5%"
           justify="space-between"
           firstTeam={
@@ -68,6 +71,7 @@ const _Quartas = () => {
         />
 
         <_SingleMatch
+          position="semi"
           margin="4.5%"
           justify="space-between"
           firstTeam={

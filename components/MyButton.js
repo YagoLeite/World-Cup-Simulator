@@ -5,7 +5,7 @@ const MyButton = (props) => {
   return (
     <Button
       bgColor={props.color1}
-      color="white"
+      color="green.700"
       fontWeight="medium"
       rounded="md"
       shadow="base"

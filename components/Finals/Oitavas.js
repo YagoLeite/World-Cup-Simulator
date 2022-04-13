@@ -21,6 +21,7 @@ const Oitavas = () => {
         divider={<StackDivider borderColor="gray.500" />}
       >
         <_SingleMatch
+          position="quartas"
           justify="space-evenly"
           firstTeam={findingTeam("A", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("B", 1, "oitavas", filteredList)}
@@ -34,6 +35,7 @@ const Oitavas = () => {
           }
         />
         <_SingleMatch
+          position="quartas"
           justify="space-evenly"
           firstTeam={findingTeam("B", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("A", 1, "oitavas", filteredList)}
@@ -47,6 +49,7 @@ const Oitavas = () => {
           }
         />
         <_SingleMatch
+          position="quartas"
           justify="space-evenly"
           firstTeam={findingTeam("C", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("D", 1, "oitavas", filteredList)}
@@ -60,6 +63,7 @@ const Oitavas = () => {
           }
         />
         <_SingleMatch
+          position="quartas"
           justify="space-evenly"
           firstTeam={findingTeam("D", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("C", 1, "oitavas", filteredList)}
@@ -73,6 +77,7 @@ const Oitavas = () => {
           }
         />
         <_SingleMatch
+          position="quartas"
           justify="space-evenly"
           firstTeam={findingTeam("E", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("F", 1, "oitavas", filteredList)}
@@ -86,6 +91,7 @@ const Oitavas = () => {
           }
         />
         <_SingleMatch
+          position="quartas"
           justify="space-evenly"
           firstTeam={findingTeam("F", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("E", 1, "oitavas", filteredList)}
@@ -99,6 +105,7 @@ const Oitavas = () => {
           }
         />
         <_SingleMatch
+          position="quartas"
           justify="space-evenly"
           firstTeam={findingTeam("G", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("H", 1, "oitavas", filteredList)}
@@ -112,6 +119,7 @@ const Oitavas = () => {
           }
         />
         <_SingleMatch
+          position="quartas"
           justify="space-evenly"
           firstTeam={findingTeam("H", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("G", 1, "oitavas", filteredList)}
