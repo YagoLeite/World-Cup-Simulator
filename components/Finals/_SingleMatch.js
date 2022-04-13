@@ -20,8 +20,8 @@ const SingleMatch = (props) => {
       <Stack pt="20px" opacity={opacityOne ? "0.5" : "1"}>
         {props.firstTeam ? (
           <Flex
-            w={["15px", "20px", "30px", "50px"]}
-            h={["15px", "20px", "30px", "50px"]}
+            w={["15px", "25px", "30px", "50px"]}
+            h={["15px", "25px", "30px", "50px"]}
             overflow="hidden"
             cursor="pointer"
             borderRadius="50%"
@@ -37,8 +37,8 @@ const SingleMatch = (props) => {
           </Flex>
         ) : (
           <Flex
-            w={["15px", "20px", "30px", "50px"]}
-            h={["15px", "20px", "30px", "50px"]}
+            w={["15px", "25px", "30px", "50px"]}
+            h={["15px", "25px", "30px", "50px"]}
             overflow="hidden"
             cursor="pointer"
             borderRadius="50%"
@@ -59,8 +59,8 @@ const SingleMatch = (props) => {
       <Stack pt="20px" opacity={opacityTwo ? "0.5" : "1"}>
         {props.secondTeam ? (
           <Flex
-            w={["15px", "20px", "30px", "50px"]}
-            h={["15px", "20px", "30px", "50px"]}
+            w={["15px", "25px", "30px", "50px"]}
+            h={["15px", "25px", "30px", "50px"]}
             overflow="hidden"
             cursor="pointer"
             borderRadius="50%"
@@ -76,8 +76,8 @@ const SingleMatch = (props) => {
           </Flex>
         ) : (
           <Flex
-            w={["15px", "20px", "30px", "50px"]}
-            h={["15px", "20px", "30px", "50px"]}
+            w={["15px", "25px", "30px", "50px"]}
+            h={["15px", "25px", "30px", "50px"]}
             overflow="hidden"
             cursor="pointer"
             borderRadius="50%"

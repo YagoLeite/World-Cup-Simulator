@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Groups from "../components/Groups/Groups";
-import Finals from "../components/Finals/Finals";
 import KnockOut from "../components/Finals/KnockOut";
 import { Header } from "../components/Header";
 import { Flex, Box } from "@chakra-ui/react";
@@ -32,7 +31,6 @@ export default function Home() {
       <Header />
 
       {state.ui === "groups" && <Groups />}
-      {/* {state.ui === "finals" && <Finals />} */}
       {state.ui === "finals" && <KnockOut />}
     </Box>
   );
