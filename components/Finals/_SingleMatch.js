@@ -28,6 +28,7 @@ const SingleMatch = (props) => {
             boxShadow="lg"
             bg="gray.500"
             onClick={() => props.onClick(props.firstTeam, props.secondTeam)}
+            className="fade-in"
           >
             <Image
               objectFit="cover"
@@ -66,6 +67,7 @@ const SingleMatch = (props) => {
             borderRadius="50%"
             boxShadow="lg"
             bg="gray.500"
+            className="fade-in"
             onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
           >
             <Image
