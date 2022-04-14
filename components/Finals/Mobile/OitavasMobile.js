@@ -1,6 +1,6 @@
 import React from "react";
 import SingleMatchMobile from "./SingleMatchMobile";
-import { Stack, Text, StackDivider } from "@chakra-ui/react";
+import { Stack, Text, StackDivider, Button, Flex } from "@chakra-ui/react";
 import {
   findingTeam,
   mata_mata_Handler,
@@ -8,7 +8,7 @@ import {
 } from "../../functions";
 import { CupState } from "../../../context/Context";
 
-const OitavasMobile = () => {
+const OitavasMobile = (props) => {
   const { state, dispatch } = CupState();
   const filteredList = filteringByIndex(state.groupState, 1);
   return (
@@ -18,7 +18,10 @@ const OitavasMobile = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Text>Oitavas</Text>
+      <Flex>
+        <Text>Oitavas</Text>
+        <Button onClick={() => props.onNext("quartas")}>Quartas</Button>
+      </Flex>
       <Stack
         direction="column"
         w="100%"
