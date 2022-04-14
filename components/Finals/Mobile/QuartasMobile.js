@@ -1,4 +1,5 @@
 import { Flex, Stack, Text, StackDivider, Button } from "@chakra-ui/react";
+import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import React from "react";
 import SingleMatchMobile from "./SingleMatchMobile";
 import {
@@ -17,17 +18,34 @@ const QuartasMobile = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
+      px="3%"
     >
-      <Flex justifyContent="space-around">
-        <Button onClick={() => props.onNext("oitavas")}>Oitavas</Button>
+      <Flex justifyContent="space-between" w="100%">
+        <Flex
+          onClick={() => props.onNext("oitavas")}
+          alignItems="center"
+          gap={1.5}
+        >
+          <ArrowLeftIcon color="gray.600" />
+          <p>Oitavas</p>
+        </Flex>
         <Text>Quartas</Text>
-        <Button onClick={() => props.onNext("semi")}>Semi-Finals</Button>
+        <Flex
+          onClick={() => props.onNext("semi")}
+          alignItems="center"
+          gap={1.5}
+        >
+          <p>Semi</p>
+          <ArrowRightIcon color="gray.600" />
+        </Flex>
       </Flex>
       <Stack
         direction="column"
         w="100%"
         justifyContent="space-around"
-        divider={<StackDivider borderColor="gray.500" />}
+        divider={
+          <StackDivider alignSelf="center" w="80%" borderColor="gray.500" />
+        }
       >
         <SingleMatchMobile
           position="semi"

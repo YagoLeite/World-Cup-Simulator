@@ -1,5 +1,6 @@
 import React from "react";
 import SingleMatchMobile from "./SingleMatchMobile";
+import { ArrowRightIcon } from "@chakra-ui/icons";
 import { Stack, Text, StackDivider, Button, Flex } from "@chakra-ui/react";
 import {
   findingTeam,
@@ -17,16 +18,31 @@ const OitavasMobile = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
+      px="3%"
     >
-      <Flex>
-        <Text>Oitavas</Text>
-        <Button onClick={() => props.onNext("quartas")}>Quartas</Button>
+      <Flex w="100%" position="relative">
+        <Text left="47%" position="absolute">
+          Oitavas
+        </Text>
+        <Flex
+          right="0"
+          position="absolute"
+          onClick={() => props.onNext("quartas")}
+          alignItems="center"
+          gap={1.5}
+        >
+          <p>Semi</p>
+          <ArrowRightIcon color="gray.600" />
+        </Flex>
       </Flex>
       <Stack
         direction="column"
         w="100%"
-        justifyContent="space-around"
-        divider={<StackDivider borderColor="gray.500" />}
+        alignItems="center"
+        justifyContent="center"
+        divider={
+          <StackDivider alignSelf="center" w="80%" borderColor="gray.500" />
+        }
       >
         <SingleMatchMobile
           position="quartas"

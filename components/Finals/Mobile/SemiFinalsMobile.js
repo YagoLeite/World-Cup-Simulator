@@ -1,6 +1,7 @@
 import React from "react";
 import SingleMatchMobile from "./SingleMatchMobile";
 import { Stack, Text, StackDivider, Button, Flex } from "@chakra-ui/react";
+import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import { mata_mata_Handler } from "../../functions";
 import { CupState } from "../../../context/Context";
 
@@ -16,13 +17,33 @@ const SemiFinalsMobile = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
+      px="3%"
     >
-      <Flex>
-        <Button onClick={() => props.onNext("quartas")}>Quartas</Button>
+      <Flex w="100%" justifyContent="space-between">
+        <Flex
+          onClick={() => props.onNext("quartas")}
+          alignItems="center"
+          gap={1.5}
+        >
+          <ArrowLeftIcon color="gray.600" />
+          <p>Quartas</p>
+        </Flex>
         <Text>Semi</Text>
-        <Button onClick={() => props.onNext("final")}>Final</Button>
+        <Flex
+          onClick={() => props.onNext("final")}
+          alignItems="center"
+          gap={1.5}
+        >
+          <p>Final</p>
+          <ArrowRightIcon color="gray.600" />
+        </Flex>
       </Flex>
-      <Stack w="100%" divider={<StackDivider borderColor="gray.500" />}>
+      <Stack
+        w="100%"
+        divider={
+          <StackDivider alignSelf="center" w="80%" borderColor="gray.500" />
+        }
+      >
         <SingleMatchMobile
           position="final"
           justify="space-around"

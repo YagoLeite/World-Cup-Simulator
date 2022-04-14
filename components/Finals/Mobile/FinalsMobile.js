@@ -3,6 +3,7 @@ import SingleMatchMobile from "./SingleMatchMobile";
 import { Flex, Stack, Text, Button } from "@chakra-ui/react";
 import { mata_mata_Handler } from "../../functions";
 import { CupState } from "../../../context/Context";
+import { ArrowLeftIcon } from "@chakra-ui/icons";
 
 const FinalsMobile = (props) => {
   const { state, dispatch } = CupState();
@@ -28,10 +29,22 @@ const FinalsMobile = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
+      px="3%"
     >
-      <Flex>
-        <Button onClick={() => props.onNext("semi")}>Semi-Finals</Button>
-        <Text>Final</Text>
+      <Flex w="100%" position="relative">
+        <Text right="47%" position="absolute">
+          Finals
+        </Text>
+        <Flex
+          left="0"
+          position="absolute"
+          onClick={() => props.onNext("semi")}
+          alignItems="center"
+          gap={1.5}
+        >
+          <ArrowLeftIcon color="gray.600" />
+          <p>Semi</p>
+        </Flex>
       </Flex>
       <Stack w="100%">
         <SingleMatchMobile
