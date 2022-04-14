@@ -20,7 +20,7 @@ const OitavasMobile = (props) => {
       alignItems="center"
       px="3%"
     >
-      <Flex w="100%" position="relative">
+      <Flex w="100%" position="relative" cursor="pointer">
         <Text left="47%" position="absolute">
           Oitavas
         </Text>

@@ -21,6 +21,7 @@ const SemiFinalsMobile = (props) => {
     >
       <Flex w="100%" justifyContent="space-between">
         <Flex
+          cursor="pointer"
           onClick={() => props.onNext("quartas")}
           alignItems="center"
           gap={1.5}
@@ -30,6 +31,7 @@ const SemiFinalsMobile = (props) => {
         </Flex>
         <Text>Semi</Text>
         <Flex
+          cursor="pointer"
           onClick={() => props.onNext("final")}
           alignItems="center"
           gap={1.5}

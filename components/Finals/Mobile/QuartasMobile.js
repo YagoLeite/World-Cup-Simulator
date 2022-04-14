@@ -25,12 +25,14 @@ const QuartasMobile = (props) => {
           onClick={() => props.onNext("oitavas")}
           alignItems="center"
           gap={1.5}
+          cursor="pointer"
         >
           <ArrowLeftIcon color="gray.600" />
           <p>Oitavas</p>
         </Flex>
         <Text>Quartas</Text>
         <Flex
+          cursor="pointer"
           onClick={() => props.onNext("semi")}
           alignItems="center"
           gap={1.5}

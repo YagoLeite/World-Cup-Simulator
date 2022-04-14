@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <VStack>
       <Heading>Simulador da Copa 2022</Heading>
-      <HStack>
+      <HStack w="100%" justifyContent="space-around">
         {[
           { content: "Fase De Grupos", ui: "groups" },
           { content: "Finais", ui: "finals" },

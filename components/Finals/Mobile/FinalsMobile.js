@@ -37,6 +37,7 @@ const FinalsMobile = (props) => {
         </Text>
         <Flex
           left="0"
+          cursor="pointer"
           position="absolute"
           onClick={() => props.onNext("semi")}
           alignItems="center"
