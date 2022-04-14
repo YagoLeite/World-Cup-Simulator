@@ -29,7 +29,7 @@ const FinalsMobile = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      px="3%"
+      p="3%"
     >
       <Flex py="3%" w="100%" position="relative">
         <Text right="45%" position="absolute">

@@ -25,8 +25,8 @@ const onDragEnd = (result, columns, dispatch) => {
 
 const GroupTable = (props) => {
   const bg = useColorModeValue("white", "gray.700");
-  const bgDragingOver = useColorModeValue("gray.200", "white");
-  const bgTopTwo = useColorModeValue("green", "red");
+  const bgDragingOver = useColorModeValue("gray.200", "salmon");
+  const bgTopTwo = useColorModeValue("green", "green.200");
   const { state, dispatch } = CupState();
   const toast = useToast();
   const filteredList = state.groupState
@@ -44,7 +44,6 @@ const GroupTable = (props) => {
     dispatch({ type: "OITAVAS-SELECTION", value: props.group });
     toast({
       title: "Group Confirmed",
-      // description: "We've created your account for you.",
       status: "success",
       duration: 800,
       isClosable: true,
@@ -80,6 +79,7 @@ const GroupTable = (props) => {
                         {(provided, snapshot) => {
                           return (
                             <HStack
+                              boxShadow="md"
                               ref={provided.innerRef}
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
@@ -110,6 +110,8 @@ const GroupTable = (props) => {
                                 w="45px"
                                 bg="gray.700"
                                 h="45px"
+                                // borderColor="#c9c5c9"
+                                // borderWidth="1px"
                                 borderRadius="50%"
                                 overflow="hidden"
                               >

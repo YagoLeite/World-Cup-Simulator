@@ -12,12 +12,13 @@ const SemiFinals = () => {
       .find((item) => item.group === a || item.group === b);
   return (
     <Stack
+      pt="1%"
       w="100%"
       direction="column"
       justifyContent="center"
       alignItems="center"
     >
-      <Text>Semi</Text>
+      <Text pt="1%">Semi</Text>
       <HStack
         w="100%"
         divider={<StackDivider borderColor="gray.500" />}

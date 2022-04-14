@@ -13,8 +13,9 @@ const _Quartas = () => {
       direction="column"
       justifyContent="center"
       alignItems="center"
+      pt="1%"
     >
-      <Text>Quartas</Text>
+      <Text pt="1%">Quartas</Text>
       <HStack
         w="100%"
         justifyContent="space-evenly"

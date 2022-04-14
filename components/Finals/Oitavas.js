@@ -9,12 +9,13 @@ const Oitavas = () => {
   const filteredList = filteringByIndex(state.groupState, 1);
   return (
     <Stack
+      py="1%"
       w="100%"
       direction="column"
       justifyContent="center"
       alignItems="center"
     >
-      <Text>Oitavas</Text>
+      <Text py="1%">Oitavas</Text>
       <Stack
         direction="row"
         w="100%"

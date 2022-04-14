@@ -23,7 +23,7 @@ const Finals = () => {
   };
 
   return (
-    <Box>
+    <Box minH="100vh">
       {test === "solid" && (
         <Box px="1%">
           <Oitavas />

@@ -24,12 +24,13 @@ const _Finals = () => {
 
   return (
     <Stack
+      pt="1%"
       w="100%"
       direction="column"
       justifyContent="center"
       alignItems="center"
     >
-      <Text>Final</Text>
+      <Text pt="1%">Final</Text>
       <HStack w="100%" justifyContent="space-evenly">
         <_SingleMatch
           position="winner"

@@ -18,7 +18,7 @@ const QuartasMobile = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      px="3%"
+      p="3%"
     >
       <Flex py="3%" justifyContent="space-between" w="100%">
         <Flex

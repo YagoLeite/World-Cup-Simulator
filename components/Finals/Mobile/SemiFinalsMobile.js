@@ -17,7 +17,7 @@ const SemiFinalsMobile = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      px="3%"
+      p="3%"
     >
       <Flex py="3%" w="100%" justifyContent="space-between">
         <Flex

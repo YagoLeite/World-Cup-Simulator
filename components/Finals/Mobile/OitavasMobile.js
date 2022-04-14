@@ -18,7 +18,7 @@ const OitavasMobile = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      px="3%"
+      p="3%"
     >
       <Flex py="3%" w="100%" position="relative" cursor="pointer">
         <Text left="44%" position="absolute">
