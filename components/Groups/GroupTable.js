@@ -6,6 +6,7 @@ import {
   VStack,
   Image,
   HStack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
@@ -23,6 +24,9 @@ const onDragEnd = (result, columns, dispatch) => {
 };
 
 const GroupTable = (props) => {
+  const bg = useColorModeValue("white", "gray.700");
+  const bgDragingOver = useColorModeValue("gray.200", "white");
+  const bgTopTwo = useColorModeValue("green", "red");
   const { state, dispatch } = CupState();
   const toast = useToast();
   const filteredList = state.groupState
@@ -48,7 +52,7 @@ const GroupTable = (props) => {
   };
 
   return (
-    <VStack justifyContent="center" p="20px">
+    <VStack justifyContent="center" p="20px" boxShadow="lg">
       <DragDropContext
         onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
       >
@@ -62,7 +66,7 @@ const GroupTable = (props) => {
                   {...provided.droppableProps}
                   {...provided.dragHandleProps}
                   ref={provided.innerRef}
-                  bg={snapshot.isDraggingOver ? "gray.200" : "white"}
+                  bg={snapshot.isDraggingOver ? bgDragingOver : bg}
                   p="4px"
                   width="100%"
                 >
@@ -87,7 +91,7 @@ const GroupTable = (props) => {
                               bg={
                                 !snapshot.isDragging
                                   ? item.index <= 1
-                                    ? "green.50"
+                                    ? bgTopTwo
                                     : ""
                                   : "yellow.200"
                               }

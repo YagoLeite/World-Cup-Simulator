@@ -31,8 +31,8 @@ const FinalsMobile = (props) => {
       alignItems="center"
       px="3%"
     >
-      <Flex w="100%" position="relative">
-        <Text right="47%" position="absolute">
+      <Flex py="3%" w="100%" position="relative">
+        <Text right="45%" position="absolute">
           Finals
         </Text>
         <Flex

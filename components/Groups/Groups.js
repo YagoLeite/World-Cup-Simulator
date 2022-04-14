@@ -13,13 +13,14 @@ const Groups = () => {
   }, []);
   return (
     <Grid
+      p="3%"
       // gridTemplateColumns={["repeat(2, 290px)", "repeat(4, 290px)"]}
       gridTemplateColumns={[
         "repeat(2, minmax(290, 1fr))",
         "repeat(3, minmax(290, 1fr))",
         "repeat(4, minmax(290px, 1fr))",
       ]}
-      gap={3}
+      gap={2}
     >
       {a &&
         groups.map((group, index) => <GroupTable key={index} group={group} />)}

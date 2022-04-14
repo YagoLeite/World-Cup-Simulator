@@ -19,7 +19,7 @@ const SemiFinalsMobile = (props) => {
       alignItems="center"
       px="3%"
     >
-      <Flex w="100%" justifyContent="space-between">
+      <Flex py="3%" w="100%" justifyContent="space-between">
         <Flex
           cursor="pointer"
           onClick={() => props.onNext("quartas")}

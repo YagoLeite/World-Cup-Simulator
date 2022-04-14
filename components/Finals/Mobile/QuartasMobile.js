@@ -20,7 +20,7 @@ const QuartasMobile = (props) => {
       alignItems="center"
       px="3%"
     >
-      <Flex justifyContent="space-between" w="100%">
+      <Flex py="3%" justifyContent="space-between" w="100%">
         <Flex
           onClick={() => props.onNext("oitavas")}
           alignItems="center"
