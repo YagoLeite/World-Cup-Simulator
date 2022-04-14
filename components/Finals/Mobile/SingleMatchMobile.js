@@ -46,6 +46,8 @@ const SingleMatch = (props) => {
             bg="gray.500"
             onClick={() => props.onClick(props.firstTeam, props.secondTeam)}
             className={classNameTeamOne}
+            borderWidth="1px"
+            borderColor="#C9C9C9"
           >
             <Image
               objectFit="cover"

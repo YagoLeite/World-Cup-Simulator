@@ -1,11 +1,7 @@
 import React from "react";
 import SingleMatchMobile from "./SingleMatchMobile";
 import { Stack, Text, StackDivider, Button, Flex } from "@chakra-ui/react";
-import {
-  findingTeam,
-  mata_mata_Handler,
-  filteringByIndex,
-} from "../../functions";
+import { mata_mata_Handler } from "../../functions";
 import { CupState } from "../../../context/Context";
 
 const SemiFinalsMobile = (props) => {
@@ -30,7 +26,6 @@ const SemiFinalsMobile = (props) => {
         <SingleMatchMobile
           position="final"
           justify="space-around"
-          margin="10.5%"
           firstTeam={findSemi("A", "B")}
           secondTeam={findSemi("C", "D")}
           onClick={(firstTeam, secondTeam) =>
@@ -45,7 +40,6 @@ const SemiFinalsMobile = (props) => {
         <SingleMatchMobile
           position="final"
           justify="space-around"
-          margin="10.5%"
           firstTeam={findSemi("E", "F")}
           secondTeam={findSemi("G", "H")}
           onClick={(firstTeam, secondTeam) =>

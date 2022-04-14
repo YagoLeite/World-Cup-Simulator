@@ -24,13 +24,13 @@ const QuartasMobile = (props) => {
         <Button onClick={() => props.onNext("semi")}>Semi-Finals</Button>
       </Flex>
       <Stack
+        direction="column"
         w="100%"
-        justifyContent="space-evenly"
-        divider={<StackDivider borderColor="gray.400" />}
+        justifyContent="space-around"
+        divider={<StackDivider borderColor="gray.500" />}
       >
         <SingleMatchMobile
           position="semi"
-          margin="4.1%"
           justify="space-around"
           firstTeam={
             findingTeam("A", 0, "quartas", filteredList) ||
@@ -46,7 +46,6 @@ const QuartasMobile = (props) => {
         />
         <SingleMatchMobile
           position="semi"
-          margin="4.1%"
           justify="space-around"
           firstTeam={
             findingTeam("C", 0, "quartas", filteredList) ||
@@ -63,7 +62,6 @@ const QuartasMobile = (props) => {
 
         <SingleMatchMobile
           position="semi"
-          margin="4.1%"
           justify="space-around"
           firstTeam={
             findingTeam("E", 0, "quartas", filteredList) ||
@@ -80,7 +78,6 @@ const QuartasMobile = (props) => {
 
         <SingleMatchMobile
           position="semi"
-          margin="4.1%"
           justify="space-around"
           firstTeam={
             findingTeam("G", 0, "quartas", filteredList) ||
