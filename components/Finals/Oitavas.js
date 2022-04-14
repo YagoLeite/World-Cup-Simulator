@@ -15,7 +15,8 @@ const Oitavas = () => {
       alignItems="center"
     >
       <Text>Oitavas</Text>
-      <HStack
+      <Stack
+        direction="row"
         w="100%"
         justifyContent="space-evenly"
         divider={<StackDivider borderColor="gray.500" />}
@@ -132,7 +133,7 @@ const Oitavas = () => {
             )
           }
         />
-      </HStack>
+      </Stack>
     </Stack>
   );
 };

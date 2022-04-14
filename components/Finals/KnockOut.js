@@ -39,12 +39,27 @@ const Finals = () => {
       {test === "outline" && (
         <Box>
           <OitavasMobile />
-          <QuartasMobile />
+          {/* <QuartasMobile />
           <SemiFinalsMobile />
-          <FinalsMobile />
+          <FinalsMobile /> */}
         </Box>
       )}
     </Box>
+    // <Box px="1%">
+    //   <Oitavas />
+    //   <_Quartas />
+    //   <SemiFinals />
+    //   <_Finals />
+    //   <Winner />
+    //   <MyButton
+    //     color1={"#0BFA1B"}
+    //     color2={"green.200"}
+    //     color3={"green.300"}
+    //     onClick={() => dispatch({ type: "CLEAR" })}
+    //   >
+    //     Clear
+    //   </MyButton>
+    // </Box>
   );
 };
 

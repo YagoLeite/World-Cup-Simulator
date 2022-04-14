@@ -1,5 +1,6 @@
 import { Flex, Image, Text, Stack } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
+import { SmallCloseIcon } from "@chakra-ui/icons";
 
 const SingleMatch = (props) => {
   const [classNameTeamOne, setClassNameTeamOne] = useState("");
@@ -73,6 +74,9 @@ const SingleMatch = (props) => {
           {props.firstTeam?.name.slice(0, 3).toUpperCase()}
         </Text>
       </Stack>
+      <Flex alignItems="center" justifyContent="center">
+        <SmallCloseIcon />
+      </Flex>
       <Stack pt="20px" opacity={opacityTwo ? "0.5" : "1"}>
         {props.secondTeam ? (
           <Flex
