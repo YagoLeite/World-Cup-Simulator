@@ -20,13 +20,11 @@ const OitavasMobile = (props) => {
       alignItems="center"
       p="3%"
     >
-      <Flex py="3%" w="100%" position="relative" cursor="pointer">
-        <Text left="44%" position="absolute">
-          Oitavas
-        </Text>
+      <Flex py="3%" w="100%" justifyContent="space-between" cursor="pointer">
+        <Flex w="50px"></Flex>
+        <Text>Oitavas</Text>
         <Flex
-          right="0"
-          position="absolute"
+          w="50px"
           onClick={() => props.onNext("quartas")}
           alignItems="center"
           gap={1.5}
@@ -36,7 +34,6 @@ const OitavasMobile = (props) => {
         </Flex>
       </Flex>
       <Stack
-        direction="column"
         w="100%"
         alignItems="center"
         justifyContent="center"

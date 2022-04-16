@@ -31,14 +31,10 @@ const FinalsMobile = (props) => {
       alignItems="center"
       p="3%"
     >
-      <Flex py="3%" w="100%" position="relative">
-        <Text right="45%" position="absolute">
-          Finals
-        </Text>
+      <Flex py="3%" w="100%" justifyContent="space-between">
         <Flex
-          left="0"
+          w="50px"
           cursor="pointer"
-          position="absolute"
           onClick={() => props.onNext("semi")}
           alignItems="center"
           gap={1.5}
@@ -46,6 +42,8 @@ const FinalsMobile = (props) => {
           <ArrowLeftIcon color="gray.600" />
           <p>Semi</p>
         </Flex>
+        <Text>Finals</Text>
+        <Flex w="50px"></Flex>
       </Flex>
       <Stack w="100%">
         <SingleMatchMobile
