@@ -1,10 +1,16 @@
-import { HStack, Stack, Text } from "@chakra-ui/react";
-import React from "react";
+import { HStack, Stack, Text, useDisclosure } from "@chakra-ui/react";
+import React, { useState, useEffect } from "react";
 import { CupState } from "../../context/Context";
 import _SingleMatch from "./_SingleMatch";
 import { mata_mata_Handler } from "../functions";
+import Winner from "./Winner";
+
+import { motion } from "framer-motion";
 
 const _Finals = () => {
+  const { getButtonProps, getDisclosureProps, isOpen, onOpen, onClose } =
+    useDisclosure();
+  const [hidden, setHidden] = useState(!isOpen);
   const { state, dispatch } = CupState();
   const findFinal = state.groupState.filter((item) => item.final);
   const findFinalOne = state.groupState.find(
@@ -21,6 +27,14 @@ const _Finals = () => {
       (item.final && item.group === "G") ||
       (item.final && item.group === "H")
   );
+
+  const winner = state.groupState.find((item) => item.winner);
+  console.log(winner);
+
+  useEffect(() => {
+    if (!winner) return;
+    onOpen();
+  }, [winner]);
 
   return (
     <Stack
@@ -47,6 +61,28 @@ const _Finals = () => {
             )
           }
         />
+        <div>
+          {/* <button {...getButtonProps()}>Toggle</button> */}
+          {/* <motion.div
+            // {...getDisclosureProps()}
+            hidden={hidden}
+            initial={false}
+            onAnimationStart={() => setHidden(false)}
+            onAnimationComplete={() => setHidden(!isOpen)}
+            animate={{ width: isOpen ? "100vw" : 0 }}
+            style={{
+              background: "red",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              position: "absolute",
+              right: "0",
+              height: "100%",
+              bottom: "100",
+            }}
+          >
+            <Winner />
+          </motion.div> */}
+        </div>
       </HStack>
     </Stack>
   );

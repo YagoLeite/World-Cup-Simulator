@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 export default function Home() {
   const { state, dispatch } = CupState();
-  const bg = useColorModeValue("white", "gray.700");
+  const bg = useColorModeValue("#d3d3d3", "gray.700");
   useEffect(() => {
     if (localStorage.getItem("state"))
       dispatch({

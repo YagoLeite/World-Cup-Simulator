@@ -1,5 +1,10 @@
-import { Box, useBreakpointValue } from "@chakra-ui/react";
-import React, { useState } from "react";
+import {
+  Box,
+  useBreakpointValue,
+  useDisclosure,
+  Collapse,
+} from "@chakra-ui/react";
+import React, { useState, useEffect } from "react";
 import { CupState } from "../../context/Context";
 import _Quartas from "./_Quartas";
 import Oitavas from "./Oitavas";
@@ -14,13 +19,22 @@ import FinalsMobile from "./Mobile/FinalsMobile";
 
 const Finals = () => {
   const [knockOut, setKnockOut] = useState("oitavas");
-  const { dispatch } = CupState();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { state, dispatch } = CupState();
   const test = useBreakpointValue({ base: "outline", md: "solid" });
   console.log(test);
 
   const onNext = (next) => {
     setKnockOut(next);
   };
+
+  const winner = state.groupState.find((item) => item.winner);
+  console.log(winner);
+
+  useEffect(() => {
+    if (!winner) return;
+    onOpen();
+  }, [winner]);
 
   return (
     <Box minH="100vh">
@@ -30,7 +44,9 @@ const Finals = () => {
           <_Quartas />
           <SemiFinals />
           <_Finals />
-          <Winner />
+          <Collapse in={isOpen} animateOpacity>
+            <Winner />
+          </Collapse>
           <MyButton
             color1={"#0BFA1B"}
             color2={"green.200"}
