@@ -60,10 +60,11 @@ export const Header = () => {
       w="full"
       h="full"
       pt="4px"
-      position="relative"
+      pr="1%"
       alignItems="center"
-      justifyContent="center"
+      justifyContent="space-between"
     >
+      <Box w="50px" />
       <Box>
         <Text>World Cup 2022 Simulator</Text>
         <Flex gap={3}>
@@ -79,7 +80,7 @@ export const Header = () => {
           </Button>
         </Flex>
       </Box>
-      <HStack position="absolute" right={["2", "5"]}>
+      <Flex gap={2.5} w="50px">
         <Link
           isExternal
           aria-label="Go to Yago's Leite GitHub page"
@@ -100,11 +101,10 @@ export const Header = () => {
           aria-label={`Switch to ${text} mode`}
           variant="ghost"
           color="current"
-          // ml={{ base: "0", md: "3" }}
           onClick={toggleMode}
           icon={<SwitchIcon />}
         />
-      </HStack>
+      </Flex>
     </Flex>
   );
 };
