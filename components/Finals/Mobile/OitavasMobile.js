@@ -24,6 +24,7 @@ const OitavasMobile = (props) => {
         <Flex w="50px"></Flex>
         <Text>Oitavas</Text>
         <Flex
+          mr="2%"
           w="50px"
           cursor="pointer"
           onClick={() => props.onNext("quartas")}

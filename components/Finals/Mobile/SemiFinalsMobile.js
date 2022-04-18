@@ -37,6 +37,7 @@ const SemiFinalsMobile = (props) => {
           onClick={() => props.onNext("final")}
           alignItems="center"
           gap={1.5}
+          mr="2%"
         >
           <p>Final</p>
           <ArrowRightIcon color="gray.600" />

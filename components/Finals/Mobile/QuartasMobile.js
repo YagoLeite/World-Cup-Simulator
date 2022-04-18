@@ -33,6 +33,7 @@ const QuartasMobile = (props) => {
         </Flex>
         <Text>Quartas</Text>
         <Flex
+          mr="2%"
           w="50px"
           cursor="pointer"
           onClick={() => props.onNext("semi")}
