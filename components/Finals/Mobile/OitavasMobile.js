@@ -25,6 +25,7 @@ const OitavasMobile = (props) => {
         <Text>Oitavas</Text>
         <Flex
           w="50px"
+          cursor="pointer"
           onClick={() => props.onNext("quartas")}
           alignItems="center"
           gap={1.5}
