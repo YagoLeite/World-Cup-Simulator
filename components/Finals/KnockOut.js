@@ -1,9 +1,4 @@
-import {
-  Box,
-  useBreakpointValue,
-  useDisclosure,
-  Collapse,
-} from "@chakra-ui/react";
+import { Box, useBreakpointValue, useDisclosure, Flex } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { CupState } from "../../context/Context";
 import _Quartas from "./_Quartas";
@@ -44,9 +39,9 @@ const Finals = () => {
           <_Quartas />
           <SemiFinals />
           <_Finals />
-          <Collapse in={isOpen} animateOpacity>
+          <Flex justifyContent="center" alignItems="center">
             <Winner />
-          </Collapse>
+          </Flex>
           <MyButton
             color1={"#0BFA1B"}
             color2={"green.200"}

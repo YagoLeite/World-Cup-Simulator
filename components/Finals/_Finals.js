@@ -61,28 +61,6 @@ const _Finals = () => {
             )
           }
         />
-        <div>
-          {/* <button {...getButtonProps()}>Toggle</button> */}
-          {/* <motion.div
-            // {...getDisclosureProps()}
-            hidden={hidden}
-            initial={false}
-            onAnimationStart={() => setHidden(false)}
-            onAnimationComplete={() => setHidden(!isOpen)}
-            animate={{ width: isOpen ? "100vw" : 0 }}
-            style={{
-              background: "red",
-              overflow: "hidden",
-              whiteSpace: "nowrap",
-              position: "absolute",
-              right: "0",
-              height: "100%",
-              bottom: "100",
-            }}
-          >
-            <Winner />
-          </motion.div> */}
-        </div>
       </HStack>
     </Stack>
   );
