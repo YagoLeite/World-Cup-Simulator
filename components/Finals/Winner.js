@@ -8,7 +8,7 @@ const Winner = () => {
 
   return (
     <div>
-      {state.groupState.find((item) => item.winner) !== undefined && (
+      {winner !== undefined && (
         <VStack justifyContent="center" alignItems="center">
           <Text>The winner is {winner.name}</Text>
           <Flex
@@ -20,11 +20,7 @@ const Winner = () => {
             borderColor="#c9c9c9"
             borderWidth="1px"
           >
-            <Image
-              objectFit="cover"
-              alt="Winners flag"
-              src={state.groupState.find((item) => item.winner).flag}
-            />
+            <Image objectFit="cover" alt="Winners flag" src={winner.flag} />
           </Flex>
         </VStack>
       )}
