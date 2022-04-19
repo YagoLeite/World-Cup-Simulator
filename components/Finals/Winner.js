@@ -7,22 +7,25 @@ const Winner = () => {
   console.log(state.groupState.find((item) => item.winner));
 
   return (
-    <Flex
-      borderRadius="50%"
-      overflow="hidden"
-      w="300px"
-      h="300px"
-      boxShadow="dark-lg"
-    >
+    <div>
       {state.groupState.find((item) => item.winner) !== undefined && (
-        <Image
-          objectFit="cover"
+        <Flex
+          borderRadius="50%"
+          overflow="hidden"
+          w="300px"
+          h="300px"
           boxShadow="lg"
-          alt="Winners flag"
-          src={state.groupState.find((item) => item.winner).flag}
-        />
+          borderColor="#c9c9c9"
+          borderWidth="1px"
+        >
+          <Image
+            objectFit="cover"
+            alt="Winners flag"
+            src={state.groupState.find((item) => item.winner).flag}
+          />
+        </Flex>
       )}
-    </Flex>
+    </div>
   );
 };
 
