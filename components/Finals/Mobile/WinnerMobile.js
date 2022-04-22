@@ -15,12 +15,15 @@ const WinnerMobile = () => {
       {winner !== undefined && (
         <VStack>
           <Text>The winner is {winner.name} </Text>
-          {/* <Text>
-            {winner.name} has won {winner.wins + 1} times
-          </Text> */}
           <Flex>
             {trophies.map((item, index) => (
-              <Flex key={index} w="30px" h="30px" overflow="hidden">
+              <Flex
+                justifyContent="space-evenly"
+                key={index}
+                w="70px"
+                h="70px"
+                overflow="hidden"
+              >
                 <Image
                   objectFit="cover"
                   src="https://www.seekpng.com/png/full/357-3576996_world-cup-trophy.png"
