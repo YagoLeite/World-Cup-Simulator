@@ -6,14 +6,21 @@ const Winner = () => {
   const { state } = CupState();
   const winner = state.groupState.find((item) => item.winner);
 
+  if (winner) {
+    const trophies = new Array(winner.wins + 1).fill(1);
+  }
+
   return (
     <div>
       {winner !== undefined && (
         <VStack justifyContent="center" alignItems="center">
           <Text>The winner is {winner.name}</Text>
-          <Text>
+          {/* <Text>
             {winner.name} has won {winner.wins + 1} times
-          </Text>
+          </Text> */}
+          {trophies.map((item, index) => (
+            <Text key={index}>oie</Text>
+          ))}
           <Flex
             borderRadius="50%"
             overflow="hidden"
