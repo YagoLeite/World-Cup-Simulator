@@ -11,6 +11,9 @@ const WinnerMobile = () => {
       {winner !== undefined && (
         <VStack>
           <Text>The winner is {winner.name} </Text>
+          <Text>
+            {winner.name} has won {winner.wins + 1} times
+          </Text>
           <Flex
             borderRadius="50%"
             overflow="hidden"
