@@ -1,7 +1,6 @@
 import { Image, Flex, Text, Box, VStack } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
-import trophy from "../../styles/images/trophy.png";
 
 const Winner = () => {
   const { state } = CupState();
