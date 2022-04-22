@@ -11,13 +11,19 @@ const Winner = () => {
   }
 
   return (
-    <div>
+    <VStack w="100%" justifyContent="center" alignItems="center">
       {winner !== undefined && (
-        <VStack justifyContent="center" alignItems="center">
+        <VStack>
           <Text>The winner is {winner.name}</Text>
           <Flex>
             {trophies.map((item, index) => (
-              <Flex key={index} w="30px" h="30px" overflow="hidden">
+              <Flex
+                justifyContent="space-evenly"
+                key={index}
+                w="70px"
+                h="70px"
+                overflow="hidden"
+              >
                 <Image
                   objectFit="cover"
                   src="https://www.seekpng.com/png/full/357-3576996_world-cup-trophy.png"
@@ -38,7 +44,7 @@ const Winner = () => {
           </Flex>
         </VStack>
       )}
-    </div>
+    </VStack>
   );
 };
 
