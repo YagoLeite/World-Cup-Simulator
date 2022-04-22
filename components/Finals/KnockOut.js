@@ -17,14 +17,12 @@ const Finals = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { state, dispatch } = CupState();
   const test = useBreakpointValue({ base: "outline", md: "solid" });
-  console.log(test);
 
   const onNext = (next) => {
     setKnockOut(next);
   };
 
   const winner = state.groupState.find((item) => item.winner);
-  console.log(winner);
 
   useEffect(() => {
     if (!winner) return;

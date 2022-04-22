@@ -11,6 +11,7 @@ const Groups = () => {
   useEffect(() => {
     setA(true);
   }, []);
+
   return (
     <Grid
       p="3%"

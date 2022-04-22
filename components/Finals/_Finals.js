@@ -29,7 +29,6 @@ const _Finals = () => {
   );
 
   const winner = state.groupState.find((item) => item.winner);
-  console.log(winner);
 
   useEffect(() => {
     if (!winner) return;
