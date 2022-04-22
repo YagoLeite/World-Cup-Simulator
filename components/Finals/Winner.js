@@ -1,6 +1,7 @@
 import { Image, Flex, Text, Box, VStack } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
+import trophy from "../../styles/images/trophy.png";
 
 const Winner = () => {
   const { state } = CupState();
@@ -15,12 +16,16 @@ const Winner = () => {
       {winner !== undefined && (
         <VStack justifyContent="center" alignItems="center">
           <Text>The winner is {winner.name}</Text>
-          {/* <Text>
-            {winner.name} has won {winner.wins + 1} times
-          </Text> */}
-          {trophies.map((item, index) => (
-            <Text key={index}>oie</Text>
-          ))}
+          <Flex>
+            {trophies.map((item, index) => (
+              <Flex w="30px" h="30px" overflow="hidden">
+                <Image
+                  objectFit="cover"
+                  src="https://www.seekpng.com/png/full/357-3576996_world-cup-trophy.png"
+                />
+              </Flex>
+            ))}
+          </Flex>
           <Flex
             borderRadius="50%"
             overflow="hidden"
