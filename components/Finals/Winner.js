@@ -17,7 +17,7 @@ const Winner = () => {
           <Text>The winner is {winner.name}</Text>
           <Flex>
             {trophies.map((item, index) => (
-              <Flex w="30px" h="30px" overflow="hidden">
+              <Flex key={index} w="30px" h="30px" overflow="hidden">
                 <Image
                   objectFit="cover"
                   src="https://www.seekpng.com/png/full/357-3576996_world-cup-trophy.png"

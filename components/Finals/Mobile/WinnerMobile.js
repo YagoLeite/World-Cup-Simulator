@@ -18,9 +18,16 @@ const WinnerMobile = () => {
           {/* <Text>
             {winner.name} has won {winner.wins + 1} times
           </Text> */}
-          {trophies.map((item, index) => (
-            <Text key={index}>oie</Text>
-          ))}
+          <Flex>
+            {trophies.map((item, index) => (
+              <Flex key={index} w="30px" h="30px" overflow="hidden">
+                <Image
+                  objectFit="cover"
+                  src="https://www.seekpng.com/png/full/357-3576996_world-cup-trophy.png"
+                />
+              </Flex>
+            ))}
+          </Flex>
           <Flex
             borderRadius="50%"
             overflow="hidden"
