@@ -16,7 +16,7 @@ const Finals = () => {
   const [knockOut, setKnockOut] = useState("oitavas");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { state, dispatch } = CupState();
-  const test = useBreakpointValue({ base: "outline", md: "solid" });
+  const test = useBreakpointValue({ md: "outline", lg: "solid" });
 
   const onNext = (next) => {
     setKnockOut(next);
