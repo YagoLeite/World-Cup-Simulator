@@ -24,9 +24,13 @@ const Winner = () => {
                 h="70px"
                 overflow="hidden"
               >
+                {/* <Image
+                  objectFit="cover"
+                  src="https://www.pngall.com/wp-content/uploads/2016/04/Trophy-Free-PNG-Image.png"
+                /> */}
                 <Image
                   objectFit="cover"
-                  src="https://www.seekpng.com/png/full/357-3576996_world-cup-trophy.png"
+                  src="https://www.pngall.com/wp-content/uploads/4/Golden-Cup-PNG-Image.png"
                 />
               </Flex>
             ))}
