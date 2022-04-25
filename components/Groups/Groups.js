@@ -15,12 +15,8 @@ const Groups = () => {
   return (
     <Grid
       p="3%"
-      // gridTemplateColumns={["repeat(2, 290px)", "repeat(4, 290px)"]}
-      gridTemplateColumns={[
-        "repeat(2, minmax(290, 1fr))",
-        "repeat(3, minmax(290, 1fr))",
-        "repeat(4, minmax(290px, 1fr))",
-      ]}
+      gridTemplateColumns="repeat(auto-fit, minmax(290px, 1fr))"
+      // gridTemplateColumns={"repeat(autofit, minmax(290px, 1fr))"}
       gap={2}
     >
       {a &&
