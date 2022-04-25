@@ -16,7 +16,7 @@ const Finals = () => {
   const [knockOut, setKnockOut] = useState("oitavas");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { state, dispatch } = CupState();
-  const test = useBreakpointValue({ md: "outline", lg: "solid" });
+  const test = useBreakpointValue({ lg: "solid", xl: "solid" });
 
   const onNext = (next) => {
     setKnockOut(next);
@@ -50,7 +50,7 @@ const Finals = () => {
           </MyButton>
         </Box>
       )}
-      {test === "outline" && (
+      {test !== "solid" && (
         <Box>
           {knockOut === "oitavas" && <OitavasMobile onNext={onNext} />}
           {knockOut === "quartas" && <QuartasMobile onNext={onNext} />}
