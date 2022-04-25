@@ -20,18 +20,18 @@ const Winner = () => {
               <Flex
                 justifyContent="space-evenly"
                 key={index}
-                w="70px"
+                w="50px"
                 h="70px"
                 overflow="hidden"
               >
-                {/* <Image
-                  objectFit="cover"
-                  src="https://www.pngall.com/wp-content/uploads/2016/04/Trophy-Free-PNG-Image.png"
-                /> */}
                 <Image
                   objectFit="cover"
-                  src="https://www.pngall.com/wp-content/uploads/4/Golden-Cup-PNG-Image.png"
+                  src="https://www.pngall.com/wp-content/uploads/2016/04/Trophy-Free-PNG-Image.png"
                 />
+                {/* <Image
+                  objectFit="cover"
+                  src="https://www.pngall.com/wp-content/uploads/4/Golden-Cup-PNG-Image.png"
+                /> */}
               </Flex>
             ))}
           </Flex>

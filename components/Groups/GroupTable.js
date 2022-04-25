@@ -110,8 +110,8 @@ const GroupTable = (props) => {
                                 w="45px"
                                 bg="gray.700"
                                 h="45px"
-                                // borderColor="#c9c5c9"
-                                // borderWidth="1px"
+                                borderColor="#c9c5c9"
+                                borderWidth="1px"
                                 borderRadius="50%"
                                 overflow="hidden"
                               >
