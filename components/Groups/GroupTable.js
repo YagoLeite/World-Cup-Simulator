@@ -25,7 +25,7 @@ const onDragEnd = (result, columns, dispatch) => {
 
 const GroupTable = (props) => {
   const bg = useColorModeValue("white", "gray.700");
-  const bgDragingOver = useColorModeValue("gray.200", "salmon");
+  const bgDragingOver = useColorModeValue("gray.200", "gray.500");
   const bgTopTwo = useColorModeValue("green", "green.200");
   const { state, dispatch } = CupState();
   const toast = useToast();

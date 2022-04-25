@@ -95,6 +95,22 @@ export const CupReducer = (state, action) => {
         }
       });
       return { ...state, groupState: winner };
+    case "CONFIRM-ALL":
+      const all = state.groupState.map((item) => {
+        if (item.index <= 1) {
+          return {
+            ...item,
+            oitavas: true,
+            quartas: false,
+            semi: false,
+            finals: false,
+            winner: false,
+          };
+        } else {
+          return item;
+        }
+      });
+      return { ...state, groupState: all };
     case "UI-UPDATE":
       return { ...state, ui: action.value };
     case "LOADING":
