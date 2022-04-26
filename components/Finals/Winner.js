@@ -15,7 +15,7 @@ const Winner = () => {
       {winner !== undefined && (
         <VStack>
           <Text>The winner is {winner.name}</Text>
-          <Flex>
+          {/* <Flex>
             {trophies.map((item, index) => (
               <Flex
                 justifyContent="space-evenly"
@@ -28,13 +28,13 @@ const Winner = () => {
                   objectFit="cover"
                   src="https://www.pngall.com/wp-content/uploads/2016/04/Trophy-Free-PNG-Image.png"
                 />
-                {/* <Image
+                <Image
                   objectFit="cover"
                   src="https://www.pngall.com/wp-content/uploads/4/Golden-Cup-PNG-Image.png"
-                /> */}
+                />
               </Flex>
             ))}
-          </Flex>
+          </Flex> */}
           <Flex
             borderRadius="50%"
             overflow="hidden"

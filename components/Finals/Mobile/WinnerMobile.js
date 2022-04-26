@@ -15,7 +15,7 @@ const WinnerMobile = () => {
       {winner !== undefined && (
         <VStack>
           <Text>The winner is {winner.name} </Text>
-          <Flex>
+          {/* <Flex>
             {trophies.map((item, index) => (
               <Flex
                 justifyContent="space-evenly"
@@ -24,17 +24,17 @@ const WinnerMobile = () => {
                 h="70px"
                 overflow="hidden"
               >
-                {/* <Image
+                <Image
                   objectFit="cover"
                   src="https://www.seekpng.com/png/full/357-3576996_world-cup-trophy.png"
-                /> */}
+                />
                 <Image
                   objectFit="cover"
                   src="https://www.pngall.com/wp-content/uploads/4/Golden-Cup-PNG-Image.png"
                 />
               </Flex>
             ))}
-          </Flex>
+          </Flex> */}
           <Flex
             borderRadius="50%"
             overflow="hidden"
