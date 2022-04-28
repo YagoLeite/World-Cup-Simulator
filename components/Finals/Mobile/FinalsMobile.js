@@ -62,7 +62,7 @@ const FinalsMobile = (props) => {
           }
         />
       </Stack>
-      <WinnerMobile />
+      {/* <WinnerMobile /> */}
     </Stack>
   );
 };

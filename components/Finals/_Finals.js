@@ -30,10 +30,10 @@ const _Finals = () => {
 
   const winner = state.groupState.find((item) => item.winner);
 
-  useEffect(() => {
-    if (!winner) return;
-    onOpen();
-  }, [winner]);
+  // useEffect(() => {
+  //   if (!winner) return;
+  //   onOpen();
+  // }, [winner]);
 
   return (
     <Stack

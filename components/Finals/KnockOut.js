@@ -38,7 +38,7 @@ const Finals = () => {
           <SemiFinals />
           <_Finals />
           <Flex justifyContent="center" alignItems="center">
-            <Winner />
+            {/* <Winner /> */}
           </Flex>
           <MyButton
             color1={"#0BFA1B"}
