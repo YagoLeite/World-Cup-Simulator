@@ -26,7 +26,13 @@ const onDragEnd = (result, columns, dispatch) => {
 const position = (
   <Box h="100%" pt="24px">
     {["1º", "2º", "3º", "4º"].map((position, index) => (
-      <Flex key={index} h="45px" justifyContent="center" alignItems="center">
+      <Flex
+        key={index}
+        h="45px"
+        my="8px"
+        justifyContent="center"
+        alignItems="center"
+      >
         <Text>{position}</Text>
       </Flex>
     ))}
@@ -78,6 +84,7 @@ const _GroupTable = (props) => {
                   ref={provided.innerRef}
                   bg={snapshot.isDraggingOver ? bgDragingOver : bg}
                   width="100%"
+                  p="4px"
                 >
                   {filteredList.map((item, index) => {
                     return (
@@ -94,6 +101,7 @@ const _GroupTable = (props) => {
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
                               userSelect="none"
+                              px="8px"
                               borderRadius="4px"
                               bg={
                                 !snapshot.isDragging
@@ -102,6 +110,7 @@ const _GroupTable = (props) => {
                                     : ""
                                   : "yellow.200"
                               }
+                              my="8px"
                             >
                               <Flex
                                 w="45px"
