@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Groups from "../components/Groups/Groups";
 import KnockOut from "../components/Finals/KnockOut";
-import { Header } from "../components/Header";
+import { Header } from "../components/Header/Header";
 import { Flex, Box, useColorModeValue } from "@chakra-ui/react";
 import { CupState } from "../context/Context";
 import { useEffect } from "react";
