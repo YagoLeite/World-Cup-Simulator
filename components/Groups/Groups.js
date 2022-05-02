@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GroupTable from "./GroupTable";
+import _GroupTable from "./_GroupTable";
 import { Button, Grid, useToast } from "@chakra-ui/react";
 import { CupState } from "../../context/Context";
 
@@ -22,7 +23,7 @@ const Groups = () => {
       gap={2}
     >
       {a &&
-        groups.map((group, index) => <GroupTable key={index} group={group} />)}
+        groups.map((group, index) => <_GroupTable key={index} group={group} />)}
       <Button
         onClick={() => {
           toast({
