@@ -20,6 +20,7 @@ import { useViewportScroll } from "framer-motion";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import MainHeader from "./MainHeader";
+import Controler from "./Controler";
 
 export const Header = () => {
   const { dispatch } = CupState();
@@ -69,6 +70,7 @@ export const Header = () => {
     <Box>
       {github}
       <MainHeader />
+      <Controler />
       {/* <Flex gap={3}>
           <Button
             onClick={() => dispatch({ type: "UI-UPDATE", value: "groups" })}

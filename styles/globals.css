@@ -22,6 +22,14 @@ a {
 	animation-duration: 0.3s;
 }
 
+.skewed {
+	transform: skew(-10deg)
+}
+
+.skewed2 {
+	transform: skew(10deg);
+}
+
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;

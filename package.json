@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^1.8.7",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/oswald": "^4.5.7",
     "@react-forked/dnd": "^14.0.1",
     "framer-motion": "^6.2.8",
     "next": "12.1.0",
