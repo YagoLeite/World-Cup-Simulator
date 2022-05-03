@@ -97,13 +97,13 @@ const _GroupTable = (props) => {
                               {...provided.dragHandleProps}
                               userSelect="none"
                               px="8px"
-                              //   bg={
-                              //     !snapshot.isDragging
-                              //       ? item.index <= 1
-                              //         ? bgTopTwo
-                              //         : ""
-                              //       : "yellow.200"
-                              //   }
+                              bg={
+                                !snapshot.isDragging
+                                  ? item.index <= 1
+                                    ? bgTopTwo
+                                    : ""
+                                  : "yellow.200"
+                              }
                               opacity={
                                 !snapshot.isDragging
                                   ? item.index <= 1
@@ -131,7 +131,7 @@ const _GroupTable = (props) => {
                                 />
                               </Flex>
                               <Text
-                                color={item.index <= 1 ? "green" : ""}
+                                // color={item.index <= 1 ? "green" : ""}
                                 fontSize={["24px"]}
                               >
                                 {item.name}
@@ -156,6 +156,7 @@ const _GroupTable = (props) => {
           bg="#E36262"
           cursor="pointer"
           onClick={oitavasHandler}
+          w="140px"
         >
           <Text fontWeight="500" fontSize="32px" color="white">
             Confirm
