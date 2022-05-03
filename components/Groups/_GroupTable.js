@@ -122,6 +122,7 @@ const _GroupTable = (props) => {
                                 borderWidth="1px"
                                 borderRadius="50%"
                                 overflow="hidden"
+                                alt="country flag"
                               >
                                 <Image
                                   objectFit="cover"
