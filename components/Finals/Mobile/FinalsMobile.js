@@ -63,6 +63,7 @@ const FinalsMobile = (props) => {
         />
       </Stack>
       {/* <WinnerMobile /> */}
+      <Button onClick={() => dispatch({ type: "CLEAR" })}>clear</Button>
     </Stack>
   );
 };
