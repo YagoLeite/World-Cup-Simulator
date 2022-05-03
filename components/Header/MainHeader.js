@@ -12,7 +12,7 @@ const MainHeader = () => {
         fontWeight="200"
         fontSize={["48"]}
         textAlign="center"
-        fontFamily="heading"
+        fontFamily="Arial"
       >
         Simulator
       </Text>
