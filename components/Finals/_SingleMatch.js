@@ -50,6 +50,7 @@ const SingleMatch = (props) => {
             <Image
               objectFit="cover"
               boxShadow="lg"
+              alt="country flag"
               src={props.firstTeam.flag}
             />
           </Flex>
@@ -91,6 +92,7 @@ const SingleMatch = (props) => {
             onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
           >
             <Image
+              alt="country flag"
               objectFit="cover"
               boxShadow="lg"
               src={props.secondTeam.flag}

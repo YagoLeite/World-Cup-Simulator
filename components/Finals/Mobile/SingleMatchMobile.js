@@ -50,6 +50,7 @@ const SingleMatch = (props) => {
             borderColor="#C9C9C9"
           >
             <Image
+              alt="country flag"
               objectFit="cover"
               boxShadow="lg"
               src={props.firstTeam.flag}
@@ -95,6 +96,7 @@ const SingleMatch = (props) => {
             onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
           >
             <Image
+              alt="country flag"
               objectFit="cover"
               boxShadow="lg"
               src={props.secondTeam.flag}

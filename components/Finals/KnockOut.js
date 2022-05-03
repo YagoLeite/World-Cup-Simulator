@@ -22,12 +22,12 @@ const Finals = () => {
     setKnockOut(next);
   };
 
-  const winner = state.groupState.find((item) => item.winner);
+  // const winner = state.groupState.find((item) => item.winner);
 
-  useEffect(() => {
-    if (!winner) return;
-    onOpen();
-  }, [winner]);
+  // useEffect(() => {
+  //   if (!winner) return;
+  //   onOpen();
+  // }, [winner]);
 
   return (
     <Box minH="100vh">

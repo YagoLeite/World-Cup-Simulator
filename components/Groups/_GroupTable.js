@@ -125,6 +125,7 @@ const _GroupTable = (props) => {
                               >
                                 <Image
                                   objectFit="cover"
+                                  alt="country flag"
                                   src={item.flag ? item.flag : ""}
                                 />
                               </Flex>

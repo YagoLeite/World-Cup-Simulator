@@ -58,7 +58,7 @@ const Controler = () => {
       </Flex>
       {state.ui === "groups" && (
         <VStack pt="18px" w="100%" justifyContent="center">
-          <Text>Drag n' drop the teams to select its position</Text>
+          <Text>Drag and drop the teams to select its position</Text>
           <Flex gap="3px">
             <Text>Or</Text>
             <Text

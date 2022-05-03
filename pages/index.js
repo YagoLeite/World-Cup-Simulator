@@ -15,7 +15,7 @@ export default function Home() {
         type: "LOADING",
         value: { ...JSON.parse(localStorage.getItem("state")), ui: "groups" },
       });
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     localStorage.setItem("state", JSON.stringify(state));
