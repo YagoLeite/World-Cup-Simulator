@@ -1,7 +1,10 @@
-import { Text, Flex, Box, VStack } from "@chakra-ui/react";
+import { Text, Flex, VStack, useToast } from "@chakra-ui/react";
 import React from "react";
+import { CupState } from "../../context/Context";
 
 const Controler = () => {
+  const { dispatch } = CupState();
+  const toast = useToast();
   return (
     <Flex
       w="100%"
@@ -11,7 +14,15 @@ const Controler = () => {
       pt="65px"
     >
       <Flex w="100%" justifyContent="center" gap="48px" alignContent="center">
-        <Flex className="skewed" w="201px" h="78px" bg="#E36262" color="white">
+        <Flex
+          className="skewed"
+          w="201px"
+          h="78px"
+          bg="#E36262"
+          color="white"
+          onClick={() => dispatch({ type: "UI-UPDATE", value: "groups" })}
+          cursor="pointer"
+        >
           <Flex
             className="skewed2"
             w="100%"
@@ -30,6 +41,8 @@ const Controler = () => {
           w="201px"
           h="78px"
           bg="#E36262"
+          cursor="pointer"
+          onClick={() => dispatch({ type: "UI-UPDATE", value: "finals" })}
         >
           <Flex
             className="skewed2"
@@ -47,7 +60,21 @@ const Controler = () => {
         <Text>Drag n' drop the teams to select its position</Text>
         <Flex gap="3px">
           <Text>Or</Text>
-          <Text color="#E36262">Confirm all</Text>
+          <Text
+            cursor="pointer"
+            onClick={() => {
+              toast({
+                title: "All Groups Confirmed",
+                status: "success",
+                duration: 800,
+                isClosable: true,
+              });
+              dispatch({ type: "CONFIRM-ALL" });
+            }}
+            color="#E36262"
+          >
+            Confirm all
+          </Text>
         </Flex>
       </VStack>
     </Flex>

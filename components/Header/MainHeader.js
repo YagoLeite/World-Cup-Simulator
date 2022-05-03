@@ -9,9 +9,10 @@ const MainHeader = () => {
       </Heading>
       <Text
         w="100%"
-        fontWeight={"semibold"}
+        fontWeight="200"
         fontSize={["48"]}
         textAlign="center"
+        fontFamily="heading"
       >
         Simulator
       </Text>

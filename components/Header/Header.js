@@ -71,18 +71,6 @@ export const Header = () => {
       {github}
       <MainHeader />
       <Controler />
-      {/* <Flex gap={3}>
-          <Button
-            onClick={() => dispatch({ type: "UI-UPDATE", value: "groups" })}
-          >
-            Groups
-          </Button>
-          <Button
-            onClick={() => dispatch({ type: "UI-UPDATE", value: "finals" })}
-          >
-            KnockOut
-          </Button>
-        </Flex> */}
     </Box>
   );
 };

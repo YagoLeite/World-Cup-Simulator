@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   useToast,
-  VStack,
   Image,
   HStack,
   useColorModeValue,
@@ -11,7 +10,6 @@ import {
 import React from "react";
 import { CupState } from "../../context/Context";
 import { DragDropContext, Droppable, Draggable } from "@react-forked/dnd";
-import MyButton from "../MyButton";
 
 const onDragEnd = (result, columns, dispatch) => {
   if (!result.destination) return;
@@ -24,7 +22,7 @@ const onDragEnd = (result, columns, dispatch) => {
 };
 
 const position = (
-  <Box h="100%" pt="24px">
+  <Box h="100%">
     {["1º", "2º", "3º", "4º"].map((position, index) => (
       <Flex
         key={index}
@@ -51,7 +49,6 @@ const _GroupTable = (props) => {
 
   const columns = {
     [props.group]: {
-      name: `Group ${props.group}`,
       items: filteredList,
     },
   };
@@ -67,14 +64,13 @@ const _GroupTable = (props) => {
   };
 
   return (
-    <HStack justifyContent="center" p="20px" boxShadow="lg">
-      {position}
-      <DragDropContext
-        onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
-      >
-        <Box w="100%">
-          <Text textAlign={"center"}>{columns[props.group].name}</Text>
-
+    <Box p="16px">
+      <Text> Group {props.group} </Text>
+      <HStack justifyContent="center">
+        {position}
+        <DragDropContext
+          onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
+        >
           <Droppable droppableId={props.group} key={props.group}>
             {(provided, snapshot) => {
               return (
@@ -138,9 +134,8 @@ const _GroupTable = (props) => {
               );
             }}
           </Droppable>
-        </Box>
-      </DragDropContext>
-      {/* <MyButton
+        </DragDropContext>
+        {/* <MyButton
         color1={"#0BFA1B"}
         color2={"green.200"}
         color3={"green.300"}
@@ -148,7 +143,21 @@ const _GroupTable = (props) => {
       >
         Confirm
       </MyButton> */}
-    </HStack>
+      </HStack>
+      <Flex w="100%" justifyContent="flex-end">
+        <Flex
+          justify="center"
+          alignItems="center"
+          bg="#E36262"
+          cursor="pointer"
+          onClick={oitavasHandler}
+        >
+          <Text fontWeight="500" fontSize="32px" color="white">
+            Confirm
+          </Text>
+        </Flex>
+      </Flex>
+    </Box>
   );
 };
 
