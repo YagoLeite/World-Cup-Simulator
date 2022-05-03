@@ -13,7 +13,7 @@ export default function Home() {
     if (localStorage.getItem("state"))
       dispatch({
         type: "LOADING",
-        value: JSON.parse(localStorage.getItem("state")),
+        value: { ...JSON.parse(localStorage.getItem("state")), ui: "groups" },
       });
   }, []);
 
