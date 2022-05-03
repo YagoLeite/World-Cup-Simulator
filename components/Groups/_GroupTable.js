@@ -26,8 +26,8 @@ const position = (
     {["1º", "2º", "3º", "4º"].map((position, index) => (
       <Flex
         key={index}
-        h="45px"
-        my="8px"
+        h="60px"
+        my="18px"
         justifyContent="center"
         alignItems="center"
       >
@@ -65,7 +65,7 @@ const _GroupTable = (props) => {
 
   return (
     <Box p="16px">
-      <Text> Group {props.group} </Text>
+      <Text fontSize={["32px"]}> Group {props.group} </Text>
       <HStack justifyContent="center">
         {position}
         <DragDropContext
@@ -92,26 +92,32 @@ const _GroupTable = (props) => {
                         {(provided, snapshot) => {
                           return (
                             <HStack
-                              boxShadow="md"
                               ref={provided.innerRef}
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
                               userSelect="none"
                               px="8px"
-                              borderRadius="4px"
-                              bg={
+                              //   bg={
+                              //     !snapshot.isDragging
+                              //       ? item.index <= 1
+                              //         ? bgTopTwo
+                              //         : ""
+                              //       : "yellow.200"
+                              //   }
+                              opacity={
                                 !snapshot.isDragging
                                   ? item.index <= 1
-                                    ? bgTopTwo
-                                    : ""
-                                  : "yellow.200"
+                                    ? 1
+                                    : 0.5
+                                  : 1
                               }
-                              my="8px"
+                              my="18px"
+                              gap={["24px"]}
                             >
                               <Flex
-                                w="45px"
+                                w="60px"
+                                h="60px"
                                 bg="gray.700"
-                                h="45px"
                                 borderColor="#c9c5c9"
                                 borderWidth="1px"
                                 borderRadius="50%"
@@ -122,7 +128,12 @@ const _GroupTable = (props) => {
                                   src={item.flag ? item.flag : ""}
                                 />
                               </Flex>
-                              <Text>{item.name} </Text>
+                              <Text
+                                color={item.index <= 1 ? "green" : ""}
+                                fontSize={["24px"]}
+                              >
+                                {item.name}
+                              </Text>
                             </HStack>
                           );
                         }}
@@ -135,14 +146,6 @@ const _GroupTable = (props) => {
             }}
           </Droppable>
         </DragDropContext>
-        {/* <MyButton
-        color1={"#0BFA1B"}
-        color2={"green.200"}
-        color3={"green.300"}
-        onClick={oitavasHandler}
-      >
-        Confirm
-      </MyButton> */}
       </HStack>
       <Flex w="100%" justifyContent="flex-end">
         <Flex

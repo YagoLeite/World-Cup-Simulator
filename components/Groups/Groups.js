@@ -17,26 +17,14 @@ const Groups = () => {
 
   return (
     <Grid
-      p="3%"
-      gridTemplateColumns="repeat(auto-fit, minmax(290px, 1fr))"
+      px="140px"
+      pt="36px"
+      gridTemplateColumns="repeat(auto-fit, minmax(400px, 1fr))"
       // gridTemplateColumns={"repeat(autofit, minmax(290px, 1fr))"}
-      gap={2}
+      gap={["95px"]}
     >
       {a &&
         groups.map((group, index) => <_GroupTable key={index} group={group} />)}
-      <Button
-        onClick={() => {
-          toast({
-            title: "All Groups Confirmed",
-            status: "success",
-            duration: 800,
-            isClosable: true,
-          });
-          dispatch({ type: "CONFIRM-ALL" });
-        }}
-      >
-        Confirm all
-      </Button>
     </Grid>
   );
 };

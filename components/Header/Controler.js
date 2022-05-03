@@ -3,7 +3,7 @@ import React from "react";
 import { CupState } from "../../context/Context";
 
 const Controler = () => {
-  const { dispatch } = CupState();
+  const { state, dispatch } = CupState();
   const toast = useToast();
   return (
     <Flex
@@ -56,27 +56,34 @@ const Controler = () => {
           </Flex>
         </Flex>
       </Flex>
-      <VStack pt="18px" w="100%" justifyContent="center">
-        <Text>Drag n' drop the teams to select its position</Text>
-        <Flex gap="3px">
-          <Text>Or</Text>
-          <Text
-            cursor="pointer"
-            onClick={() => {
-              toast({
-                title: "All Groups Confirmed",
-                status: "success",
-                duration: 800,
-                isClosable: true,
-              });
-              dispatch({ type: "CONFIRM-ALL" });
-            }}
-            color="#E36262"
-          >
-            Confirm all
-          </Text>
-        </Flex>
-      </VStack>
+      {state.ui === "groups" && (
+        <VStack pt="18px" w="100%" justifyContent="center">
+          <Text>Drag n' drop the teams to select its position</Text>
+          <Flex gap="3px">
+            <Text>Or</Text>
+            <Text
+              cursor="pointer"
+              onClick={() => {
+                toast({
+                  title: "All Groups Confirmed",
+                  status: "success",
+                  duration: 800,
+                  isClosable: true,
+                });
+                dispatch({ type: "CONFIRM-ALL" });
+              }}
+              color="#E36262"
+            >
+              Confirm all
+            </Text>
+          </Flex>
+        </VStack>
+      )}
+      {state.ui === "finals" && (
+        <VStack pt="18px" w="100%" justifyContent="center">
+          <Text>Click on the team to select the winner</Text>
+        </VStack>
+      )}
     </Flex>
   );
 };
