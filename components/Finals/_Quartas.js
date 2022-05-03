@@ -15,7 +15,7 @@ const _Quartas = () => {
       alignItems="center"
       pt="1%"
     >
-      <Text pt="1%">Quartas</Text>
+      <Text pt="1%">Quarterfinals</Text>
       <HStack
         w="100%"
         justifyContent="space-evenly"

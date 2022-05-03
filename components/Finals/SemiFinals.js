@@ -18,7 +18,7 @@ const SemiFinals = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Text pt="1%">Semi</Text>
+      <Text pt="1%">Semifinals</Text>
       <HStack
         w="100%"
         divider={<StackDivider borderColor="gray.500" />}

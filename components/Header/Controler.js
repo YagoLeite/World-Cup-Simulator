@@ -22,6 +22,11 @@ const Controler = () => {
           color="white"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "groups" })}
           cursor="pointer"
+          boxShadow={
+            // state.ui === "groups" && "rgba(240, 46, 170, 0.4) -5px 5px;"
+            state.ui === "groups" &&
+            "rgba(255, 36, 0, 0.4) -5px 5px, rgba(255, 36, 0, 0.3) -10px 10px"
+          }
         >
           <Flex
             className="skewed2"
@@ -43,6 +48,9 @@ const Controler = () => {
           bg="#E36262"
           cursor="pointer"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "finals" })}
+          boxShadow={
+            state.ui === "finals" && "rgba(240, 46, 170, 0.4) -5px 5px;"
+          }
         >
           <Flex
             className="skewed2"
