@@ -20,16 +20,14 @@ const OitavasMobile = (props) => {
       alignItems="center"
     >
       <Flex
-        py="3%"
-        px="8px"
+        py={["30px"]}
         w="100%"
-        justifyContent="space-between"
+        justifyContent="space-around"
         cursor="pointer"
       >
         <Flex w="50px"></Flex>
         <Text>Oitavas</Text>
         <Flex
-          mr="2%"
           w="50px"
           cursor="pointer"
           onClick={() => props.onNext("quartas")}

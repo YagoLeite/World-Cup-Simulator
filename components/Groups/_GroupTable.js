@@ -124,11 +124,13 @@ const _GroupTable = (props) => {
                                 overflow="hidden"
                                 alt="country flag"
                               >
-                                <Image
-                                  objectFit="cover"
-                                  alt="country flag"
-                                  src={item.flag ? item.flag : ""}
-                                />
+                                {item.flag && (
+                                  <Image
+                                    objectFit="cover"
+                                    alt="country flag"
+                                    src={item.flag}
+                                  />
+                                )}
                               </Flex>
                               <Text
                                 // color={item.index <= 1 ? "green" : ""}
@@ -156,9 +158,15 @@ const _GroupTable = (props) => {
           bg="#E36262"
           cursor="pointer"
           onClick={oitavasHandler}
-          w="140px"
+          w={["100px", "140px"]}
+          _hover={{ bg: "red.500" }}
         >
-          <Text fontWeight="500" fontSize="32px" color="white">
+          <Text
+            pb="2px"
+            fontWeight="400"
+            fontSize={["24px", "32px"]}
+            color="white"
+          >
             Confirm
           </Text>
         </Flex>

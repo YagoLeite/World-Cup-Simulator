@@ -1,10 +1,20 @@
-import { Text, Flex, VStack, useToast } from "@chakra-ui/react";
+import {
+  Text,
+  Flex,
+  VStack,
+  useToast,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 
 const Controler = () => {
   const { state, dispatch } = CupState();
   const toast = useToast();
+  const shadowBG = useColorModeValue(
+    "rgba(12, 46, 0, 0.4)",
+    "rgba(108, 122, 137, 0.4)"
+  );
   return (
     <Flex
       w="100%"
@@ -21,17 +31,13 @@ const Controler = () => {
       >
         <Flex
           className="skewed"
-          w={["130px", "180px", "201px"]}
+          w={["130px", "180px", "200px"]}
           h={["50px", "70px", "78px"]}
           bg="#E36262"
           color="white"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "groups" })}
           cursor="pointer"
-          boxShadow={
-            state.ui === "groups" && "rgba(240, 46, 170) -5px 5px;"
-            // state.ui === "groups" &&
-            // "rgba(255, 36, 0, 0.4) -5px 5px, rgba(255, 36, 0, 0.3) -10px 10px"
-          }
+          boxShadow={state.ui === "groups" && `${shadowBG} -5px 5px`}
         >
           <Flex
             className="skewed2"
@@ -53,9 +59,7 @@ const Controler = () => {
           bg="#E36262"
           cursor="pointer"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "finals" })}
-          boxShadow={
-            state.ui === "finals" && "rgba(240, 46, 170, 0.4) -5px 5px;"
-          }
+          boxShadow={state.ui === "finals" && `${shadowBG} -5px 5px`}
         >
           <Flex
             className="skewed2"
@@ -76,6 +80,7 @@ const Controler = () => {
             <Text>Or</Text>
             <Text
               cursor="pointer"
+              textDecoration="underline"
               onClick={() => {
                 toast({
                   title: "All Groups Confirmed",
@@ -95,6 +100,19 @@ const Controler = () => {
       {state.ui === "finals" && (
         <VStack pt="18px" w="100%" justifyContent="center">
           <Text>Click on the team to select the winner</Text>
+          <Flex gap="3px">
+            <Text>Or</Text>
+            <Text
+              cursor="pointer"
+              textDecoration="underline"
+              onClick={() => {
+                dispatch({ type: "CLEAR" });
+              }}
+              color="#E36262"
+            >
+              Clear all
+            </Text>
+          </Flex>
         </VStack>
       )}
     </Flex>

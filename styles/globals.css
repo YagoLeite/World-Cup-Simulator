@@ -21,15 +21,6 @@ a {
 	animation-timing-function: ease-in;
 	animation-duration: 0.3s;
 }
-
-.skewed {
-	transform: skew(-10deg)
-}
-
-.skewed2 {
-	transform: skew(10deg);
-}
-
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
@@ -37,4 +28,12 @@ a {
 	100% {
 		opacity: 1;
 	}
+}
+
+.skewed {
+	transform: skew(-10deg)
+}
+
+.skewed2 {
+	transform: skew(10deg);
 }

@@ -31,7 +31,7 @@ const FinalsMobile = (props) => {
       justifyContent="center"
       alignItems="center"
     >
-      <Flex py="3%" px="8px" w="100%" justifyContent="space-between">
+      <Flex py={["30px"]} w="100%" justifyContent="space-around">
         <Flex
           w="50px"
           cursor="pointer"

@@ -19,7 +19,7 @@ const QuartasMobile = (props) => {
       justifyContent="center"
       alignItems="center"
     >
-      <Flex py="3%" px="8px" justifyContent="space-between" w="100%">
+      <Flex py={["30px"]} justifyContent="space-around" w="100%">
         <Flex
           w="50px"
           onClick={() => props.onNext("oitavas")}
@@ -32,7 +32,6 @@ const QuartasMobile = (props) => {
         </Flex>
         <Text>Quartas</Text>
         <Flex
-          mr="2%"
           w="50px"
           cursor="pointer"
           onClick={() => props.onNext("semi")}

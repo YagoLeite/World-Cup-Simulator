@@ -33,6 +33,7 @@ const SingleMatch = (props) => {
       justifyContent={props.justify}
       direction="row"
       marginX={props.margin}
+      bg="red"
     >
       <Stack pt="20px" opacity={opacityOne ? "0.5" : "1"}>
         {props.firstTeam ? (
@@ -49,12 +50,14 @@ const SingleMatch = (props) => {
             borderWidth="1px"
             borderColor="#C9C9C9"
           >
-            <Image
-              alt="country flag"
-              objectFit="cover"
-              boxShadow="lg"
-              src={props.firstTeam.flag}
-            />
+            {props.firstTeam.flag && (
+              <Image
+                alt="country flag"
+                objectFit="cover"
+                boxShadow="lg"
+                src={props.firstTeam.flag}
+              />
+            )}
           </Flex>
         ) : (
           <Flex
@@ -95,12 +98,14 @@ const SingleMatch = (props) => {
             borderColor="#C9C9C9"
             onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
           >
-            <Image
-              alt="country flag"
-              objectFit="cover"
-              boxShadow="lg"
-              src={props.secondTeam.flag}
-            />
+            {props.secondTeam.flag && (
+              <Image
+                alt="country flag"
+                objectFit="cover"
+                boxShadow="lg"
+                src={props.secondTeam.flag}
+              />
+            )}
           </Flex>
         ) : (
           <Flex

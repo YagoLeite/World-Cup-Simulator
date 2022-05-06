@@ -18,9 +18,10 @@ const Groups = () => {
   return (
     <Grid
       px={["10px", "50px", "140px"]}
-      pt="36px"
-      gridTemplateColumns="repeat(auto-fit, minmax(360px, 1fr))"
+      pt={["15px", "36px"]}
+      gridTemplateColumns="repeat(auto-fit, minmax(330px, 1fr))"
       gap={["95px"]}
+      maxW="1440px"
     >
       {a &&
         groups.map((group, index) => <_GroupTable key={index} group={group} />)}
