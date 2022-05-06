@@ -33,7 +33,10 @@ const Controler = () => {
           className="skewed"
           w={["130px", "180px", "200px"]}
           h={["50px", "70px", "78px"]}
-          bg="#E36262"
+          bg={state.ui !== "groups" && "red.500"}
+          bgGradient={
+            state.ui === "groups" && "linear(45deg, red.500 60%, red.300)"
+          }
           color="white"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "groups" })}
           cursor="pointer"
@@ -56,10 +59,13 @@ const Controler = () => {
           className="skewed"
           w={["130px", "180px", "201px"]}
           h={["50px", "70px", "78px"]}
-          bg="#E36262"
+          bg={state.ui !== "finals" && "red.500"}
           cursor="pointer"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "finals" })}
           boxShadow={state.ui === "finals" && `${shadowBG} -5px 5px`}
+          bgGradient={
+            state.ui === "finals" && "linear(45deg, red.500 60%, red.300)"
+          }
         >
           <Flex
             className="skewed2"
