@@ -30,9 +30,8 @@ const FinalsMobile = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      p="3%"
     >
-      <Flex py="3%" w="100%" justifyContent="space-between">
+      <Flex py="3%" px="8px" w="100%" justifyContent="space-between">
         <Flex
           w="50px"
           cursor="pointer"
@@ -63,7 +62,6 @@ const FinalsMobile = (props) => {
         />
       </Stack>
       {/* <WinnerMobile /> */}
-      <Button onClick={() => dispatch({ type: "CLEAR" })}>clear</Button>
     </Stack>
   );
 };

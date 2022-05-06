@@ -18,9 +18,14 @@ const OitavasMobile = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      p="3%"
     >
-      <Flex py="3%" w="100%" justifyContent="space-between" cursor="pointer">
+      <Flex
+        py="3%"
+        px="8px"
+        w="100%"
+        justifyContent="space-between"
+        cursor="pointer"
+      >
         <Flex w="50px"></Flex>
         <Text>Oitavas</Text>
         <Flex
