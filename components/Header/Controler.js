@@ -23,9 +23,9 @@ const Controler = () => {
           onClick={() => dispatch({ type: "UI-UPDATE", value: "groups" })}
           cursor="pointer"
           boxShadow={
-            // state.ui === "groups" && "rgba(240, 46, 170, 0.4) -5px 5px;"
-            state.ui === "groups" &&
-            "rgba(255, 36, 0, 0.4) -5px 5px, rgba(255, 36, 0, 0.3) -10px 10px"
+            state.ui === "groups" && "rgba(240, 46, 170) -5px 5px;"
+            // state.ui === "groups" &&
+            // "rgba(255, 36, 0, 0.4) -5px 5px, rgba(255, 36, 0, 0.3) -10px 10px"
           }
         >
           <Flex
