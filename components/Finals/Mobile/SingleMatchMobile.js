@@ -33,7 +33,6 @@ const SingleMatch = (props) => {
       justifyContent={props.justify}
       direction="row"
       marginX={props.margin}
-      bg="red"
     >
       <Stack pt="20px" opacity={opacityOne ? "0.5" : "1"}>
         {props.firstTeam ? (
