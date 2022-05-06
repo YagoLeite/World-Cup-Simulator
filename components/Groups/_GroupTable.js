@@ -97,13 +97,13 @@ const _GroupTable = (props) => {
                               {...provided.dragHandleProps}
                               userSelect="none"
                               px="8px"
-                              bg={
-                                !snapshot.isDragging
-                                  ? item.index <= 1
-                                    ? bgTopTwo
-                                    : ""
-                                  : "yellow.200"
-                              }
+                              // bg={
+                              //   !snapshot.isDragging
+                              //     ? item.index <= 1
+                              //       ? bgTopTwo
+                              //       : ""
+                              //     : "yellow.200"
+                              // }
                               opacity={
                                 !snapshot.isDragging
                                   ? item.index <= 1

@@ -35,7 +35,8 @@ const Controler = () => {
           h={["50px", "70px", "78px"]}
           bg={state.ui !== "groups" && "red.500"}
           bgGradient={
-            state.ui === "groups" && "linear(45deg, red.500 60%, red.300)"
+            state.ui === "groups" &&
+            " linear-gradient(25deg, rgba(184,28,28,1) 0%, rgba(221,60,60,1) 36%, rgba(255,92,92,1) 100%)"
           }
           color="white"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "groups" })}
@@ -64,7 +65,8 @@ const Controler = () => {
           onClick={() => dispatch({ type: "UI-UPDATE", value: "finals" })}
           boxShadow={state.ui === "finals" && `${shadowBG} -5px 5px`}
           bgGradient={
-            state.ui === "finals" && "linear(45deg, red.500 60%, red.300)"
+            state.ui === "finals" &&
+            " linear-gradient(25deg, rgba(184,28,28,1) 0%, rgba(221,60,60,1) 36%, rgba(255,92,92,1) 100%)"
           }
         >
           <Flex

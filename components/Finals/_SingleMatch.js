@@ -47,12 +47,14 @@ const SingleMatch = (props) => {
             onClick={() => props.onClick(props.firstTeam, props.secondTeam)}
             className={classNameTeamOne}
           >
-            <Image
-              objectFit="cover"
-              boxShadow="lg"
-              alt="country flag"
-              src={props.firstTeam.flag}
-            />
+            {props.firstTeam.flag && (
+              <Image
+                objectFit="cover"
+                boxShadow="lg"
+                alt="country flag"
+                src={props.firstTeam.flag}
+              />
+            )}
           </Flex>
         ) : (
           <Flex
@@ -91,12 +93,14 @@ const SingleMatch = (props) => {
             className={classNameTeamTwo}
             onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
           >
-            <Image
-              alt="country flag"
-              objectFit="cover"
-              boxShadow="lg"
-              src={props.secondTeam.flag}
-            />
+            {props.secondTeam.flag && (
+              <Image
+                alt="country flag"
+                objectFit="cover"
+                boxShadow="lg"
+                src={props.secondTeam.flag}
+              />
+            )}
           </Flex>
         ) : (
           <Flex
