@@ -11,13 +11,18 @@ const Controler = () => {
       justifyContent="center"
       direction="column"
       alignContent="center"
-      pt="65px"
+      pt={["30px", "65px"]}
     >
-      <Flex w="100%" justifyContent="center" gap="48px" alignContent="center">
+      <Flex
+        w="100%"
+        justifyContent="center"
+        gap={["20px", "25px", "48px"]}
+        alignContent="center"
+      >
         <Flex
           className="skewed"
-          w="201px"
-          h="78px"
+          w={["130px", "180px", "201px"]}
+          h={["50px", "70px", "78px"]}
           bg="#E36262"
           color="white"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "groups" })}
@@ -34,17 +39,17 @@ const Controler = () => {
             h="100%"
             alignItems="center"
             justifyContent="center"
-            fontSize="32px"
+            fontSize={["24px", "32px"]}
             color="white"
           >
             Groups
           </Flex>
         </Flex>
         <Flex
-          fontSize="32px"
+          fontSize={["24px", "32px"]}
           className="skewed"
-          w="201px"
-          h="78px"
+          w={["130px", "180px", "201px"]}
+          h={["50px", "70px", "78px"]}
           bg="#E36262"
           cursor="pointer"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "finals" })}

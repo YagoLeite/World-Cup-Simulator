@@ -17,7 +17,7 @@ const Groups = () => {
 
   return (
     <Grid
-      px="140px"
+      px={["10px", "50px", "140px"]}
       pt="36px"
       gridTemplateColumns="repeat(auto-fit, minmax(360px, 1fr))"
       gap={["95px"]}
