@@ -30,7 +30,7 @@ const Winner = () => {
           >
             <Image objectFit="cover" alt="Winners flag" src={winner.flag} />
           </Flex>
-          <Flex gap="12px">
+          {/* <Flex gap="12px">
             {[...winner.wins, "2022"].map((item, index) => {
               return (
                 <VStack key={index}>
@@ -39,7 +39,7 @@ const Winner = () => {
                 </VStack>
               );
             })}
-          </Flex>
+          </Flex> */}
         </VStack>
       )}
     </VStack>
