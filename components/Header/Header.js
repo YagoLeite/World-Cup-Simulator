@@ -1,25 +1,10 @@
 import React from "react";
-import {
-  Flex,
-  Icon,
-  IconButton,
-  Link,
-  useColorMode,
-  useColorModeValue,
-  Box,
-} from "@chakra-ui/react";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { Flex, Icon, Link, Box } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 import MainHeader from "./MainHeader";
 import Controler from "./Controler";
 
 export const Header = () => {
-  const { toggleColorMode: toggleMode } = useColorMode();
-  const text = useColorModeValue("dark", "light");
-  const SwitchIcon = useColorModeValue(FaMoon, FaSun);
-
-  const bg = useColorModeValue("white", "gray.700");
-
   const github = (
     <Flex
       pr={["16px", "16px", "24px", "48px", "48px"]}
@@ -43,20 +28,11 @@ export const Header = () => {
           _hover={{ color: "gray.600" }}
         />
       </Link>
-      <IconButton
-        size={["sm", "md"]}
-        fontSize="lg"
-        aria-label={`Switch to ${text} mode`}
-        variant="ghost"
-        color="current"
-        onClick={toggleMode}
-        icon={<SwitchIcon />}
-      />
     </Flex>
   );
 
   return (
-    <Box>
+    <Box bg="gray.700" color="white">
       {github}
       <MainHeader />
       <Controler />

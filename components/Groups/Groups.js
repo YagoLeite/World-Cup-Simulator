@@ -11,7 +11,7 @@ const Groups = () => {
   }, []);
 
   return (
-    <VStack w="100%">
+    <VStack w="100%" color="white" bg="gray.700">
       <Grid
         px={["10px", "50px", "140px"]}
         pt={["15px", "36px"]}

@@ -28,8 +28,6 @@ const position = (
       <Flex
         key={index}
         h="85px"
-        // py="5px"
-        // my="18px"
         borderColor="rgb(255, 176, 74)"
         borderBottomWidth={index <= 1 ? "5px" : ""}
         justifyContent="center"
@@ -42,9 +40,6 @@ const position = (
 );
 
 const _GroupTable = (props) => {
-  const bg = useColorModeValue("white", "gray.700");
-  const bgDragingOver = useColorModeValue("gray.200", "gray.500");
-  const bgTopTwo = useColorModeValue("#ffebcd", "#ededed21");
   const { state, dispatch } = CupState();
   const toast = useToast();
   const filteredList = state.groupState
@@ -68,7 +63,7 @@ const _GroupTable = (props) => {
   };
 
   return (
-    <Box py="16px">
+    <Box bg="gray.700" py="16px">
       <Text fontSize={["32px"]}> Group {props.group} </Text>
       <HStack>
         {position}
@@ -82,7 +77,7 @@ const _GroupTable = (props) => {
                   {...provided.droppableProps}
                   {...provided.dragHandleProps}
                   ref={provided.innerRef}
-                  bg={snapshot.isDraggingOver ? bgDragingOver : bg}
+                  bg={snapshot.isDraggingOver ? "gray.600" : "gray.700"}
                   width="100%"
                   px="4px"
                 >
@@ -108,7 +103,7 @@ const _GroupTable = (props) => {
                               bg={
                                 !snapshot.isDragging
                                   ? item.index <= 1
-                                    ? bgTopTwo
+                                    ? "#ededed21"
                                     : ""
                                   : "yellow.200"
                               }

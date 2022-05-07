@@ -20,7 +20,6 @@ import FinalsMobile from "./Mobile/FinalsMobile";
 
 const Finals = () => {
   const [knockOut, setKnockOut] = useState("oitavas");
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const { state, dispatch } = CupState();
   const test = useBreakpointValue({ lg: "solid", xl: "solid" });
 
@@ -32,7 +31,7 @@ const Finals = () => {
   console.log(winner);
 
   return (
-    <VStack w="100%" minH="100vh">
+    <VStack bg="gray.700" color="white" w="100%" minH="100vh">
       {test === "solid" && (
         <Box w="100%" maxW="1440px" px="1%">
           <Oitavas />
