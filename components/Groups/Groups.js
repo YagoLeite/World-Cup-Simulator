@@ -21,7 +21,7 @@ const Groups = () => {
         px={["10px", "50px", "140px"]}
         pt={["15px", "36px"]}
         gridTemplateColumns="repeat(auto-fit, minmax(330px, 1fr))"
-        gap={["95px"]}
+        gap={["24px", "95px"]}
         w="100%"
         maxW="1440px"
       >

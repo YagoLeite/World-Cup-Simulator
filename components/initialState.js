@@ -9,7 +9,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Ecuador",
@@ -21,7 +21,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Senegal",
@@ -33,7 +33,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Netherlands",
@@ -45,7 +45,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "England",
@@ -57,7 +57,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 1,
+    wins: ["1966"],
   },
   {
     name: "Iran",
@@ -69,7 +69,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "USA",
@@ -81,7 +81,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "To de decided 1",
@@ -92,7 +92,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Argentina",
@@ -104,7 +104,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 2,
+    wins: ["1978", "1976"],
   },
   {
     name: "Saudi Arabia",
@@ -116,7 +116,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Mexico",
@@ -128,7 +128,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Poland",
@@ -140,7 +140,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "France",
@@ -152,7 +152,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 2,
+    wins: ["1998", "2018"],
   },
   {
     name: "To be decided 2",
@@ -163,7 +163,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Denmark",
@@ -175,7 +175,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Tunisia",
@@ -187,7 +187,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Spain",
@@ -199,7 +199,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 1,
+    wins: ["2010"],
   },
   {
     name: "To be decided 3",
@@ -210,7 +210,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Germany",
@@ -222,7 +222,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 4,
+    wins: ["1954", "1974", "1990", "2014"],
   },
   {
     name: "Japan",
@@ -234,7 +234,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Belgium",
@@ -246,7 +246,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Canada",
@@ -258,7 +258,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Marroco",
@@ -270,7 +270,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Croatia",
@@ -282,7 +282,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Brazil",
@@ -294,7 +294,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 5,
+    wins: ["1958", "1962", "1970", "1994", "2002"],
   },
   {
     name: "Serbia",
@@ -306,7 +306,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Switzerland",
@@ -318,7 +318,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Cameroon",
@@ -330,7 +330,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Portugal",
@@ -342,7 +342,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Ghana",
@@ -354,7 +354,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
   {
     name: "Uruguay",
@@ -366,7 +366,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 2,
+    wins: ["1930", "1950"],
   },
   {
     name: "South Korea",
@@ -378,6 +378,6 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: 0,
+    wins: [],
   },
 ];
