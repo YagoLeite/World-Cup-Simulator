@@ -8,10 +8,6 @@ const Winner = () => {
   const { state } = CupState();
   const winner = state.groupState.find((item) => item.winner);
 
-  if (winner) {
-    const timesWon = [...winner.wins, "2022"];
-  }
-
   return (
     <VStack
       w="100%"
@@ -35,7 +31,7 @@ const Winner = () => {
             <Image objectFit="cover" alt="Winners flag" src={winner.flag} />
           </Flex>
           <Flex gap="12px">
-            {timesWon.map((item, index) => {
+            {[...winner.wins, "2022"].map((item, index) => {
               return (
                 <VStack key={index}>
                   <Text>{item}</Text>
