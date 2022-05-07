@@ -1,4 +1,10 @@
-import { Box, useBreakpointValue, useDisclosure, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  useBreakpointValue,
+  useDisclosure,
+  Flex,
+  VStack,
+} from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { CupState } from "../../context/Context";
 import _Quartas from "./_Quartas";
@@ -30,9 +36,9 @@ const Finals = () => {
   // }, [winner]);
 
   return (
-    <Box minH="100vh">
+    <VStack w="100%" minH="100vh">
       {test === "solid" && (
-        <Box px="1%">
+        <Box w="100%" maxW="1440px" px="1%">
           <Oitavas />
           <_Quartas />
           <SemiFinals />
@@ -43,14 +49,14 @@ const Finals = () => {
         </Box>
       )}
       {test !== "solid" && (
-        <Box>
+        <Box w="100%">
           {knockOut === "oitavas" && <OitavasMobile onNext={onNext} />}
           {knockOut === "quartas" && <QuartasMobile onNext={onNext} />}
           {knockOut === "semi" && <SemiFinalsMobile onNext={onNext} />}
           {knockOut === "final" && <FinalsMobile onNext={onNext} />}
         </Box>
       )}
-    </Box>
+    </VStack>
   );
 };
 

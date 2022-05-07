@@ -6,6 +6,7 @@ import {
   Image,
   HStack,
   useColorModeValue,
+  VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
@@ -22,25 +23,28 @@ const onDragEnd = (result, columns, dispatch) => {
 };
 
 const position = (
-  <Box h="100%">
+  <VStack justifyContent="center" h="100%">
     {["1º", "2º", "3º", "4º"].map((position, index) => (
       <Flex
         key={index}
-        h="60px"
-        my="18px"
+        h="85px"
+        // py="5px"
+        // my="18px"
+        borderColor="rgb(255, 176, 74)"
+        borderBottomWidth={index <= 1 ? "5px" : ""}
         justifyContent="center"
         alignItems="center"
       >
-        <Text>{position}</Text>
+        {position}
       </Flex>
     ))}
-  </Box>
+  </VStack>
 );
 
 const _GroupTable = (props) => {
   const bg = useColorModeValue("white", "gray.700");
   const bgDragingOver = useColorModeValue("gray.200", "gray.500");
-  const bgTopTwo = useColorModeValue("green", "green.200");
+  const bgTopTwo = useColorModeValue("#ffebcd", "#ededed21");
   const { state, dispatch } = CupState();
   const toast = useToast();
   const filteredList = state.groupState
@@ -64,9 +68,9 @@ const _GroupTable = (props) => {
   };
 
   return (
-    <Box p="16px">
+    <Box py="16px">
       <Text fontSize={["32px"]}> Group {props.group} </Text>
-      <HStack justifyContent="center">
+      <HStack>
         {position}
         <DragDropContext
           onDragEnd={(result) => onDragEnd(result, columns, dispatch)}
@@ -80,7 +84,7 @@ const _GroupTable = (props) => {
                   ref={provided.innerRef}
                   bg={snapshot.isDraggingOver ? bgDragingOver : bg}
                   width="100%"
-                  p="4px"
+                  px="4px"
                 >
                   {filteredList.map((item, index) => {
                     return (
@@ -97,13 +101,17 @@ const _GroupTable = (props) => {
                               {...provided.dragHandleProps}
                               userSelect="none"
                               px="8px"
-                              // bg={
-                              //   !snapshot.isDragging
-                              //     ? item.index <= 1
-                              //       ? bgTopTwo
-                              //       : ""
-                              //     : "yellow.200"
-                              // }
+                              py="5px"
+                              borderRadius="2px"
+                              borderBottomWidth={item.index <= 1 ? "5px" : ""}
+                              borderColor="rgb(255, 176, 74)"
+                              bg={
+                                !snapshot.isDragging
+                                  ? item.index <= 1
+                                    ? bgTopTwo
+                                    : ""
+                                  : "yellow.200"
+                              }
                               opacity={
                                 !snapshot.isDragging
                                   ? item.index <= 1
@@ -159,7 +167,7 @@ const _GroupTable = (props) => {
           cursor="pointer"
           onClick={oitavasHandler}
           w={["100px", "140px"]}
-          _hover={{ bg: "red.500" }}
+          _hover={{ bg: "rgba(184,28,28,1)" }}
         >
           <Text
             pb="2px"

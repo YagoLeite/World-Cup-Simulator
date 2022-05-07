@@ -16,12 +16,13 @@ const Groups = () => {
   const toast = useToast();
 
   return (
-    <VStack>
+    <VStack w="100%">
       <Grid
         px={["10px", "50px", "140px"]}
         pt={["15px", "36px"]}
         gridTemplateColumns="repeat(auto-fit, minmax(330px, 1fr))"
         gap={["95px"]}
+        w="100%"
         maxW="1440px"
       >
         {a &&
