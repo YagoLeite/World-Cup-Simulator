@@ -1,50 +1,48 @@
 import { Image, Flex, Text, Box, VStack } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrophy } from "@fortawesome/free-solid-svg-icons";
+import { faTrophyStar } from "@fortawesome/free-solid-svg-icons";
 
 const Winner = () => {
   const { state } = CupState();
   const winner = state.groupState.find((item) => item.winner);
 
-  if (winner) {
-    const trophies = new Array(winner.wins + 1).fill(1);
-  }
+  const timesWon = [...winner.wins, "2022"];
+  console.log(timesWon);
 
   return (
-    <VStack w="100%" justifyContent="center" alignItems="center">
+    <VStack
+      w="100%"
+      pt="24px"
+      mb="30px"
+      justifyContent="center"
+      alignItems="center"
+    >
       {winner !== undefined && (
-        <VStack>
-          <Text>The winner is {winner.name}</Text>
-          {/* <Flex>
-            {trophies.map((item, index) => (
-              <Flex
-                justifyContent="space-evenly"
-                key={index}
-                w="50px"
-                h="70px"
-                overflow="hidden"
-              >
-                <Image
-                  objectFit="cover"
-                  src="https://www.pngall.com/wp-content/uploads/2016/04/Trophy-Free-PNG-Image.png"
-                />
-                <Image
-                  objectFit="cover"
-                  src="https://www.pngall.com/wp-content/uploads/4/Golden-Cup-PNG-Image.png"
-                />
-              </Flex>
-            ))}
-          </Flex> */}
+        <VStack gap={["12px", "24px"]}>
+          <Text fontSize={"24px"}>The winner is {winner.name}</Text>
           <Flex
             borderRadius="50%"
             overflow="hidden"
-            w="300px"
-            h="300px"
+            w={["150px", "200px", "300px"]}
+            h={["150px", "200px", "300px"]}
             boxShadow="lg"
             borderColor="#c9c9c9"
             borderWidth="1px"
           >
             <Image objectFit="cover" alt="Winners flag" src={winner.flag} />
+          </Flex>
+          <Flex gap="12px">
+            {timesWon.map((item, index) => {
+              return (
+                <VStack key={index}>
+                  <Text>{item}</Text>
+                  <FontAwesomeIcon icon={faTrophy} />
+                </VStack>
+              );
+            })}
           </Flex>
         </VStack>
       )}

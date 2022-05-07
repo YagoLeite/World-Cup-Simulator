@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from "react";
-import GroupTable from "./GroupTable";
 import _GroupTable from "./_GroupTable";
-import { Button, Grid, useToast, VStack } from "@chakra-ui/react";
-import { CupState } from "../../context/Context";
+import { Grid, VStack } from "@chakra-ui/react";
 
 const groups = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 const Groups = () => {
-  const { state, dispatch } = CupState();
   const [a, setA] = useState(false);
   useEffect(() => {
     setA(true);
   }, []);
-
-  const toast = useToast();
 
   return (
     <VStack w="100%">

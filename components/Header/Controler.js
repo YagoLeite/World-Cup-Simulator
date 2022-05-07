@@ -7,6 +7,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 
 const Controler = () => {
   const { state, dispatch } = CupState();

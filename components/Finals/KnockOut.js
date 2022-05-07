@@ -28,12 +28,8 @@ const Finals = () => {
     setKnockOut(next);
   };
 
-  // const winner = state.groupState.find((item) => item.winner);
-
-  // useEffect(() => {
-  //   if (!winner) return;
-  //   onOpen();
-  // }, [winner]);
+  const winner = state.groupState.find((item) => item.winner);
+  console.log(winner);
 
   return (
     <VStack w="100%" minH="100vh">
@@ -43,9 +39,7 @@ const Finals = () => {
           <_Quartas />
           <SemiFinals />
           <_Finals />
-          <Flex justifyContent="center" alignItems="center">
-            {/* <Winner /> */}
-          </Flex>
+          {winner && <Winner />}
         </Box>
       )}
       {test !== "solid" && (

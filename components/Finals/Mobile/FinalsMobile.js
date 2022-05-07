@@ -4,7 +4,7 @@ import { Flex, Stack, Text, Button } from "@chakra-ui/react";
 import { mata_mata_Handler } from "../../functions";
 import { CupState } from "../../../context/Context";
 import { ArrowLeftIcon } from "@chakra-ui/icons";
-import WinnerMobile from "./WinnerMobile";
+import Winner from "../Winner";
 
 const FinalsMobile = (props) => {
   const { state, dispatch } = CupState();
@@ -62,6 +62,7 @@ const FinalsMobile = (props) => {
         />
       </Stack>
       {/* <WinnerMobile /> */}
+      <Winner />
     </Stack>
   );
 };
