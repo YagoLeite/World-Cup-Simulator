@@ -3,14 +3,14 @@ import React from "react";
 import { CupState } from "../../context/Context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
-import { faTrophyStar } from "@fortawesome/free-solid-svg-icons";
 
 const Winner = () => {
   const { state } = CupState();
   const winner = state.groupState.find((item) => item.winner);
 
-  const timesWon = [...winner.wins, "2022"];
-  console.log(timesWon);
+  if (winner) {
+    const timesWon = [...winner.wins, "2022"];
+  }
 
   return (
     <VStack
