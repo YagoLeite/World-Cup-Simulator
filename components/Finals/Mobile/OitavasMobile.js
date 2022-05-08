@@ -34,7 +34,7 @@ const OitavasMobile = (props) => {
           alignItems="center"
           gap={1.5}
         >
-          <p>Semi</p>
+          <p>Quarter</p>
           <ArrowRightIcon color="gray.600" />
         </Flex>
       </Flex>
