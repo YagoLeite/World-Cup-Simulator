@@ -34,7 +34,7 @@ const Winner = () => {
             )}
           </Flex>
           <Flex gap="12px">
-            {[...winner.wins, { year: 2022, place: "qatar" }].map(
+            {[...winner.wins, { year: "2022", place: "qatar" }].map(
               (item, index) => {
                 return (
                   <Link

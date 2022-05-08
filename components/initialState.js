@@ -57,7 +57,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: [{ year: 1966, place: "england" }],
+    wins: [{ year: "1966", place: "england" }],
   },
   {
     name: "Iran",
@@ -105,8 +105,8 @@ export const initialState = [
     final: false,
     winner: false,
     wins: [
-      { year: 1978, place: "argentina" },
-      { year: 1986, place: "mexico" },
+      { year: "1978", place: "argentina" },
+      { year: "1986", place: "mexico" },
     ],
   },
   {
@@ -156,8 +156,8 @@ export const initialState = [
     final: false,
     winner: false,
     wins: [
-      { year: 1998, place: "france" },
-      { year: 2018, place: "russia" },
+      { year: "1998", place: "france" },
+      { year: " 2018", place: "russia" },
     ],
   },
   {
@@ -205,7 +205,7 @@ export const initialState = [
     semi: false,
     final: false,
     winner: false,
-    wins: [{ year: 2010, place: "south-africa" }],
+    wins: [{ year: "2010", place: "south-africa" }],
   },
   {
     name: "To be decided 3",
@@ -229,10 +229,10 @@ export const initialState = [
     final: false,
     winner: false,
     wins: [
-      { year: 1954, place: "switzerland" },
-      { year: 1974, place: "germany" },
-      { year: 1990, place: "italy" },
-      { year: 2014, place: "brazil" },
+      { year: "1954", place: "switzerland" },
+      { year: "1974", place: "germany" },
+      { year: "1990", place: "italy" },
+      { year: "2014", place: "brazil" },
     ],
   },
   {
@@ -306,11 +306,11 @@ export const initialState = [
     final: false,
     winner: false,
     wins: [
-      { year: 1958, place: "sweden" },
-      { year: 1962, place: "chile" },
-      { year: 1970, place: "mexico" },
-      { year: 1994, place: "usa" },
-      { year: 2002, place: "korea-japan" },
+      { year: "1958", place: "sweden" },
+      { year: "1962", place: "chile" },
+      { year: "1970", place: "mexico" },
+      { year: "1994", place: "usa" },
+      { year: "2002", place: "korea-japan" },
     ],
   },
   {
@@ -384,8 +384,8 @@ export const initialState = [
     final: false,
     winner: false,
     wins: [
-      { year: 1930, place: "uruguay" },
-      { year: 1950, place: "brazil" },
+      { year: "1930", place: "uruguay" },
+      { year: "1950", place: "brazil" },
     ],
   },
   {
