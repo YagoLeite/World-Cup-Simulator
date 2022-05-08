@@ -1,4 +1,4 @@
-import { Image, Flex, Text, Box, VStack } from "@chakra-ui/react";
+import { Image, Flex, Text, VStack, Link } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,18 +28,32 @@ const Winner = () => {
             borderColor="#c9c9c9"
             borderWidth="1px"
           >
-            <Image objectFit="cover" alt="Winners flag" src={winner.flag} />
+            {winner.flag && (
+              <Image objectFit="cover" alt="Winners flag" src={winner.flag} />
+            )}
           </Flex>
           <Flex gap="12px">
-            {[...winner.wins, "2022"].map((item, index) => {
-              return (
-                <VStack key={index}>
-                  <Text>{item}</Text>
-                  <FontAwesomeIcon icon={faTrophy} />
-                </VStack>
-              );
-            })}
+            {[...winner.wins, { year: 2022, place: "qatar" }].map(
+              (item, index) => {
+                return (
+                  <Link
+                    isExternal
+                    href={
+                      item.year === 2022
+                        ? `https://www.fifa.com/tournaments/mens/worldcup/${item.place}${item.year}`
+                        : `https://www.fifa.com/tournaments/mens/worldcup/${item.year}${item.place}`
+                    }
+                  >
+                    <VStack key={index}>
+                      <Text>{item.year}</Text>
+                      <FontAwesomeIcon icon={faTrophy} />
+                    </VStack>
+                  </Link>
+                );
+              }
+            )}
           </Flex>
+          <Text>For more information click on the year!</Text>
         </VStack>
       )}
     </VStack>
