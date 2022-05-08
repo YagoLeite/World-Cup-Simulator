@@ -41,7 +41,7 @@ const Winner = () => {
                     key={index}
                     isExternal
                     href={
-                      item.year === 2022
+                      item.year !== 2022
                         ? `https://www.fifa.com/tournaments/mens/worldcup/${item.place}${item.year}`
                         : `https://www.fifa.com/tournaments/mens/worldcup/${item.year}${item.place}`
                     }
