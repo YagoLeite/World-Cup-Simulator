@@ -401,28 +401,3 @@ export const initialState = [
     wins: [],
   },
 ];
-
-export const cups = [
-  { year: 1930, place: "uruguay" },
-  { year: 1934, place: "italy" },
-  { year: 1938, place: "france" },
-  { year: 1950, place: "brazil" },
-  { year: 1954, place: "switzerland" },
-  { year: 1958, place: "sweden" },
-  { year: 1962, place: "chile" },
-  { year: 1966, place: "england" },
-  { year: 1970, place: "mexico" },
-  { year: 1974, place: "germany" },
-  { year: 1978, place: "argentina" },
-  { year: 1982, place: "spain" },
-  { year: 1986, place: "mexico" },
-  { year: 1990, place: "italy" },
-  { year: 1994, place: "usa" },
-  { year: 1998, place: "france" },
-  { year: 2002, place: "korea-japan" },
-  { year: 2006, place: "germany" },
-  { year: 2010, place: "south-africa" },
-  { year: 2014, place: "brazil" },
-  { year: 2018, place: "russia" },
-  { year: 2022, place: "qatar" },
-];
