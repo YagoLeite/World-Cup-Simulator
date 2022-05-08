@@ -39,36 +39,8 @@ const Oitavas = () => {
         <_SingleMatch
           position="quartas"
           justify="space-evenly"
-          firstTeam={findingTeam("B", 0, "oitavas", filteredList)}
-          secondTeam={findingTeam("A", 1, "oitavas", filteredList)}
-          onClick={(firstTeam, secondTeam) =>
-            mata_mata_Handler(
-              firstTeam,
-              secondTeam,
-              "QUARTAS-SELECTION",
-              dispatch
-            )
-          }
-        />
-        <_SingleMatch
-          position="quartas"
-          justify="space-evenly"
           firstTeam={findingTeam("C", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("D", 1, "oitavas", filteredList)}
-          onClick={(firstTeam, secondTeam) =>
-            mata_mata_Handler(
-              firstTeam,
-              secondTeam,
-              "QUARTAS-SELECTION",
-              dispatch
-            )
-          }
-        />
-        <_SingleMatch
-          position="quartas"
-          justify="space-evenly"
-          firstTeam={findingTeam("D", 0, "oitavas", filteredList)}
-          secondTeam={findingTeam("C", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
             mata_mata_Handler(
               firstTeam,
@@ -95,8 +67,8 @@ const Oitavas = () => {
         <_SingleMatch
           position="quartas"
           justify="space-evenly"
-          firstTeam={findingTeam("F", 0, "oitavas", filteredList)}
-          secondTeam={findingTeam("E", 1, "oitavas", filteredList)}
+          firstTeam={findingTeam("G", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("H", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
             mata_mata_Handler(
               firstTeam,
@@ -109,8 +81,8 @@ const Oitavas = () => {
         <_SingleMatch
           position="quartas"
           justify="space-evenly"
-          firstTeam={findingTeam("G", 0, "oitavas", filteredList)}
-          secondTeam={findingTeam("H", 1, "oitavas", filteredList)}
+          firstTeam={findingTeam("B", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("A", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
             mata_mata_Handler(
               firstTeam,
@@ -120,6 +92,37 @@ const Oitavas = () => {
             )
           }
         />
+
+        <_SingleMatch
+          position="quartas"
+          justify="space-evenly"
+          firstTeam={findingTeam("D", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("C", 1, "oitavas", filteredList)}
+          onClick={(firstTeam, secondTeam) =>
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
+          }
+        />
+
+        <_SingleMatch
+          position="quartas"
+          justify="space-evenly"
+          firstTeam={findingTeam("F", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("E", 1, "oitavas", filteredList)}
+          onClick={(firstTeam, secondTeam) =>
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
+          }
+        />
+
         <_SingleMatch
           position="quartas"
           justify="space-evenly"

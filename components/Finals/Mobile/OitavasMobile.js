@@ -63,36 +63,8 @@ const OitavasMobile = (props) => {
         <SingleMatchMobile
           position="quartas"
           justify="space-around"
-          firstTeam={findingTeam("B", 0, "oitavas", filteredList)}
-          secondTeam={findingTeam("A", 1, "oitavas", filteredList)}
-          onClick={(firstTeam, secondTeam) =>
-            mata_mata_Handler(
-              firstTeam,
-              secondTeam,
-              "QUARTAS-SELECTION",
-              dispatch
-            )
-          }
-        />
-        <SingleMatchMobile
-          position="quartas"
-          justify="space-around"
           firstTeam={findingTeam("C", 0, "oitavas", filteredList)}
           secondTeam={findingTeam("D", 1, "oitavas", filteredList)}
-          onClick={(firstTeam, secondTeam) =>
-            mata_mata_Handler(
-              firstTeam,
-              secondTeam,
-              "QUARTAS-SELECTION",
-              dispatch
-            )
-          }
-        />
-        <SingleMatchMobile
-          position="quartas"
-          justify="space-around"
-          firstTeam={findingTeam("D", 0, "oitavas", filteredList)}
-          secondTeam={findingTeam("C", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
             mata_mata_Handler(
               firstTeam,
@@ -119,8 +91,8 @@ const OitavasMobile = (props) => {
         <SingleMatchMobile
           position="quartas"
           justify="space-around"
-          firstTeam={findingTeam("F", 0, "oitavas", filteredList)}
-          secondTeam={findingTeam("E", 1, "oitavas", filteredList)}
+          firstTeam={findingTeam("G", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("H", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
             mata_mata_Handler(
               firstTeam,
@@ -133,8 +105,8 @@ const OitavasMobile = (props) => {
         <SingleMatchMobile
           position="quartas"
           justify="space-around"
-          firstTeam={findingTeam("G", 0, "oitavas", filteredList)}
-          secondTeam={findingTeam("H", 1, "oitavas", filteredList)}
+          firstTeam={findingTeam("B", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("A", 1, "oitavas", filteredList)}
           onClick={(firstTeam, secondTeam) =>
             mata_mata_Handler(
               firstTeam,
@@ -144,6 +116,37 @@ const OitavasMobile = (props) => {
             )
           }
         />
+
+        <SingleMatchMobile
+          position="quartas"
+          justify="space-around"
+          firstTeam={findingTeam("D", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("C", 1, "oitavas", filteredList)}
+          onClick={(firstTeam, secondTeam) =>
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
+          }
+        />
+
+        <SingleMatchMobile
+          position="quartas"
+          justify="space-around"
+          firstTeam={findingTeam("F", 0, "oitavas", filteredList)}
+          secondTeam={findingTeam("E", 1, "oitavas", filteredList)}
+          onClick={(firstTeam, secondTeam) =>
+            mata_mata_Handler(
+              firstTeam,
+              secondTeam,
+              "QUARTAS-SELECTION",
+              dispatch
+            )
+          }
+        />
+
         <SingleMatchMobile
           position="quartas"
           justify="space-around"
