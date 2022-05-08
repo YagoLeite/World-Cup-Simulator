@@ -38,6 +38,7 @@ const Winner = () => {
               (item, index) => {
                 return (
                   <Link
+                    key={index}
                     isExternal
                     href={
                       item.year === 2022
@@ -45,7 +46,7 @@ const Winner = () => {
                         : `https://www.fifa.com/tournaments/mens/worldcup/${item.year}${item.place}`
                     }
                   >
-                    <VStack key={index}>
+                    <VStack>
                       <Text>{item.year}</Text>
                       <FontAwesomeIcon icon={faTrophy} />
                     </VStack>
