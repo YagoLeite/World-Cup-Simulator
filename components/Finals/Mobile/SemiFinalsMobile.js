@@ -7,10 +7,16 @@ import { CupState } from "../../../context/Context";
 
 const SemiFinalsMobile = (props) => {
   const { state, dispatch } = CupState();
-  const findSemi = (a, b) =>
+  const findSemi = (a, b, c, d) =>
     state.groupState
       .filter((item) => item.semi)
-      .find((item) => item.group === a || item.group === b);
+      .find(
+        (item) =>
+          (item.group === a && item.index === 0) ||
+          (item.group === b && item.index === 0) ||
+          (item.group === c && item.index === 1) ||
+          (item.group === d && item.index === 1)
+      );
   return (
     <Stack
       w="100%"
@@ -50,8 +56,8 @@ const SemiFinalsMobile = (props) => {
         <SingleMatchMobile
           position="final"
           justify="space-around"
-          firstTeam={findSemi("A", "B")}
-          secondTeam={findSemi("C", "D")}
+          firstTeam={findSemi("A", "C", "B", "D")}
+          secondTeam={findSemi("E", "G", "F", "H")}
           onClick={(firstTeam, secondTeam) =>
             mata_mata_Handler(
               firstTeam,
@@ -64,8 +70,8 @@ const SemiFinalsMobile = (props) => {
         <SingleMatchMobile
           position="final"
           justify="space-around"
-          firstTeam={findSemi("E", "F")}
-          secondTeam={findSemi("G", "H")}
+          firstTeam={findSemi("B", "D", "A", "C")}
+          secondTeam={findSemi("F", "H", "G", "E")}
           onClick={(firstTeam, secondTeam) =>
             mata_mata_Handler(
               firstTeam,
