@@ -157,7 +157,7 @@ export const initialState = [
     winner: false,
     wins: [
       { year: "1998", place: "france" },
-      { year: " 2018", place: "russia" },
+      { year: "2018", place: "russia" },
     ],
   },
   {

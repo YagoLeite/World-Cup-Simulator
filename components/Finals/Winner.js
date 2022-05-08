@@ -47,7 +47,14 @@ const Winner = () => {
                     }
                   >
                     <VStack>
-                      <Text>{item.year}</Text>
+                      <Flex
+                        w="40px"
+                        h="40px"
+                        justifyContent="center"
+                        alignItems="center"
+                      >
+                        <Text _hover={{ fontSize: "18px" }}>{item.year}</Text>
+                      </Flex>
                       <FontAwesomeIcon icon={faTrophy} />
                     </VStack>
                   </Link>
