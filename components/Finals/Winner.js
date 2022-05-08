@@ -7,6 +7,7 @@ import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 const Winner = () => {
   const { state } = CupState();
   const winner = state.groupState.find((item) => item.winner);
+  console.log("oi");
 
   return (
     <VStack
