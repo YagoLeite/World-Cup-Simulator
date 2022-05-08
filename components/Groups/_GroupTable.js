@@ -162,7 +162,7 @@ const _GroupTable = (props) => {
           cursor="pointer"
           onClick={oitavasHandler}
           w={["100px", "140px"]}
-          _hover={{ bg: "rgba(184,28,28,1)" }}
+          _hover={{ bg: "#d73838" }}
         >
           <Text
             pb="2px"

@@ -1,22 +1,11 @@
-import {
-  Text,
-  Flex,
-  VStack,
-  useToast,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Text, Flex, VStack, useToast } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 
 const Controler = () => {
   const { state, dispatch } = CupState();
   const toast = useToast();
-  const shadowBG = useColorModeValue(
-    "rgba(12, 46, 0, 0.4)",
-    "rgba(108, 122, 137, 0.4)"
-  );
+
   return (
     <Flex
       w="100%"
@@ -43,7 +32,9 @@ const Controler = () => {
           color="white"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "groups" })}
           cursor="pointer"
-          boxShadow={state.ui === "groups" && `${shadowBG} -5px 5px`}
+          boxShadow={
+            state.ui === "groups" && "rgba(108, 122, 137, 0.4) -5px 5px"
+          }
         >
           <Flex
             className="skewed2"
@@ -65,7 +56,9 @@ const Controler = () => {
           bg={state.ui !== "finals" && "red.500"}
           cursor="pointer"
           onClick={() => dispatch({ type: "UI-UPDATE", value: "finals" })}
-          boxShadow={state.ui === "finals" && `${shadowBG} -5px 5px`}
+          boxShadow={
+            state.ui === "finals" && "rgba(108, 122, 137, 0.4) -5px 5px"
+          }
           bgGradient={
             state.ui === "finals" &&
             " linear-gradient(25deg, rgba(184,28,28,1) 0%, rgba(221,60,60,1) 36%, rgba(255,92,92,1) 100%)"
@@ -116,6 +109,12 @@ const Controler = () => {
               cursor="pointer"
               textDecoration="underline"
               onClick={() => {
+                toast({
+                  title: "Cleared All Groups",
+                  status: "success",
+                  duration: 800,
+                  isClosable: true,
+                });
                 dispatch({ type: "CLEAR" });
               }}
               color="#E36262"
