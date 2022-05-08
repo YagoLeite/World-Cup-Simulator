@@ -30,8 +30,8 @@ const _Quartas = () => {
             findingTeam("B", 1, "quartas", filteredList)
           }
           secondTeam={
-            findingTeam("B", 0, "quartas", filteredList) ||
-            findingTeam("A", 1, "quartas", filteredList)
+            findingTeam("C", 0, "quartas", filteredList) ||
+            findingTeam("D", 1, "quartas", filteredList)
           }
           onClick={(firstTeam, secondTeam) =>
             mata_mata_Handler(firstTeam, secondTeam, "SEMI-SELECTION", dispatch)
@@ -42,8 +42,25 @@ const _Quartas = () => {
           margin="4.1%"
           justify="space-between"
           firstTeam={
-            findingTeam("C", 0, "quartas", filteredList) ||
-            findingTeam("D", 1, "quartas", filteredList)
+            findingTeam("E", 0, "quartas", filteredList) ||
+            findingTeam("F", 1, "quartas", filteredList)
+          }
+          secondTeam={
+            findingTeam("G", 0, "quartas", filteredList) ||
+            findingTeam("H", 1, "quartas", filteredList)
+          }
+          onClick={(firstTeam, secondTeam) =>
+            mata_mata_Handler(firstTeam, secondTeam, "SEMI-SELECTION", dispatch)
+          }
+        />
+
+        <_SingleMatch
+          position="semi"
+          margin="4.1%"
+          justify="space-between"
+          firstTeam={
+            findingTeam("B", 0, "quartas", filteredList) ||
+            findingTeam("A", 1, "quartas", filteredList)
           }
           secondTeam={
             findingTeam("D", 0, "quartas", filteredList) ||
@@ -59,25 +76,8 @@ const _Quartas = () => {
           margin="4.1%"
           justify="space-between"
           firstTeam={
-            findingTeam("E", 0, "quartas", filteredList) ||
-            findingTeam("F", 1, "quartas", filteredList)
-          }
-          secondTeam={
             findingTeam("F", 0, "quartas", filteredList) ||
             findingTeam("E", 1, "quartas", filteredList)
-          }
-          onClick={(firstTeam, secondTeam) =>
-            mata_mata_Handler(firstTeam, secondTeam, "SEMI-SELECTION", dispatch)
-          }
-        />
-
-        <_SingleMatch
-          position="semi"
-          margin="4.1%"
-          justify="space-between"
-          firstTeam={
-            findingTeam("G", 0, "quartas", filteredList) ||
-            findingTeam("H", 1, "quartas", filteredList)
           }
           secondTeam={
             findingTeam("H", 0, "quartas", filteredList) ||
