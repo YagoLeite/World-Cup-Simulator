@@ -41,10 +41,9 @@ const Winner = () => {
                     key={index}
                     isExternal
                     href={
-                      // item.year !== 2022
-                      //   ? `https://www.fifa.com/tournaments/mens/worldcup/${item.place}${item.year}`
-                      //   : `https://www.fifa.com/tournaments/mens/worldcup/${item.year}${item.place}`
-                      "https://www.linkedin.com/feed/"
+                      item.year !== 2022
+                        ? `https://www.fifa.com/tournaments/mens/worldcup/${item.place}${item.year}`
+                        : `https://www.fifa.com/tournaments/mens/worldcup/${item.year}${item.place}`
                     }
                   >
                     <VStack>
