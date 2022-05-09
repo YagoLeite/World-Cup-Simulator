@@ -28,6 +28,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### The challenge
 
+As the 2022 World Cup is almost upon us, I decided to create a simulator for it.
+
 Users should be able to:
 
 - View the optimal layout for the game depending on their device's screen size
@@ -38,6 +40,8 @@ Users should be able to:
 ### Screenshot
 
 ![image](https://user-images.githubusercontent.com/90288212/167478337-93cb71de-70b4-4344-99d6-08f7078736ff.png)
+
+![image](https://user-images.githubusercontent.com/90288212/167480058-4db279be-5f06-4b56-a683-e633a34e6132.png)
 
 ![image](https://user-images.githubusercontent.com/90288212/167478082-c882363c-0a4e-471d-9126-9301a196658a.png)
 
