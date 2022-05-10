@@ -135,12 +135,7 @@ const _GroupTable = (props) => {
                                   />
                                 )}
                               </Flex>
-                              <Text
-                                // color={item.index <= 1 ? "green" : ""}
-                                fontSize={["24px"]}
-                              >
-                                {item.name}
-                              </Text>
+                              <Text fontSize={["24px"]}>{item.name}</Text>
                             </HStack>
                           );
                         }}

@@ -1,6 +1,6 @@
 import React from "react";
 import SingleMatchMobile from "./SingleMatchMobile";
-import { Stack, Text, StackDivider, Button, Flex } from "@chakra-ui/react";
+import { Stack, Text, StackDivider, Flex } from "@chakra-ui/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import { mata_mata_Handler } from "../../functions";
 import { CupState } from "../../../context/Context";

@@ -1,7 +1,7 @@
 import React from "react";
 import SingleMatchMobile from "./SingleMatchMobile";
 import { ArrowRightIcon } from "@chakra-ui/icons";
-import { Stack, Text, StackDivider, Button, Flex } from "@chakra-ui/react";
+import { Stack, Text, StackDivider, Flex } from "@chakra-ui/react";
 import {
   findingTeam,
   mata_mata_Handler,

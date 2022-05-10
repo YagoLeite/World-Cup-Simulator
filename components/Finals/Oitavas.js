@@ -2,7 +2,7 @@ import React from "react";
 import { findingTeam, mata_mata_Handler, filteringByIndex } from "../functions";
 import _SingleMatch from "./_SingleMatch";
 import { CupState } from "../../context/Context";
-import { Flex, HStack, Stack, Text, StackDivider } from "@chakra-ui/react";
+import { Stack, Text, StackDivider } from "@chakra-ui/react";
 
 const Oitavas = () => {
   const { state, dispatch } = CupState();
