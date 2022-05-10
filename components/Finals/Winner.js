@@ -1,5 +1,5 @@
 import { Image, Flex, Text, VStack, Link } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { CupState } from "../../context/Context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +8,12 @@ import { motion } from "framer-motion";
 const Winner = () => {
   const { state } = CupState();
   const winner = state.groupState.find((item) => item.winner);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const scroll = () => ref.current.scrollIntoView();
+    scroll();
+  }, [winner]);
 
   const flip = {
     hidden: {
@@ -37,14 +43,16 @@ const Winner = () => {
       mb="30px"
       justifyContent="center"
       alignItems="center"
+      ref={ref}
     >
       {winner !== undefined && (
         <motion.div
+          key={winner}
           onClick={(e) => e.stopPropagation()}
           variants={flip}
           initial="hidden"
           animate="visible"
-          exit="exit"
+          // exit="exit"
         >
           <VStack gap={["12px", "24px"]}>
             <Text fontSize={"24px"}>The winner is {winner.name}</Text>
