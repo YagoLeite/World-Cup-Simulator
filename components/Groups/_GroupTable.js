@@ -5,12 +5,12 @@ import {
   useToast,
   Image,
   HStack,
-  useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 import { DragDropContext, Droppable, Draggable } from "@react-forked/dnd";
+import { motion } from "framer-motion";
 
 const onDragEnd = (result, columns, dispatch) => {
   if (!result.destination) return;
@@ -156,6 +156,7 @@ const _GroupTable = (props) => {
       </HStack>
       <Flex w="100%" justifyContent="flex-end">
         <Flex
+          as={motion.div}
           justify="center"
           alignItems="center"
           bg="#E36262"
@@ -163,6 +164,8 @@ const _GroupTable = (props) => {
           onClick={oitavasHandler}
           w={["100px", "140px"]}
           _hover={{ bg: "#d73838" }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           <Text
             pb="2px"
