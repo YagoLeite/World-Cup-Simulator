@@ -12,7 +12,9 @@ const Winner = () => {
 
   useEffect(() => {
     const scroll = () => ref.current.scrollIntoView({ behavior: "smooth" });
-    scroll();
+    if (winner) {
+      scroll();
+    }
   }, [winner]);
 
   const flip = {
@@ -61,7 +63,7 @@ const Winner = () => {
               overflow="hidden"
               w={["150px", "200px", "300px"]}
               h={["150px", "200px", "300px"]}
-              boxShadow="lg"
+              boxShadow="dark-lg"
               borderColor="#c9c9c9"
               borderWidth="1px"
             >
@@ -82,17 +84,19 @@ const Winner = () => {
                           : `https://www.fifa.com/tournaments/mens/worldcup/${item.year}${item.place}`
                       }
                     >
-                      <VStack>
-                        <Flex
-                          w="40px"
-                          h="40px"
-                          justifyContent="center"
-                          alignItems="center"
-                        >
-                          <Text _hover={{ fontSize: "18px" }}>{item.year}</Text>
-                        </Flex>
-                        <FontAwesomeIcon icon={faTrophy} />
-                      </VStack>
+                      <motion.div whileHover={{ scale: 1.1 }}>
+                        <VStack>
+                          <Flex
+                            w="40px"
+                            h="40px"
+                            justifyContent="center"
+                            alignItems="center"
+                          >
+                            <Text>{item.year}</Text>
+                          </Flex>
+                          <FontAwesomeIcon icon={faTrophy} />
+                        </VStack>
+                      </motion.div>
                     </Link>
                   );
                 }
