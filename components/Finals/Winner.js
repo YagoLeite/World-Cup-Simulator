@@ -11,7 +11,7 @@ const Winner = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const scroll = () => ref.current.scrollIntoView();
+    const scroll = () => ref.current.scrollIntoView({ behavior: "smooth" });
     scroll();
   }, [winner]);
 
