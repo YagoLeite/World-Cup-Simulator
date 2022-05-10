@@ -15,7 +15,7 @@ const Oitavas = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Text py="1%">Oitavas</Text>
+      <Text py="1%">Playoffs</Text>
       <Stack
         direction="row"
         w="100%"

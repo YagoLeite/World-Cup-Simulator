@@ -28,7 +28,7 @@ const QuartasMobile = (props) => {
           cursor="pointer"
         >
           <ArrowLeftIcon color="gray.600" />
-          <p>Oitavas</p>
+          <Text>Playoffs</Text>
         </Flex>
         <Text>Quartas</Text>
         <Flex

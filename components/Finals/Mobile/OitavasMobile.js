@@ -26,7 +26,7 @@ const OitavasMobile = (props) => {
         cursor="pointer"
       >
         <Flex w="50px"></Flex>
-        <Text>Oitavas</Text>
+        <Text>Round of 16</Text>
         <Flex
           w="50px"
           cursor="pointer"
