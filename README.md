@@ -61,5 +61,4 @@ When you choose a winner, you'll be able to see all the years that your choice h
 ## Author
 
 - Website - [My Portifolio](https://portifolio-12fab.web.app)
-- Frontend Mentor - [@YagoLeite](https://www.frontendmentor.io/profile/YagoLeite)
 - LinkedIn - [Yago Leite](https://www.linkedin.com/in/yagoleite/)
