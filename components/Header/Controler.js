@@ -1,4 +1,4 @@
-import { Text, Flex, VStack, useToast } from "@chakra-ui/react";
+import { Text, Flex, VStack, useToast, MenuItemOption } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 
@@ -94,6 +94,7 @@ const Controler = () => {
                 dispatch({ type: "CONFIRM-ALL" });
               }}
               color="#E36262"
+              _hover={{ color: "#ff3131" }}
             >
               Confirm all
             </Text>
@@ -118,6 +119,7 @@ const Controler = () => {
                 dispatch({ type: "CLEAR" });
               }}
               color="#E36262"
+              _hover={{ color: "#ff3131" }}
             >
               Clear all
             </Text>
