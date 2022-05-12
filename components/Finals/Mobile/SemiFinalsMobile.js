@@ -33,7 +33,7 @@ const SemiFinalsMobile = (props) => {
           gap={1.5}
         >
           <ArrowLeftIcon color="gray.600" />
-          <p>Quartas</p>
+          <p>Quarter</p>
         </Flex>
         <Text>Semi</Text>
         <Flex
