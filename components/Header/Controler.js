@@ -1,4 +1,4 @@
-import { Text, Flex, VStack, useToast, MenuItemOption } from "@chakra-ui/react";
+import { Text, Flex, VStack, useToast } from "@chakra-ui/react";
 import React from "react";
 import { CupState } from "../../context/Context";
 

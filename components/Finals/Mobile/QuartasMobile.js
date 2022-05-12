@@ -30,7 +30,7 @@ const QuartasMobile = (props) => {
           <ArrowLeftIcon color="gray.600" />
           <Text>Playoffs</Text>
         </Flex>
-        <Text>Quartas</Text>
+        <Text>Quarter</Text>
         <Flex
           w="50px"
           cursor="pointer"

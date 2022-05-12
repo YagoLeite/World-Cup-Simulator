@@ -19,12 +19,7 @@ const OitavasMobile = (props) => {
       justifyContent="center"
       alignItems="center"
     >
-      <Flex
-        py={["30px"]}
-        w="100%"
-        justifyContent="space-around"
-        cursor="pointer"
-      >
+      <Flex py={["30px"]} w="100%" justifyContent="space-around">
         <Flex w="50px"></Flex>
         <Text>Round of 16</Text>
         <Flex
