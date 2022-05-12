@@ -72,7 +72,7 @@ const Controler = () => {
             justifyContent="center"
             color="white"
           >
-            KnockOut
+            Knockout
           </Flex>
         </Flex>
       </Flex>
