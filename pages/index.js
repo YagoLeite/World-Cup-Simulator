@@ -2,24 +2,23 @@ import Head from "next/head";
 import Groups from "../components/Groups/Groups";
 import KnockOut from "../components/Finals/KnockOut";
 import { Header } from "../components/Header/Header";
-import { Flex, Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import { CupState } from "../context/Context";
-import { useEffect } from "react";
 
 export default function Home() {
   const { state, dispatch } = CupState();
   const bg = useColorModeValue("white", "gray.700");
-  useEffect(() => {
-    if (localStorage.getItem("state"))
-      dispatch({
-        type: "LOADING",
-        value: { ...JSON.parse(localStorage.getItem("state")), ui: "groups" },
-      });
-  }, [dispatch]);
+  // useEffect(() => {
+  //   if (localStorage.getItem("state"))
+  //     dispatch({
+  //       type: "LOADING",
+  //       value: { ...JSON.parse(localStorage.getItem("state")), ui: "groups" },
+  //     });
+  // }, [dispatch]);
 
-  useEffect(() => {
-    localStorage.setItem("state", JSON.stringify(state));
-  }, [state]);
+  // useEffect(() => {
+  //   localStorage.setItem("state", JSON.stringify(state));
+  // }, [state]);
 
   return (
     <Box bg={bg}>

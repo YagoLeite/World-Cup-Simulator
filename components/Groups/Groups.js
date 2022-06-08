@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import _GroupTable from "./_GroupTable";
 import { Grid, VStack } from "@chakra-ui/react";
 import GroupTable from "./GroupTable";
@@ -6,11 +6,6 @@ import GroupTable from "./GroupTable";
 const groups = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 const Groups = () => {
-  const [a, setA] = useState(false);
-  useEffect(() => {
-    setA(true);
-  }, []);
-
   return (
     <VStack w="100%" color="white" bg="gray.700" px={["18px"]}>
       <Grid
