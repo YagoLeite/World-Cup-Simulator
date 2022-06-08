@@ -84,7 +84,8 @@ export const initialState = [
     wins: [],
   },
   {
-    name: "To de decided 1",
+    name: "Wales",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Flag_of_Wales.svg/800px-Flag_of_Wales.svg.png",
     index: 3,
     group: "B",
     oitavas: false,
