@@ -28,22 +28,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### The challenge
 
-As the 2022 World Cup is almost upon us, I decided to create a simulator for it.
 
-Users should be able to:
+The 2022 World Cup is right upon us, so I decided to create a simulator to it. I wanted to challenge myself, so I tried some things that I had never done before.
+The application is divided in two main parts: The group stage and the knockout stage.
 
-- View the optimal layout for the game depending on their device's screen size
-- Play Rock, Paper, Scissors against the computer
-- Maintain the state of the score after refreshing the browser _(optional)_
-- **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
+For the group stage I've used drag and drop for the user select the winner. This functionality was pretty fun to implement.
+For the knockout, the issue was to create a responsive design that worked well. I couldn't find a design for both desktops and mobile, so I divided them into two saparete problems. This approach worked very well.
+
+When you choose a winner, you'll be able to see all the years that your choice has won the world cup. If you click on the year, you'll be redirected to Fifa's website.
 
 ### Screenshot
 
 ![image](https://user-images.githubusercontent.com/90288212/167478337-93cb71de-70b4-4344-99d6-08f7078736ff.png)
 
-![image](https://user-images.githubusercontent.com/90288212/167480058-4db279be-5f06-4b56-a683-e633a34e6132.png)
+![image](https://user-images.githubusercontent.com/90288212/167861698-90c83ea4-6bd9-450e-908d-b709eda31690.png)
 
-![image](https://user-images.githubusercontent.com/90288212/167478082-c882363c-0a4e-471d-9126-9301a196658a.png)
+![image](https://user-images.githubusercontent.com/90288212/167861804-1b4c549b-20d5-4972-b76c-fa3df0ba497e.png)
 
 ### Links
 - Live Site URL: [World Cup Simulator](https://world-cup-simulator.vercel.app/)
@@ -52,18 +52,13 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
 - [React Beautiful DnD Forked](https://github.com/react-forked/dnd) - To drag and drop
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [Chakra UI](https://chakra-ui.com) - For styles
+- [Framer Motion](https://www.framer.com/motion/) - For animation
 
 ## Author
 
 - Website - [My Portifolio](https://portifolio-12fab.web.app)
-- Frontend Mentor - [@YagoLeite](https://www.frontendmentor.io/profile/YagoLeite)
 - LinkedIn - [Yago Leite](https://www.linkedin.com/in/yagoleite/)

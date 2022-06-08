@@ -36,7 +36,16 @@ const SingleMatch = (props) => {
       marginX={props.margin}
     >
       <motion.div whileHover={{ scale: 1.1 }}>
-        <Stack pt="20px" opacity={opacityOne ? "0.5" : "1"}>
+        <Stack
+          pt="20px"
+          opacity={opacityOne ? "0.5" : "1"}
+          onClick={
+            props.firstTeam
+              ? () => props.onClick(props.firstTeam, props.secondTeam)
+              : null
+          }
+          cursor="pointer"
+        >
           {props.firstTeam ? (
             <Flex
               w={{ md: "20px", lg: "30px", xl: "40px" }}
@@ -46,7 +55,6 @@ const SingleMatch = (props) => {
               borderRadius="50%"
               boxShadow="dark-lg"
               bg="gray.500"
-              onClick={() => props.onClick(props.firstTeam, props.secondTeam)}
               className={classNameTeamOne}
             >
               {props.firstTeam.flag && (
@@ -74,7 +82,6 @@ const SingleMatch = (props) => {
             fontWeight="600"
             fontSize={["12px", "15px"]}
             cursor="pointer"
-            onClick={() => props.onClick(props.firstTeam, props.secondTeam)}
           >
             {props.firstTeam?.name.slice(0, 3).toUpperCase()}
           </Text>
@@ -84,7 +91,16 @@ const SingleMatch = (props) => {
         <SmallCloseIcon />
       </Flex>
       <motion.div whileHover={{ scale: 1.1 }}>
-        <Stack pt="20px" opacity={opacityTwo ? "0.5" : "1"}>
+        <Stack
+          pt="20px"
+          opacity={opacityTwo ? "0.5" : "1"}
+          cursor="pointer"
+          onClick={
+            props.secondTeam
+              ? () => props.onClick(props.secondTeam, props.firstTeam)
+              : null
+          }
+        >
           {props.secondTeam ? (
             <Flex
               w={{ md: "20px", lg: "30px", xl: "40px" }}
@@ -95,7 +111,6 @@ const SingleMatch = (props) => {
               boxShadow="dark-lg"
               bg="gray.500"
               className={classNameTeamTwo}
-              onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
             >
               {props.secondTeam.flag && (
                 <Image
@@ -122,7 +137,6 @@ const SingleMatch = (props) => {
             fontWeight="600"
             fontSize={["12px", "15px"]}
             cursor="pointer"
-            onClick={() => props.onClick(props.secondTeam, props.firstTeam)}
           >
             {props.secondTeam?.name.slice(0, 3).toUpperCase()}
           </Text>

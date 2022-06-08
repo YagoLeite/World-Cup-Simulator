@@ -72,7 +72,7 @@ const Controler = () => {
             justifyContent="center"
             color="white"
           >
-            KnockOut
+            Knockout
           </Flex>
         </Flex>
       </Flex>
@@ -94,6 +94,7 @@ const Controler = () => {
                 dispatch({ type: "CONFIRM-ALL" });
               }}
               color="#E36262"
+              _hover={{ color: "#ff3131" }}
             >
               Confirm all
             </Text>
@@ -118,6 +119,7 @@ const Controler = () => {
                 dispatch({ type: "CLEAR" });
               }}
               color="#E36262"
+              _hover={{ color: "#ff3131" }}
             >
               Clear all
             </Text>
