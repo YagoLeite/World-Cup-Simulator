@@ -12,14 +12,14 @@ const Groups = () => {
   }, []);
 
   return (
-    <VStack w="100%" color="white" bg="gray.700">
+    <VStack w="100%" color="white" bg="gray.700" px={["18px"]}>
       <Grid
         px={["10px", "50px", "140px"]}
         pt={["15px", "36px"]}
-        gridTemplateColumns="repeat(auto-fit, minmax(330px, 1fr))"
+        gridTemplateColumns="repeat(auto-fit, minmax(290px, 1fr))"
         gap={["24px", "95px"]}
         w="100%"
-        maxW="1440px"
+        maxW="1300px"
       >
         {/* {a &&
           groups.map((group, index) => (
