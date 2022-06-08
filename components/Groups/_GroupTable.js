@@ -20,6 +20,7 @@ const onDragEnd = (result, columns, dispatch) => {
   const [removed] = copiedItems.splice(source.index, 1);
   copiedItems.splice(destination.index, 0, removed);
   dispatch({ type: "SCORE-UPDATE", value: copiedItems });
+  console.log(copiedItems);
 };
 
 const position = (

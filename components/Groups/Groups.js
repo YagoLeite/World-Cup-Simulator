@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import _GroupTable from "./_GroupTable";
 import { Grid, VStack } from "@chakra-ui/react";
+import GroupTable from "./GroupTable";
 
 const groups = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
@@ -20,10 +21,13 @@ const Groups = () => {
         w="100%"
         maxW="1440px"
       >
-        {a &&
+        {/* {a &&
           groups.map((group, index) => (
             <_GroupTable key={index} group={group} />
-          ))}
+          ))} */}
+        {groups.map((group, index) => {
+          return <GroupTable group={group} key={index} />;
+        })}
       </Grid>
     </VStack>
   );

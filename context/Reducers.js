@@ -23,6 +23,22 @@ export const CupReducer = (state, action) => {
       return { ...state, groupState: newGroupState };
     case "GROUP-UPDATE":
       return { ...state, group: action.value };
+    case "REMOVE-OITAVAS":
+      const removeOitavas = state.groupState.map((item) => {
+        if (item.group === action.value) {
+          return {
+            ...item,
+            oitavas: false,
+            quartas: false,
+            semi: false,
+            finals: false,
+            winner: false,
+          };
+        } else {
+          return item;
+        }
+      });
+      return { ...state, groupState: removeOitavas };
     case "OITAVAS-SELECTION":
       const oitavas = state.groupState.map((item) => {
         if (item.index <= 1 && item.group === action.value) {

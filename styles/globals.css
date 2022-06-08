@@ -37,3 +37,7 @@ a {
 .skewed2 {
 	transform: skew(10deg);
 }
+
+ul, li {
+	list-style: none;
+}
