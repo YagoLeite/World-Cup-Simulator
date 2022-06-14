@@ -162,7 +162,8 @@ export const initialState = [
     ],
   },
   {
-    name: "To be decided 2",
+    name: "Australia",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/800px-Flag_of_Australia.svg.png",
     index: 1,
     group: "D",
     oitavas: false,
