@@ -210,7 +210,8 @@ export const initialState = [
     wins: [{ year: "2010", place: "south-africa" }],
   },
   {
-    name: "To be decided 3",
+    name: "Costa Rica",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Costa_Rica.svg/800px-Flag_of_Costa_Rica.svg.png",
     index: 1,
     group: "E",
     oitavas: false,
